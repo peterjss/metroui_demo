@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+
+    <title> UI Demo </title>
+
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <!-- Basic Styles -->
+    <link href="../css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
+    <!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+    <link href="../css/smartadmin-production.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="../css/smartadmin-skins.css" media="screen" rel="stylesheet" type="text/css">
+    <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+    <link href="../css/demo.css" media="screen" rel="stylesheet" type="text/css">
+    <!-- FAVICONS -->
+    <link href="../img/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="../img/favicon/favicon.ico" rel="icon" type="image/x-icon">
+    <!-- GOOGLE FONT -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700" rel="stylesheet">
+    <!-- Specifying a Webpage Icon for Web Clip
+         Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+    <link href="../img/splash/sptouch-icon-iphone.png" rel="apple-touch-icon">
+    <link href="../img/splash/touch-icon-ipad.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="../img/splash/touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="../img/splash/touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152">
+    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!-- Startup image for web apps -->
+    <link href="../img/splash/ipad-landscape.png"
+          media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)"
+          rel="apple-touch-startup-image">
+    <link href="../img/splash/ipad-portrait.png"
+          media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)"
+          rel="apple-touch-startup-image">
+    <link href="../img/splash/iphone.png" media="screen and (max-device-width: 320px)" rel="apple-touch-startup-image">
+
+    <style>
+        /*.rightbar span#activity {*/
+        /*-moz-user-select: none;*/
+        /*background-color: #F8F8F8;*/
+        /*background-image: -moz-linear-gradient(center top, #F8F8F8, #F1F1F1);*/
+        /*border: 1px solid #BFBFBF;*/
+        /*border-radius: 2px;*/
+        /*color: #C4BAB6;*/
+        /*cursor: default !important;*/
+        /*display: inline-block;*/
+        /*font-size: 19px;*/
+        /*font-weight: 700;*/
+        /*height: 24px;*/
+        /*margin: 10px 0 0;*/
+        /*padding: 2px;*/
+        /*position: relative;*/
+        /*text-align: center;*/
+        /*text-decoration: none !important;*/
+        /*width: 24px;*/
+        /*}*/
+
+        /*.rightbar span#activity:hover {*/
+        /*border: 1px solid #BFBFBF;*/
+        /*box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.08) inset;*/
+        /*cursor: pointer !important;*/
+        /*transition: all 0s ease 0s;*/
+        /*}*/
+
+        /*.rightbar > span .badge {*/
+        /*background: none repeat scroll 0 0 #0091D9;*/
+        /*border-radius: 50%;*/
+        /*box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1) inset, 0 -1px 0 rgba(0, 0, 0, 0.07) inset;*/
+        /*color: #FFFFFF;*/
+        /*cursor: pointer;*/
+        /*display: inline-block;*/
+        /*font-size: 10px;*/
+        /*font-weight: 700;*/
+        /*line-height: normal;*/
+        /*padding: 2px 4px 3px;*/
+        /*position: absolute;*/
+        /*right: -5px;*/
+        /*text-align: center;*/
+        /*top: -5px;*/
+        /*}*/
+
+        /*.rightbar > span{*/
+        /*-moz-box-sizing: content-box;*/
+        /*}*/
+
+        /*.ajax-dropdown {*/
+        /*background: none repeat scroll 0 0 #FFFFFF;*/
+        /*border: 1px solid #B3B3B3;*/
+        /*border-radius: 0;*/
+        /*box-shadow: 0 2px 4px rgba(30, 30, 100, 0.25);*/
+        /*display: none;*/
+        /*height: 435px;*/
+        /*left: 16px;*/
+        /*right: 10px;*/
+        /*padding: 10px;*/
+        /*position: absolute;*/
+        /*top: 48px;*/
+        /*width: 344px;*/
+        /*z-index: 1003;*/
+        /*}*/
+        /*#header {*/
+        /*background-color: #6FB3E0; *//*#438EB9;*/
+        /*background-image: linear-gradient(to bottom, #6FB3E0, #6FB3E0);*/
+        /*background-repeat: repeat-x;*/
+        /*display: block;*/
+        /*height: 49px;*/
+        /*margin: 0;*/
+        /*padding: 0 13px 0 0;*/
+        /*position: relative;*/
+        /*}*/
+        /*#header span{*/
+        /*color:#ffffff;*/
+        /*}*/
+        /*#project-context > *:first-child {*/
+        /*color: #ffffff;*/
+        /*display: block;*/
+        /*font-size: 10px;*/
+        /*font-weight: 700;*/
+        /*padding-left: 0;*/
+        /*text-align: left;*/
+        /*text-shadow: 0 0 1px #FFFFFF;*/
+        /*text-transform: uppercase;*/
+        /*}*/
+    </style>
+    <script type="text/javascript">
+        //        (function() {
+
+        //        })();
+    </script>
+</head>
+<body class="">
+
+<!-- HEADER -->
+<!-- possible classes: minified, fixed-ribbon, fixed-header, fixed-width-->
+<div class="navbar navbar-default" id="navbar">
+
+<div class="navbar-container" id="navbar-container">
+
+<div class="navbar-header pull-left">
+    <a href="#" id="show-shortcut" class="nav-top-appbtn pull-left">
+        <i class="fa fa-cloud "></i>
+    </a>
+
+    <a href="#" class="navbar-brand">
+        <small>
+            <i class="fa fa-leaf"></i>
+            IDTS-问题跟踪管理系统
+        </small>
+    </a><!-- /.brand -->
+</div>
+<!-- /.navbar-header -->
+
+<div class="navbar-header pull-right" role="navigation">
+<ul class="nav ace-nav">
+<li class="grey">
+    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+        <i class="glyphicon glyphicon-tasks"></i>
+        <span class="badge badge-grey">4</span>
+    </a>
+
+    <ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+        <li class="dropdown-header">
+            <i class="glyphicon glyphicon-ok"></i>
+            还有4个任务完成
+        </li>
+
+        <li>
+            <a href="#">
+                <div class="clearfix">
+                    <span class="pull-left">软件更新</span>
+                    <span class="pull-right">65%</span>
+                </div>
+
+                <div class="progress progress-xs ">
+                    <div style="width:65%" class="progress-bar "></div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <div class="clearfix">
+                    <span class="pull-left">硬件更新</span>
+                    <span class="pull-right">35%</span>
+                </div>
+
+                <div class="progress progress-xs ">
+                    <div style="width:35%" class="progress-bar progress-bar-danger"></div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <div class="clearfix">
+                    <span class="pull-left">单元测试</span>
+                    <span class="pull-right">15%</span>
+                </div>
+
+                <div class="progress progress-xs ">
+                    <div style="width:15%" class="progress-bar progress-bar-warning"></div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <div class="clearfix">
+                    <span class="pull-left">错误修复</span>
+                    <span class="pull-right">90%</span>
+                </div>
+
+                <div class="progress progress-xs progress-striped active">
+                    <div style="width:90%" class="progress-bar progress-bar-success"></div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                查看任务详情
+                <i class="fa fa-arrow-right"></i>
+            </a>
+        </li>
+    </ul>
+</li>
+
+<li class="purple">
+    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+        <i class="fa fa-bell  fa-icon-animated-bell"></i>
+        <span class="badge bg-color-red">8</span>
+    </a>
+
+    <ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+        <li class="dropdown-header">
+            <i class="fa fa-warning"></i>
+            8条通知
+        </li>
+
+        <li>
+            <a href="#">
+                <div class="clearfix">
+                                                        <span class="pull-left">
+                                                            <button class="btn btn-xs bg-color-pink txt-color-white" href="#">
+                                                                <i class=" fa fa-comment fa-1x "></i>
+                                                            </button>
+                                                            新闻评论
+                                                        </span>
+                    <span class="pull-right badge badge-info">+12</span>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+
+                <div class="clearfix">
+                                                    <span class="pull-left">
+                                                        <!--<i class="btn btn-xs btn-primary icon-user"></i>-->
+                                                        <button class="btn btn-xs bg-color-blue txt-color-white" href="#">
+                                                            <i class=" fa fa-user fa-1x"></i>
+                                                        </button>
+                                                        切换为编辑登录..
+                                                        </span>
+                    <!--<span class="pull-right badge badge-info">+12</span>-->
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                查看所有通知
+                <i class="fa fa-arrow-right"></i>
+            </a>
+        </li>
+    </ul>
+</li>
+
+<li class="green">
+    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+        <i class="fa fa-envelope fa-icon-animated-vertical"></i>
+        <span class="badge badge-success bg-color-teal ">5</span>
+    </a>
+
+    <ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+        <li class="dropdown-header">
+            <i class="fa fa-envelope-o"></i>
+            5条消息
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="../img/avatars/1.png" class="msg-photo" alt="Alex's Avatar"/>
+                                                    <span class="msg-body">
+                                                        <span class="msg-title">
+                                                            <span class="txt-color-blue">Alex:</span>
+                                                            不知道写啥 ...
+                                                        </span>
+
+                                                        <span class="msg-time">
+                                                            <i class="fa fa-clock-o "></i>
+                                                            <span>1分钟以前</span>
+                                                        </span>
+                                                    </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="../img/avatars/3.png" class="msg-photo" alt="Susan's Avatar"/>
+                                                    <span class="msg-body">
+                                                        <span class="msg-title">
+                                                            <span class="txt-color-blue">Susan:</span>
+                                                            不知道翻译...
+                                                        </span>
+
+                                                        <span class="msg-time">
+                                                            <i class="fa fa-clock-o"></i>
+                                                            <span>20分钟以前</span>
+                                                        </span>
+                                                    </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <img src="../img/avatars/4.png" class="msg-photo" alt="Bob's Avatar"/>
+                                                    <span class="msg-body">
+                                                        <span class="msg-title">
+                                                            <span class="txt-color-blue">Bob:</span>
+                                                            到底是不是英文 ...
+                                                        </span>
+
+                                                        <span class="msg-time">
+                                                            <i class="fa fa-clock-o"></i>
+                                                            <span>下午3:15</span>
+                                                        </span>
+                                                    </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="inbox.html">
+                查看所有消息
+                <i class="fa fa-arrow-right "></i>
+            </a>
+        </li>
+    </ul>
+</li>
+
+<li class="light-blue">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+        <img class="nav-user-photo" src="../img/avatars/sunny.png" alt="Jason's Photo"/>
+                                                <span class="user-info">
+                                                    <small>欢迎光临,</small>
+                                                    Peter Li
+                                                </span>
+        <i class="fa fa-sort-down"></i>
+    </a>
+
+    <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+        <li>
+            <a href="#">
+                <i class="fa fa-cog"></i>
+                设置
+            </a>
+        </li>
+
+        <li>
+            <a href="#">
+                <i class="fa fa-user"></i>
+                个人资料
+            </a>
+        </li>
+
+        <li class="divider"></li>
+
+        <li>
+            <a href="#">
+                <i class="fa fa-power-off"></i>
+                退出
+            </a>
+        </li>
+    </ul>
+</li>
+</ul>
+<!-- /.ace-nav -->
+</div>
+<!-- /.navbar-header -->
+
+</div>
+<!-- /.container -->
+
+</div>
+<!-- END HEADER -->
+
+<!-- possible classes: minified, fixed-ribbon, fixed-header, fixed-width-->
+<!-- HEADER -->
+<!--<header id="header">-->
+<!--<div id="logo-group">-->
+
+<!--&lt;!&ndash; PLACE YOUR LOGO HERE &ndash;&gt;-->
+<!--<span id="logo" style="font-size: 16px;">EIPD 缺陷跟踪管理系统</span>-->
+<!--&lt;!&ndash;END LOGO PLACEHOLDER &ndash;&gt;-->
+
+<!--&lt;!&ndash; Note: The activity badge color changes when clicked and resets the number to 0-->
+<!--Suggestion: You may want to set a flag when this happens to tick off all checked messages / notifications &ndash;&gt;
+-->
+<!--<span id="activity" class="activity-dropdown"> <i class="fa fa-user"></i> <b class="badge"> 21 </b> </span>-->
+
+<!--&lt;!&ndash; AJAX-DROPDOWN : control this dropdown height, look and feel from the LESS variable file &ndash;&gt;-->
+<!--<div class="ajax-dropdown">-->
+
+<!--&lt;!&ndash; the ID links are fetched via AJAX to the ajax container "ajax-notifications" &ndash;&gt;-->
+<!--<div class="btn-group btn-group-justified" data-toggle="buttons">-->
+<!--<label class="btn btn-default">-->
+<!--<input type="radio" name="activity" id="../ajax/notify/mail.html">-->
+<!--消息 (14) </label>-->
+<!--<label class="btn btn-default">-->
+<!--<input type="radio" name="activity" id="../ajax/notify/notifications.html">-->
+<!--通知 (3) </label>-->
+<!--<label class="btn btn-default">-->
+<!--<input type="radio" name="activity" id="../ajax/notify/tasks.html">-->
+<!--任务 (4) </label>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; notification content &ndash;&gt;-->
+<!--<div class="ajax-notifications custom-scroll">-->
+
+<!--<div class="alert alert-transparent">-->
+<!--<h4>点击按钮来显示消息</h4>-->
+<!--这个页面用来保护个人的一些隐私，或者可以自动显示一些消息在这里。-->
+<!--</div>-->
+
+<!--<i class="fa fa-lock fa-4x fa-border"></i>-->
+
+<!--</div>-->
+<!--&lt;!&ndash; end notification content &ndash;&gt;-->
+
+<!--&lt;!&ndash; footer: refresh area &ndash;&gt;-->
+<!--<span> 最后更新时间: 12/12/2013 9:43上午-->
+<!--<button type="button" data-loading-text="<i class='fa fa-refresh fa-spin'></i> 读取中..."-->
+<!--class="btn btn-xs btn-default pull-right">-->
+<!--<i class="fa fa-refresh"></i>-->
+<!--</button> </span>-->
+<!--&lt;!&ndash; end footer &ndash;&gt;-->
+
+<!--</div>-->
+<!--&lt;!&ndash; END AJAX-DROPDOWN &ndash;&gt;-->
+<!--</div>-->
+
+
+<!--&lt;!&ndash; projects dropdown &ndash;&gt;-->
+<!--<div id="project-context" class="">-->
+
+
+<!--<span class="label">项目:</span>-->
+<!--<span id="project-selector" class="popover-trigger-element dropdown-toggle" data-toggle="dropdown">当前项目 <i-->
+<!--class="fa fa-angle-down"></i></span>-->
+
+<!--&lt;!&ndash; Suggestion: populate this list with fetch and push technique &ndash;&gt;-->
+<!--<ul class="dropdown-menu">-->
+<!--<li>-->
+<!--<a href="javascript:void(0);">Online e-merchant management system - attaching integration with the-->
+<!--iOS</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="javascript:void(0);">Notes on pipeline upgradee</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="javascript:void(0);">Assesment Report for merchant account</a>-->
+<!--</li>-->
+<!--<li class="divider"></li>-->
+<!--<li>-->
+<!--<a href="javascript:void(0);"><i class="fa fa-power-off"></i> 清除</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--&lt;!&ndash; end dropdown-menu&ndash;&gt;-->
+
+<!--</div>-->
+<!--&lt;!&ndash; end projects dropdown &ndash;&gt;-->
+
+<!--&lt;!&ndash; pulled right: nav area &ndash;&gt;-->
+<!--<div class="rightbar pull-right">-->
+
+<!--&lt;!&ndash; collapse menu button &ndash;&gt;-->
+<!--<div id="hide-menu" class="btn-header pull-right">-->
+<!--<span> <a href="javascript:void(0);" title="Collapse Menu"><i class="fa fa-reorder"></i></a> </span>-->
+<!--</div>-->
+<!--&lt;!&ndash; end collapse menu &ndash;&gt;-->
+
+<!--&lt;!&ndash; logout button &ndash;&gt;-->
+<!--<div id="logout" class="btn-header transparent pull-right">-->
+<!--<span> <a href="../login.html" title="Sign Out"><i class="fa fa-sign-out"></i></a> </span>-->
+<!--</div>-->
+<!--&lt;!&ndash; end logout button &ndash;&gt;-->
+
+<!--&lt;!&ndash; search mobile button (this is hidden till mobile view port) &ndash;&gt;-->
+<!--<div id="search-mobile" class="btn-header transparent pull-right">-->
+<!--<span> <a href="javascript:void(0)" title="Search"><i class="fa fa-search"></i></a> </span>-->
+<!--</div>-->
+<!--&lt;!&ndash; end search mobile button &ndash;&gt;-->
+
+<!--&lt;!&ndash; input: search field &ndash;&gt;-->
+<!--<form action="#search.html" class="header-search pull-right">-->
+<!--<input type="text" placeholder="Find reports and more" id="search-fld">-->
+<!--<button type="submit">-->
+<!--<i class="fa fa-search"></i>-->
+<!--</button>-->
+<!--<a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>-->
+<!--</form>-->
+<!--&lt;!&ndash; end input: search field &ndash;&gt;-->
+
+<!--&lt;!&ndash; multiple lang dropdown : find all flags in the image folder &ndash;&gt;-->
+<!--<ul class="header-dropdown-list hidden-xs">-->
+<!--<li>-->
+<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img alt="" src="../img/flags/cn.png"> <span> 中文 </span>-->
+<!--<i class="fa fa-angle-down"></i> </a>-->
+<!--<ul class="dropdown-menu pull-right">-->
+<!--<li class="active">-->
+<!--<a href="javascript:void(0);"><img alt="" src="../img/flags/cn.png"> 中文</a>-->
+<!--</li>-->
+<!--<li >-->
+<!--<a href="javascript:void(0);"><img alt="" src="../img/flags/us.png"> US</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</li>-->
+<!--</ul>-->
+<!--&lt;!&ndash; end multiple lang &ndash;&gt;-->
+
+<!--</div>-->
+<!--&lt;!&ndash; end pulled right: nav area &ndash;&gt;-->
+
+<!--</header>-->
+<!-- END HEADER -->
+
+
+<!-- Left panel : Navigation area -->
+<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+<aside id="left-panel">
+    <!--&lt;!&ndash; User info &ndash;&gt;-->
+    <!--<div class="login-info">-->
+    <!--<span> &lt;!&ndash; User image size is adjusted inside CSS, it should stay as it &ndash;&gt;-->
+
+        <!--<a href="javascript:void(0);" id="show-shortcut">-->
+            <!--<img src="../img/avatars/sunny.png" alt="me" class="online"/>-->
+            <!--<span>-->
+                <!--Peter.Li-->
+            <!--</span>-->
+            <!--<i class="fa fa-angle-down"></i>-->
+        <!--</a>-->
+
+    <!--</span>-->
+    <!--</div>-->
+    <!-- end user info -->
+
+    <!-- NAVIGATION : This navigation is also responsive
+
+    To make this navigation dynamic please make sure to link the node
+    (the reference to the nav > ul) after page load. Or the navigation
+    will not initialize.
+    -->
+    <nav>
+        <!-- NOTE: Notice the gaps after each icon usage <i></i>..
+        Please note that these links work a bit different than
+        traditional hre="" links. See documentation for details.
+        -->
+
+        <ul>
+            <li class="active">
+                <a href="main.html" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i> <span
+                        class="menu-item-parent">首页</span></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-lg fa-fw fa-bar-chart-o"></i> <span class="menu-item-parent">项目</span></a>
+                <ul>
+                    <li>
+                        <a href="flot.html">所有项目</a>
+                    </li>
+                    <li>
+                        <a href="morris.html">最近的项目</a>
+                    </li>
+                    <li>
+                        <a href="inline-charts.html">我参加的项目</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">问题</span></a>
+                <ul>
+                    <li>
+                        <a href="datatables.html">问题搜索</a>
+                    </li>
+                    <li>
+                        <a href="table.html">我的问题</a>
+                    </li>
+                    <li>
+                        <a href="datatables.html">我提交的问题</a>
+                    </li>
+                    <li>
+                        <a href="datatables.html">分配给我的问题</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> <span class="menu-item-parent">系统管理</span></a>
+                <ul>
+                    <li>
+                        <a href="form-elements.html">项目维护</a>
+                    </li>
+                    <li>
+                        <a href="sys_users.html">用户管理</a>
+                    </li>
+                    <li>
+                        <a href="form-elements.html">组织机构</a>
+                    </li>
+                    <li>
+                        <a href="form-elements.html">角色</a>
+                    </li>
+                    <li>
+                        <a href="form-elements.html">资源</a>
+                    </li>
+                    <li>
+                        <a href="fa.html">系统基本信息</a>
+                    </li>
+                    <li>
+                        <a href="glyph.html"> Email 设定 </a>
+                    </li>
+                    <li>
+                        <a href="glyph.html">系统备份 </a>
+                    </li>
+                    <li>
+                        <a href="glyph.html">系统还原 </a>
+                    </li>
+                    <li>
+                        <a href="glyph.html">系统通知策略 </a>
+                    </li>
+                    <li>
+                        <a href="glyph.html">通知事件设定 </a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+    <span class="minifyme"> <i class="fa fa-arrow-circle-left hit"></i> </span>
+
+
+</aside>
+<!-- END NAVIGATION -->
+
+<div id="main" role="main">
+
+<!-- RIBBON -->
+<div id="ribbon">
+        <span class="ribbon-button-alignment">
+            <span id="refresh" class="btn btn-ribbon" data-title="refresh" rel="tooltip" data-placement="bottom"
+                  data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings."
+                  data-html="true">
+                <i class="fa fa-refresh"></i></span>
+        </span>
+
+    <!-- breadcrumb -->
+    <ol class="breadcrumb">
+        <li>首页</li>
+        <li>仪表盘</li>
+    </ol>
+    <!-- end breadcrumb -->
+
+    <!-- You can also add more buttons to the
+    ribbon for further usability
+
+    Example below:
+
+    <span class="ribbon-button-alignment pull-right">
+    <span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+    <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+    <span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+    </span> -->
+
+</div>
+<!-- END RIBBON -->
+
+<!-- MAIN CONTENT -->
+<div id="content">
+<div class="row">
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4">
+        <h1 class="page-title txt-color-blueDark"><i class="fa-fw fa fa-home"></i> 仪表盘 <span>> 我的仪表盘</span></h1>
+    </div>
+    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-8">
+        <ul id="sparks" class="">
+            <li class="sparks-info">
+                <h5> 我提交的问题 <span class="txt-color-blue">47,17</span></h5>
+
+                <div class="sparkline txt-color-blue hidden-mobile hidden-md hidden-sm">
+                    130, 187, 250, 257, 200, 210, 300, 270, 363, 241, 270, 363, 247
+                </div>
+            </li>
+            <li class="sparks-info">
+                <h5> 已解决的问题 <span class="txt-color-purple"><i class="fa  fa-flash"></i>&nbsp;45%</span></h5>
+
+                <div class="sparkline txt-color-greenDark hidden-mobile hidden-md hidden-sm">
+                    110,150,300,130,400,240,220,310,220,300, 270, 210
+                </div>
+            </li>
+            <li class="sparks-info">
+                <h5> 高优先级问题 <span class="txt-color-greenDark"><i class="fa fa-fire"></i>&nbsp;2447</span></h5>
+
+                <div class="sparkline txt-color-purple hidden-mobile hidden-md hidden-sm">
+                    110,150,300,130,400,240,220,310,220,300, 270, 210
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- widget grid -->
+<section id="widget-grid" class="">
+<!-- row -->
+<div class="row">
+    <article class="col-sm-12">
+        <!-- new widget -->
+        <div class="jarviswidget" id="wid-id-0" data-widget-togglebutton="false" data-widget-editbutton="false"
+             data-widget-fullscreenbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false">
+            <!-- widget options:
+                    usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+                    data-widget-colorbutton="false"
+                    data-widget-editbutton="false"
+                    data-widget-togglebutton="false"
+                    data-widget-deletebutton="false"
+                    data-widget-fullscreenbutton="false"
+                    data-widget-custombutton="false"
+                    data-widget-collapsed="true"
+                    data-widget-sortable="false"
+                    -->
+            <header>
+                <span class="widget-icon"> <i class="glyphicon glyphicon-stats txt-color-darken"></i> </span>
+
+                <h2>活动信息 </h2>
+
+                <ul class="nav nav-tabs pull-right in" id="myTab">
+                    <li class="active">
+                        <a data-toggle="tab" href="#s1"><i class="fa fa-clock-o"></i> <span
+                                class="hidden-mobile hidden-tablet">活动状态</span></a>
+                    </li>
+
+                    <li>
+                        <a data-toggle="tab" href="#s2"><i class="fa fa-bar-chart-o"></i> <span
+                                class="hidden-mobile hidden-tablet">项目总览</span></a>
+                    </li>
+
+                    <li>
+                        <a data-toggle="tab" href="#s3"><i class="fa fa-reorder "></i> <span
+                                class="hidden-mobile hidden-tablet">分类信息</span></a>
+                    </li>
+                </ul>
+
+            </header>
+
+            <!-- widget div-->
+            <div class="no-padding">
+                <!-- widget edit box -->
+                <div class="jarviswidget-editbox">
+                    test
+                </div>
+                <!-- end widget edit box -->
+
+                <div class="widget-body">
+                    <!-- content -->
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade active in padding-10 no-padding-bottom" id="s1">
+                            <div class="row no-space">
+                                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                                                    <span class="demo-liveupdate-1">
+                                                        <span class="onoffswitch-title">自动获取</span>
+                                                        <span class="onoffswitch">
+                                                            <input type="checkbox" name="start_interval"
+                                                                   class="onoffswitch-checkbox" id="start_interval">
+                                                            <label class="onoffswitch-label" for="start_interval">
+                                                                <span class="onoffswitch-inner" data-swchon-text="ON"
+                                                                      data-swchoff-text="OFF"></span>
+                                                                <span class="onoffswitch-switch"></span>
+                                                            </label>
+                                                        </span>
+                                                    </span>
+
+                                    <div id="updating-chart" class="chart-large txt-color-blue"></div>
+
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 show-stats">
+
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12"><span
+                                                class="text"> 我的任务 <span class="pull-right">130/200</span> </span>
+
+                                            <div class="progress">
+                                                <div class="progress-bar bg-color-blueDark" style="width: 65%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12"><span
+                                                class="text"> 进行中的问题 <span class="pull-right">10/130</span> </span>
+
+                                            <div class="progress">
+                                                <div class="progress-bar bg-color-blue" style="width: 34%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12"><span
+                                                class="text"> 已解决的问题<span class="pull-right">77%</span> </span>
+
+                                            <div class="progress">
+                                                <div class="progress-bar bg-color-blue" style="width: 77%;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-12 col-lg-12"><span
+                                                class="text"> 已关闭的问题<span class="pull-right">170/200</span> </span>
+
+                                            <div class="progress">
+                                                <div class="progress-bar bg-color-greenLight" style="width: 84%;"></div>
+                                            </div>
+                                        </div>
+
+                                                    <span class="show-stat-buttons">
+                                                        <span class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                            <a href="javascript:void(0);"
+                                                               class="btn btn-default btn-block hidden-xs">生成 PDF</a>
+                                                        </span>
+                                                        <span class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                                            <a href="javascript:void(0);"
+                                                               class="btn btn-default btn-block hidden-xs">创建新问题</a>
+                                                        </span>
+                                                    </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end s1 tab panel -->
+
+                        <div class="tab-pane fade" id="s2">
+                            <div class="widget-body-toolbar bg-color-white">
+
+                                <form class="form-inline" role="form">
+
+                                    <div class="form-group">
+                                        <label class="sr-only" for="s123">显示从</label>
+                                        <input type="date" class="form-control input-sm" id="s123" placeholder="显示时间从">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="date" class="form-control input-sm" id="s124" placeholder="至">
+                                    </div>
+
+                                    <div class="btn-group hidden-phone pull-right">
+                                        <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                                class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                        <ul class="dropdown-menu pull-right">
+                                            <li>
+                                                <a href="javascript:void(0);"><i class="fa fa-file-text-alt"></i> 导出至
+                                                    PDF</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);"><i class="fa fa-question-sign"></i> 帮助</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                            <div class="padding-10">
+                                <div id="statsChart" class="chart-large has-legend-unique"></div>
+                            </div>
+
+                        </div>
+                        <!-- end s2 tab panel -->
+
+                        <div class="tab-pane fade" id="s3">
+
+                            <div class="widget-body-toolbar bg-color-white smart-form" id="rev-toggles">
+
+                                <div class="inline-group">
+
+                                    <label for="gra-0" class="checkbox">
+                                        <input type="checkbox" name="gra-0" id="gra-0" checked="checked">
+                                        <i></i> Major </label>
+                                    <label for="gra-1" class="checkbox">
+                                        <input type="checkbox" name="gra-1" id="gra-1" checked="checked">
+                                        <i></i> Critical </label>
+                                    <label for="gra-2" class="checkbox">
+                                        <input type="checkbox" name="gra-2" id="gra-2" checked="checked">
+                                        <i></i> Minor </label>
+                                </div>
+
+                                <div class="btn-group hidden-phone pull-right">
+                                    <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                            class="fa fa-cog"></i> More <span class="caret"> </span> </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="javascript:void(0);"><i class="fa fa-file-text-alt"></i> 导出到
+                                                PDF</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);"><i class="fa fa-question-sign"></i> 帮助</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="padding-10">
+                                <div id="flotcontainer" class="chart-large has-legend-unique"></div>
+                            </div>
+                        </div>
+                        <!-- end s3 tab pane -->
+                    </div>
+
+                    <!-- end content -->
+                </div>
+
+            </div>
+            <!-- end widget div -->
+
+        </div>
+        <!-- end widget -->
+    </article>
+</div>
+<!-- end row -->
+
+<!-- row -->
+
+<div class="row">
+
+<article class="col-sm-12 col-md-12 col-lg-6">
+    <!-- new widget -->
+    <div class="jarviswidget jarviswidget-color-blue" id="wid-id-4" data-widget-editbutton="false"
+         data-widget-colorbutton="false">
+
+        <!-- widget options:
+        usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+        data-widget-colorbutton="false"
+        data-widget-editbutton="false"
+        data-widget-togglebutton="false"
+        data-widget-deletebutton="false"
+        data-widget-fullscreenbutton="false"
+        data-widget-custombutton="false"
+        data-widget-collapsed="true"
+        data-widget-sortable="false"
+
+        -->
+
+        <header>
+            <span class="widget-icon"> <i class="fa fa-check txt-color-white"></i> </span>
+
+            <h2> 我的任务 </h2>
+            <!-- <div class="widget-toolbar">
+            add: non-hidden - to disable auto hide
+            </div>-->
+        </header>
+
+        <!-- widget div-->
+        <div>
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <div>
+                    <label>Title:</label>
+                    <input type="text"/>
+                </div>
+            </div>
+            <!-- end widget edit box -->
+
+            <div class="widget-body no-padding smart-form">
+                <!-- content goes here -->
+                <h5 class="todo-group-title"><i class="fa fa-warning"></i> Critical Tasks (
+                    <small class="num-of-tasks">1</small>
+                    )
+                </h5>
+                <ul id="sortable1" class="todo">
+                    <li>
+									    <span class="handle">
+                                            <label class="checkbox"><input type="checkbox"
+                                                                           name="checkbox-inline"><i></i> </label>
+                                        </span>
+
+                        <p>
+                            <strong>Issues #17643</strong> - Hotfix for WebApp interface issue [<a
+                                href="javascript:void(0);" class="font-xs">More Details</a>] <span class="text-muted">Sea deep blessed bearing under darkness from God air living isn't. </span>
+                            <span class="date">Jan 1, 2014</span>
+                        </p>
+                    </li>
+                </ul>
+                <h5 class="todo-group-title"><i class="fa fa-exclamation"></i> Important Tasks (
+                    <small class="num-of-tasks">3</small>
+                    )
+                </h5>
+                <ul id="sortable2" class="todo">
+                    <li>
+                                        <span class="handle">
+                                            <label class="checkbox"><input type="checkbox"
+                                                                           name="checkbox-inline"><i></i> </label>
+                                        </span>
+
+                        <p>
+                            <strong>Issues #1347</strong> - Inbox email is being sent twice
+                            <small>(bug fix)</small>
+                            [<a href="javascript:void(0);" class="font-xs">More Details</a>] <span class="date">Nov 22, 2013</span>
+                        </p>
+                    </li>
+                    <li>
+										<span class="handle">
+                                            <label class="checkbox"><input type="checkbox"
+                                                                           name="checkbox-inline"><i></i> </label>
+                                        </span>
+
+                        <p>
+                            <strong>Issues #1314</strong> - Call customer support re: Issue <a
+                                href="javascript:void(0);" class="font-xs">#6134</a>
+                            <small>(code review)</small>
+                            <span class="date">Nov 22, 2013</span>
+                        </p>
+                    </li>
+                    <li>
+									    <span class="handle">
+                                            <label class="checkbox"><input type="checkbox"
+                                                                           name="checkbox-inline"><i></i> </label>
+                                        </span>
+
+                        <p>
+                            <strong>Issues #17643</strong> - Hotfix for WebApp interface issue [<a
+                                href="javascript:void(0);" class="font-xs">More Details</a>] <span class="text-muted">Sea deep blessed bearing under darkness from God air living isn't. </span>
+                            <span class="date">Jan 1, 2014</span>
+                        </p>
+                    </li>
+                </ul>
+
+                <h5 class="todo-group-title"><i class="fa fa-check"></i> Completed Tasks (
+                    <small class="num-of-tasks">1</small>
+                    )
+                </h5>
+                <ul id="sortable3" class="todo">
+                    <li class="complete">
+									    <span class="handle" style="display:none">
+                                            <label class="checkbox state-disabled"><input type="checkbox"
+                                                                                          name="checkbox-inline"
+                                                                                          checked="checked"
+                                                                                          disabled="disabled"><i></i>
+                                            </label>
+                                        </span>
+
+                        <p>
+                            <strong>Issues #17643</strong> - Hotfix for WebApp interface issue [<a
+                                href="javascript:void(0);" class="font-xs">More Details</a>] <span class="text-muted">Sea deep blessed bearing under darkness from God air living isn't. </span>
+                            <span class="date">Jan 1, 2014</span>
+                        </p>
+                    </li>
+                </ul>
+
+                <!-- end content -->
+            </div>
+
+        </div>
+        <!-- end widget div -->
+    </div>
+    <!-- end widget -->
+</article>
+
+<article class="col-sm-12 col-md-12 col-lg-6">
+<!-- new widget -->
+<div class="jarviswidget jarviswidget-color-blue" id="wid-id-2" data-widget-colorbutton="false"
+     data-widget-editbutton="false">
+
+<!-- widget options:
+usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+data-widget-colorbutton="false"
+data-widget-editbutton="false"
+data-widget-togglebutton="false"
+data-widget-deletebutton="false"
+data-widget-fullscreenbutton="false"
+data-widget-custombutton="false"
+data-widget-collapsed="true"
+data-widget-sortable="false"
+
+-->
+
+<header>
+    <span class="widget-icon"> <i class="fa fa-map-marker"></i> </span>
+
+    <h2>项目成员情况</h2>
+    <!--<div class="widget-toolbar hidden-mobile">-->
+    <!--<span class="onoffswitch-title"><i class="fa fa-location-arrow"></i> Realtime</span>-->
+    <!--<span class="onoffswitch">-->
+    <!--<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" checked="checked" id="myonoffswitch">-->
+    <!--<label class="onoffswitch-label" for="myonoffswitch">-->
+    <!--<span class="onoffswitch-inner" data-swchon-text="YES" data-swchoff-text="NO"></span>-->
+    <!--<span class="onoffswitch-switch"></span>-->
+    <!--</label>-->
+    <!--</span>-->
+    <!--</div>-->
+</header>
+
+<!-- widget div-->
+<div>
+<!-- widget edit box -->
+<div class="jarviswidget-editbox">
+    <div>
+        <label>Title:</label>
+        <input type="text"/>
+    </div>
+</div>
+<!-- end widget edit box -->
+
+<div class="widget-body no-padding">
+<!-- content goes here -->
+
+<!--<div id="vector-map" class="vector-map"></div>-->
+<!--<div id="heat-fill">-->
+<!--<span class="fill-a">0</span>-->
+
+<!--<span class="fill-b">5,000</span>-->
+<!--</div>-->
+
+<table class="table table-striped table-hover table-condensed">
+<thead>
+<tr>
+    <th>名称</th>
+    <th>已分配</th>
+    <th class="text-align-center">完成情况</th>
+    <th class="text-align-center">已解决</th>
+    <th class="text-align-center">所占比例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><a href="javascript:void(0);">Peter Li</a></td>
+    <td>4,977</td>
+    <td class="text-align-center">
+        <div class="sparkline txt-color-blue text-align-center" data-sparkline-height="22px" data-sparkline-width="90px"
+             data-sparkline-barwidth="2">
+            2700, 3631, 2471, 1300, 1877, 2500, 2577, 2700, 3631, 2471, 2000, 2100, 3000
+        </div>
+    </td>
+    <td class="text-align-center">143</td>
+    <td class="text-align-center">
+        <div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]'
+             data-sparkline-offset="90" data-sparkline-piesize="23px">
+            17,83
+        </div>
+        <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+            <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-cog fa-lg"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                <li>
+                    <a href="javascript:void(0);"><i class="fa fa-file fa-lg fa-fw txt-color-greenLight"></i> <u>P</u>DF</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);"><i class="fa fa-times fa-lg fa-fw txt-color-red"></i>
+                        <u>D</u>elete</a>
+                </li>
+                <li class="divider"></li>
+                <li class="text-align-center">
+                    <a href="javascript:void(0);">Cancel</a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td><a href="javascript:void(0);">Julia</a></td>
+    <td>4,873</td>
+    <td class="text-align-center">
+        <div class="sparkline txt-color-blue text-align-center" data-sparkline-height="22px" data-sparkline-width="90px"
+             data-sparkline-barwidth="2">
+            1000, 1100, 3030, 1300, -1877, -2500, -2577, -2700, 3631, 2471, 4700, 1631, 2471
+        </div>
+    </td>
+    <td class="text-align-center">247</td>
+    <td class="text-align-center">
+        <div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]'
+             data-sparkline-offset="90" data-sparkline-piesize="23px">
+            22,88
+        </div>
+        <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+            <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-cog fa-lg"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                <li>
+                    <a href="javascript:void(0);"><i class="fa fa-file fa-lg fa-fw txt-color-greenLight"></i> <u>P</u>DF</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);"><i class="fa fa-times fa-lg fa-fw txt-color-red"></i>
+                        <u>D</u>elete</a>
+                </li>
+                <li class="divider"></li>
+                <li class="text-align-center">
+                    <a href="javascript:void(0);">Cancel</a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td><a href="javascript:void(0);">Charlie</a></td>
+    <td>3,671</td>
+    <td class="text-align-center">
+        <div class="sparkline txt-color-blue text-align-center" data-sparkline-height="22px" data-sparkline-width="90px"
+             data-sparkline-barwidth="2">
+            3631, 1471, 2400, 3631, 471, 1300, 1177, 2500, 2577, 3000, 4100, 3000, 7700
+        </div>
+    </td>
+    <td class="text-align-center">373</td>
+    <td class="text-align-center">
+        <div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]'
+             data-sparkline-offset="90" data-sparkline-piesize="23px">
+            10,90
+        </div>
+        <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+            <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-cog fa-lg"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                <li>
+                    <a href="javascript:void(0);"><i class="fa fa-file fa-lg fa-fw txt-color-greenLight"></i> <u>P</u>DF</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);"><i class="fa fa-times fa-lg fa-fw txt-color-red"></i>
+                        <u>D</u>elete</a>
+                </li>
+                <li class="divider"></li>
+                <li class="text-align-center">
+                    <a href="javascript:void(0);">Cancel</a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td><a href="javascript:void(0);">Gavin</a></td>
+    <td>2,476</td>
+    <td class="text-align-center">
+        <div class="sparkline txt-color-blue text-align-center" data-sparkline-height="22px" data-sparkline-width="90px"
+             data-sparkline-barwidth="2">
+            2700, 1877, 2500, 2577, 2000, 3631, 2471, -2700, -3631, 2471, 1300, 2100, 3000,
+        </div>
+    </td>
+    <td class="text-align-center">741</td>
+    <td class="text-align-center">
+        <div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]'
+             data-sparkline-offset="90" data-sparkline-piesize="23px">
+            34,66
+        </div>
+        <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+            <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-cog fa-lg"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                <li>
+                    <a href="javascript:void(0);"><i class="fa fa-file fa-lg fa-fw txt-color-greenLight"></i> PDF</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);"><i class="fa fa-times fa-lg fa-fw txt-color-red"></i> 删除</a>
+                </li>
+                <li class="divider"></li>
+                <li class="text-align-center">
+                    <a href="javascript:void(0);">取消</a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td><a href="javascript:void(0);">Wind</a></td>
+    <td>1,476</td>
+    <td class="text-align-center">
+        <div class="sparkline txt-color-blue text-align-center" data-sparkline-height="22px" data-sparkline-width="90px"
+             data-sparkline-barwidth="2">
+            1300, 1877, 2500, 2577, 2000, 2100, 3000, -2471, -2700, -3631, -2471, 2700, 3631
+        </div>
+    </td>
+    <td class="text-align-center">123</td>
+    <td class="text-align-center">
+        <div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]'
+             data-sparkline-offset="90" data-sparkline-piesize="23px">
+            75,25
+        </div>
+        <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+            <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-cog fa-lg"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                <li>
+                    <a href="javascript:void(0);"><i class="fa fa-file fa-lg fa-fw txt-color-greenLight"></i> PDF</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);"><i class="fa fa-times fa-lg fa-fw txt-color-red"></i> 删除</a>
+                </li>
+                <li class="divider"></li>
+                <li class="text-align-center">
+                    <a href="javascript:void(0);">取消</a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td><a href="javascript:void(0);">Kevin</a></td>
+    <td>146</td>
+    <td class="text-align-center">
+        <div class="sparkline txt-color-orange text-align-center" data-sparkline-height="22px"
+             data-sparkline-width="90px" data-sparkline-barwidth="2">
+            5, 34, 10, 1, 4, 6, -9, -1, 0, 0, 5, 6, 7
+        </div>
+    </td>
+    <td class="text-align-center">23</td>
+    <td class="text-align-center">
+        <div class="sparkline display-inline" data-sparkline-type='pie' data-sparkline-piecolor='["#E979BB", "#57889C"]'
+             data-sparkline-offset="90" data-sparkline-piesize="23px">
+            50,50
+        </div>
+        <div class="btn-group display-inline pull-right text-align-left hidden-tablet">
+            <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-cog fa-lg"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-xs pull-right">
+                <li>
+                    <a href="javascript:void(0);"><i class="fa fa-file fa-lg fa-fw txt-color-greenLight"></i> PDF</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);"><i class="fa fa-times fa-lg fa-fw txt-color-red"></i> 删除</a>
+                </li>
+                <li class="divider"></li>
+                <li class="text-align-center">
+                    <a href="javascript:void(0);">取消</a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+    <td colspan=5>
+        <ul class="pagination pagination-xs no-margin">
+            <li class="prev disabled">
+                <a href="javascript:void(0);">前一个</a>
+            </li>
+            <li class="active">
+                <a href="javascript:void(0);">1</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">2</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">3</a>
+            </li>
+            <li class="next">
+                <a href="javascript:void(0);">下一个</a>
+            </li>
+        </ul>
+    </td>
+</tr>
+</tfoot>
+</table>
+
+<!-- end content -->
+
+</div>
+
+</div>
+<!-- end widget div -->
+</div>
+<!-- end widget -->
+</article>
+</div>
+<!-- end row -->
+
+</section>
+<!-- end widget grid -->
+</div>
+<!-- END MAIN CONTENT -->
+</div>
+
+<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+Note: These tiles are completely responsive,
+you can add as many as you like
+-->
+<div id="shortcut">
+    <ul>
+        <li>
+            <a href="#inbox.html" class="jarvismetro-tile big-cubes bg-color-blue"> <span class="iconbox">
+                <i class="fa fa-envelope fa-4x"></i> <span>通知 <span
+                    class="label pull-right bg-color-darken">14</span></span> </span>
+            </a>
+        </li>
+        <li>
+            <a href="#calendar.html" class="jarvismetro-tile big-cubes bg-color-orangeDark">
+                <span class="iconbox"> <i class="fa fa-calendar fa-4x"></i> <span>任务安排</span> </span>
+            </a>
+        </li>
+        <li>
+            <a href="#invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox">
+                <i class="fa fa-book fa-4x"></i> <span>问题 <span
+                    class="label pull-right bg-color-darken">99</span></span> </span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void(0);" class="jarvismetro-tile big-cubes selected bg-color-pinkDark">
+                <span class="iconbox"> <i class="fa fa-user fa-4x"></i> <span> 个人设置 </span> </span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- END SHORTCUT AREA -->
+
+</body>
+
+<!--================================================== -->
+
+<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+<script data-pace-options='{ "restartOnRequestAfter": true }' src="../js/plugin/pace/pace.min.js"></script>
+
+<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+<script src="../js/libs/jquery-2.0.2.min.js"></script>
+<script>
+    if (!window.jQuery) {
+        document.write('<script src="../js/libs/jquery-2.0.2.min.js"><\/script>');
+    }
+</script>
+
+<script src="../js/libs/jquery-ui-1.10.3.min.js"></script>
+<script>
+    if (!window.jQuery.ui) {
+        document.write('<script src="../js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+    }
+</script>
+
+<!-- JS TOUCH : include this plugin for mobile drag / drop touch events
+<script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> -->
+
+<!-- BOOTSTRAP JS -->
+<script src="../js/bootstrap/bootstrap.min.js"></script>
+
+<!-- CUSTOM NOTIFICATION -->
+<script src="../js/notification/SmartNotification.min.js"></script>
+
+<!-- JARVIS WIDGETS -->
+<script src="../js/smartwidgets/jarvis.widget.min.js"></script>
+
+<!-- EASY PIE CHARTS -->
+<script src="../js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+<!-- SPARKLINES -->
+<script src="../js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+<!-- JQUERY VALIDATE -->
+<script src="../js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+<!-- JQUERY MASKED INPUT -->
+<script src="../js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+<!-- JQUERY SELECT2 INPUT -->
+<script src="../js/plugin/select2/select2.min.js"></script>
+
+<!-- JQUERY UI + Bootstrap Slider -->
+<script src="../js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+<!-- browser msie issue fix -->
+<script src="../js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+<!-- FastClick: For mobile devices -->
+<script src="../js/plugin/fastclick/fastclick.js"></script>
+
+<!--[if IE 7]>
+<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+<![endif]-->
+
+<!-- Demo purpose only -->
+<script src="../js/demo.js"></script>
+
+<!-- MAIN APP JS FILE -->
+<script src="../js/app.js"></script>
+
+<!-- PAGE RELATED PLUGIN(S) -->
+
+<!-- Flot Chart Plugin: Flot Engine, Flot Resizer, Flot Tooltip -->
+<script src="../js/plugin/flot/jquery.flot.cust.js"></script>
+<script src="../js/plugin/flot/jquery.flot.resize.js"></script>
+<script src="../js/plugin/flot/jquery.flot.tooltip.js"></script>
+
+<!-- Vector Maps Plugin: Vectormap engine, Vectormap language -->
+<!--<script src="js/plugin/vectormap/jquery-jvectormap-1.2.2.min.js"></script>-->
+<!--<script src="js/plugin/vectormap/jquery-jvectormap-world-mill-en.js"></script>-->
+
+<!-- Full Calendar -->
+<!--<script src="js/plugin/fullcalendar/jquery.fullcalendar.min.js"></script>-->
+
+
+<script>
+$(document).ready(function () {
+
+    // DO NOT REMOVE : GLOBAL FUNCTIONS!
+    pageSetUp();
+
+    /*
+     * RUN PAGE GRAPHS
+     */
+
+    /* TAB 1: UPDATING CHART */
+    // For the demo we use generated data, but normally it would be coming from the server
+
+    var data = [], totalPoints = 200, $UpdatingChartColors = $("#updating-chart").css('color');
+
+    function getRandomData() {
+        if (data.length > 0)
+            data = data.slice(1);
+
+        // do a random walk
+        while (data.length < totalPoints) {
+            var prev = data.length > 0 ? data[data.length - 1] : 50;
+            var y = prev + Math.random() * 10 - 5;
+            if (y < 0) {
+                y = 0;
+            }
+            if (y > 100) {
+                y = 100;
+            }
+            data.push(y);
+        }
+
+        // zip the generated y values with the x values
+        var res = [];
+        for (var i = 0; i < data.length; ++i) {
+            res.push([i, data[i]]);
+        }
+        return res;
+    }
+
+    // setup control widget
+    var updateInterval = 1500;
+    $("#updating-chart").val(updateInterval).change(function () {
+
+        var v = $(this).val();
+        if (v && !isNaN(+v)) {
+            updateInterval = +v;
+            $(this).val("" + updateInterval);
+        }
+
+    });
+
+    // setup plot
+    var options = {
+        yaxis: {
+            min: 0,
+            max: 110
+        },
+        xaxis: {
+            min: 0,
+            max: 200
+        },
+        colors: [$UpdatingChartColors],
+        series: {
+            lines: {
+                lineWidth: 1,
+                fill: true,
+                fillColor: {
+                    colors: [
+                        {
+                            opacity: 0.4
+                        },
+                        {
+                            opacity: 0
+                        }
+                    ]
+                },
+                steps: false
+
+            }
+        }
+    };
+
+    var plot = $.plot($("#updating-chart"), [getRandomData()], options);
+
+    /* live switch */
+    $('input[type="checkbox"]#start_interval').click(function () {
+        if ($(this).prop('checked')) {
+            $on = true;
+            updateInterval = 1500;
+            update();
+        } else {
+            clearInterval(updateInterval);
+            $on = false;
+        }
+    });
+
+    function update() {
+        if ($on == true) {
+            plot.setData([getRandomData()]);
+            plot.draw();
+            setTimeout(update, updateInterval);
+
+        } else {
+            clearInterval(updateInterval)
+        }
+
+    }
+
+    var $on = false;
+
+    /*end updating chart*/
+
+    /* TAB 2: Social Network  */
+
+    $(function () {
+        // jQuery Flot Chart
+        var issues = [
+            [1, 27],
+            [2, 34],
+            [3, 51],
+            [4, 48],
+            [5, 55],
+            [6, 65],
+            [7, 61],
+            [8, 70],
+            [9, 65],
+            [10, 75],
+            [11, 57],
+            [12, 59],
+            [13, 62]
+        ];
+        var tasks = [
+            [1, 25],
+            [2, 31],
+            [3, 45],
+            [4, 37],
+            [5, 38],
+            [6, 40],
+            [7, 47],
+            [8, 55],
+            [9, 43],
+            [10, 50],
+            [11, 47],
+            [12, 39],
+            [13, 47]
+        ];
+        var data = [
+            {
+                label: "Issues",
+                data: issues,
+                lines: {
+                    show: true,
+                    lineWidth: 1,
+                    fill: true,
+                    fillColor: {
+                        colors: [
+                            {
+                                opacity: 0.1
+                            },
+                            {
+                                opacity: 0.13
+                            }
+                        ]
+                    }
+                },
+                points: {
+                    show: true
+                }
+            },
+            {
+                label: "Tasks",
+                data: tasks,
+                lines: {
+                    show: true,
+                    lineWidth: 1,
+                    fill: true,
+                    fillColor: {
+                        colors: [
+                            {
+                                opacity: 0.1
+                            },
+                            {
+                                opacity: 0.13
+                            }
+                        ]
+                    }
+                },
+                points: {
+                    show: true
+                }
+            }
+        ];
+
+        var options = {
+            grid: {
+                hoverable: true
+            },
+            colors: ["#568A89", "#3276B1"],
+            tooltip: true,
+            tooltipOpts: {
+                //content : "Value <b>$x</b> Value <span>$y</span>",
+                defaultTheme: false
+            },
+            xaxis: {
+                ticks: [
+                    [1, "一月"],
+                    [2, "二月"],
+                    [3, "三月"],
+                    [4, "四月"],
+                    [5, "五月"],
+                    [6, "六月"],
+                    [7, "七月"],
+                    [8, "八月"],
+                    [9, "九月"],
+                    [10, "十月"],
+                    [11, "十一月"],
+                    [12, "十二月"],
+                    [13, "一月+1"]
+                ]
+            },
+            yaxes: {
+
+            }
+        };
+
+        var plot3 = $.plot($("#statsChart"), data, options);
+    });
+    // END TAB 2
+
+    // TAB THREE GRAPH //
+    /* TAB 3: 分类信息  */
+    $(function () {
+
+        var major = [
+                    [1354586000000, 153],
+                    [1364587000000, 658],
+                    [1374588000000, 198],
+                    [1384589000000, 663],
+                    [1394590000000, 801],
+                    [1404591000000, 1080],
+                    [1414592000000, 353],
+                    [1424593000000, 749],
+                    [1434594000000, 523],
+                    [1444595000000, 258],
+                    [1454596000000, 688],
+                    [1464597000000, 364]
+                ],
+                critical = [
+                    [1354586000000, 53],
+                    [1364587000000, 65],
+                    [1374588000000, 98],
+                    [1384589000000, 83],
+                    [1394590000000, 980],
+                    [1404591000000, 808],
+                    [1414592000000, 720],
+                    [1424593000000, 674],
+                    [1434594000000, 23],
+                    [1444595000000, 79],
+                    [1454596000000, 88],
+                    [1464597000000, 36]
+                ],
+                minor = [
+                    [1354586000000, 647],
+                    [1364587000000, 435],
+                    [1374588000000, 784],
+                    [1384589000000, 346],
+                    [1394590000000, 487],
+                    [1404591000000, 463],
+                    [1414592000000, 479],
+                    [1424593000000, 236],
+                    [1434594000000, 843],
+                    [1444595000000, 657],
+                    [1454596000000, 241],
+                    [1464597000000, 341]
+                ],
+                toggles = $("#rev-toggles"),
+                target = $("#flotcontainer");
+
+        var data = [
+            {
+                label: "Major Issues",
+                data: major,
+                bars: {
+                    show: true,
+                    align: "center",
+                    barWidth: 30 * 30 * 60 * 1000 * 80
+                }
+            },
+            {
+                label: "Critical Issues",
+                data: critical,
+                color: '#3276B1',
+                lines: {
+                    show: true,
+                    lineWidth: 3
+                },
+                points: {
+                    show: true
+                }
+            },
+            {
+                label: "Minor Issues",
+                data: minor,
+                color: '#71843F',
+                lines: {
+                    show: true,
+                    lineWidth: 1
+                },
+                points: {
+                    show: true
+                }
+            }
+        ]
+
+        var options = {
+            grid: {
+                hoverable: true
+            },
+            tooltip: true,
+            tooltipOpts: {
+                //content: '%x - %y',
+                //dateFormat: '%b %y',
+                defaultTheme: false
+            },
+            xaxis: {
+                mode: "time"
+            },
+            yaxes: {
+                tickFormatter: function (val, axis) {
+                    return "$" + val;
+                },
+                max: 1200
+            }
+
+        };
+
+        plot2 = null;
+
+        function plotNow() {
+            var d = [];
+            toggles.find(':checkbox').each(function () {
+                if ($(this).is(':checked')) {
+                    d.push(data[$(this).attr("name").substr(4, 1)]);
+                }
+            });
+            if (d.length > 0) {
+                if (plot2) {
+                    plot2.setData(d);
+                    plot2.draw();
+                } else {
+                    plot2 = $.plot(target, d, options);
+                }
+            }
+
+        };
+
+        toggles.find(':checkbox').on('change', function () {
+            plotNow();
+        });
+        plotNow()
+
+    });
+});
+</script>
+<!-- Your GOOGLE ANALYTICS CODE Below -->
+<script type="text/javascript">
+
+    //    var _gaq = _gaq || [];
+    //    _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+    //    _gaq.push(['_trackPageview']);
+    //
+    //    (function() {
+    //        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    //        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    //        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    //
+    //
+    //    })();
+</script>
+</html>
