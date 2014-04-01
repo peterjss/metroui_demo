@@ -53,6 +53,11 @@
                 top: -52px;
             }
 
+            .dtable.dropdown-menu {
+                top: auto;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
         </style>
 	</head>
 	<body class="">
@@ -443,7 +448,7 @@
 
 				<!-- breadcrumb -->
 				<ol class="breadcrumb">
-                    <li>项目</li>
+                    <li>问题</li>
                     <li>基本信息</li>
 				</ol>
 				<!-- end breadcrumb -->
@@ -472,7 +477,7 @@
                     <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
                         <h1 class="page-title txt-color-blueDark">
                             <!-- PAGE HEADER -->
-                            <i class="fa-fw fa fa-file-o"></i> 项目 <span>>
+                            <i class="fa-fw fa fa-file-o"></i> 问题 <span>>
 							基本信息 </span></h1>
                     </div>
                     <!-- end col -->
@@ -500,17 +505,17 @@
                             -->
                             <header>
                                 <h2>
-                                    <strong>项目</strong>
-                                    <span class="hidden-mobile hidden-tablet"><i> - 搜索条件：IDTS + [Peter Li, Varson] + [内部项目, 测试项目]</i></span>
+                                    <strong>问题</strong>
+                                    <span class="hidden-mobile hidden-tablet"><i> - 搜索条件：IDTS + [Peter Li, Varson] + [模板问题, 测试问题]</i></span>
                                 </h2>
                                 <div class="widget-toolbar">
                                     <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#addIssueModal"><i class="fa fa-lg fa-plus"></i>
-                                        <span class="hidden-mobile hidden-tablet">创建项目</span></a>
+                                        <span class="hidden-mobile hidden-tablet">创建问题</span></a>
                                 </div>
                                 <ul id="widget-tab-1" class="nav  nav-tabs pull-right">
                                     <!--nav-pills-->
                                     <li class="active">
-                                        <a data-toggle="tab" href="#hr1"> <i class="fa fa-lg fa-search"></i> <span class="hidden-mobile hidden-tablet"> 查询项目 </span> </a>
+                                        <a data-toggle="tab" href="#hr1"> <i class="fa fa-lg fa-search"></i> <span class="hidden-mobile hidden-tablet"> 查询问题 </span> </a>
                                     </li>
                                     <!--<li>-->
                                         <!--<a data-toggle="tab" href="#hr2"> <i class="fa fa-lg fa-plus"></i> <span class="hidden-mobile hidden-tablet"> 创建项目 </span></a>-->
@@ -550,13 +555,28 @@
                                                         <!--</label>-->
                                                     <div class="col-sm-6 col-md-3 col-lg-3">
                                                         <div class="form-group">
-                                                            <label >项目名包含：</label>
-                                                            <input class="form-control" type="text" placeholder="Default input">
+                                                            <label>项目包含：</label>
+                                                            <select multiple style="width:100%" class="select2">
+                                                                <optgroup label="ZH/iASPEC">
+                                                                    <option value="PT" selected="selected">IDTS</option>
+                                                                    <option value="WD">TEST</option>
+                                                                    <option value="VS">KOODOO</option>
+                                                                </optgroup>
+                                                                <optgroup label="HK">
+                                                                    <option value="CA">FFAA</option>
+                                                                    <option value="NV">FFBB</option>
+                                                                    <option value="OR">FFCC</option>
+                                                                    <option value="WA">FFDD</option>
+                                                                </optgroup>
+                                                                <optgroup label="NanH">
+                                                                    <option value="AZ">JJAP</option>
+                                                                </optgroup>
+                                                            </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6 col-md-3 col-lg-3">
                                                         <div class="form-group">
-                                                            <label>负责人包含：</label>
+                                                            <label>接受人包含：</label>
                                                             <select multiple style="width:100%" class="select2">
                                                                 <optgroup label="ZH/iASPEC">
                                                                     <option value="PT" selected="selected">Peter Li</option>
@@ -578,13 +598,101 @@
                                                     <div class="col-sm-6 col-md-3 col-lg-3">
                                                         <div class="form-group">
                                                             <label>标签包含：</label>
-                                                            <input class="form-control tagsinput" value="内部项目,测试项目" data-role="tagsinput"/>
+                                                            <input class="form-control tagsinput" value="模板问题,测试问题" data-role="tagsinput"/>
                                                         </div>
                                                     </div>
+
+                                                    <div class="col-sm-6 col-md-3 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>状态：</label>
+                                                            <select multiple style="width:100%" class="select2">
+                                                                <optgroup label="ZH/iASPEC">
+                                                                    <option value="PT" >新建</option>
+                                                                    <option value="WD" >打开</option>
+                                                                    <option value="VS" >正在进行</option>
+                                                                    <option value="VS" >完成</option>
+                                                                    <option value="VS" >重新打开</option>
+                                                                    <option value="VS" >关闭</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
                                                     <!--</fieldset>-->
                                                     <!--</section>-->
                                                 </div>
+                                                <div class="row">
+                                                    <!--<fieldset>-->
+                                                    <!--<section class="col col-3">-->
+                                                    <!--<label class="label">项目名包含：</label>-->
+                                                    <!--<label class="input">-->
+                                                    <!--<input class="" type="text" placeholder="Default input">-->
+                                                    <!--</label>-->
+                                                    <!--</section>-->
+                                                    <!--<section class="col col-3">-->
+                                                    <!--<label class="label">负责人包含：</label>-->
+                                                    <!--<label class="input">-->
+                                                    <!--<input class="" type="text" placeholder="Default input">-->
+                                                    <!--</label>-->
+                                                    <div class="col-sm-6 col-md-3 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>优先级：</label>
+                                                            <select multiple style="width:100%" class="select2">
+                                                                <optgroup label="ZH/iASPEC">
+                                                                    <option value="PT">严重</option>
+                                                                    <option value="WD">重要</option>
+                                                                    <option value="VS">一般</option>
+                                                                    <option value="VS">不重要</option>
+                                                                    <option value="VS">微小</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-3 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>提交人：</label>
 
+                                                            <select multiple style="width:100%" class="select2">
+                                                                <optgroup label="ZH/iASPEC">
+                                                                    <option value="PT" >Peter Li</option>
+                                                                    <option value="WD" selected="selected">Wade</option>
+                                                                    <option value="VS" >Varson</option>
+                                                                </optgroup>
+                                                                <optgroup label="HK">
+                                                                    <option value="CA">Fu</option>
+                                                                    <option value="NV">Richard</option>
+                                                                    <option value="OR">Kevin</option>
+                                                                    <option value="WA">Ams</option>
+                                                                </optgroup>
+                                                                <optgroup label="NanH">
+                                                                    <option value="AZ">Jak</option>
+                                                                </optgroup>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-3 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>完成日期：</label>
+                                                            <div class="input-group">
+                                                                <input type="text" name="mydate" placeholder="Select a date" class="form-control datepicker" data-dateformat="dd/mm/yy">
+                                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-sm-6 col-md-3 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>更新日期：</label>
+                                                            <div class="input-group">
+                                                                <input type="text" name="mydate" placeholder="Select a date" class="form-control datepicker" data-dateformat="dd/mm/yy">
+                                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--</fieldset>-->
+                                                    <!--</section>-->
+                                                </div>
                                                 <!--</fieldset>-->
                                             </form>
                                             <div >
@@ -617,7 +725,7 @@
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                                     &times;
                                 </button>
-                                <h4 class="modal-title" id="myModalLabel">新建项目</h4>
+                                <h4 class="modal-title" id="myModalLabel">新建问题</h4>
                             </div>
 
                             <div class="modal-body">
@@ -625,31 +733,11 @@
                                 <!--<div class="row">-->
                                 <fieldset>
                                 <div class="row">
-                                    <div class="col-md-7">
+                                    <div class="col-md-12">
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label"> 项目名称</label>
-                                            <div class="col-md-10">
-                                                <input name="issueName" type="text" class="form-control" maxlength="80" />
-                                                <div class="note">
-                                                    <strong>说明：</strong>
-                                                    项目名称最大可以输入80个字符。
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-2 control-label" > 编号</label>
-                                            <div class="col-md-10">
-                                                <input name="code" type="text" class="form-control" maxlength="10"/>
-                                                <div class="note">
-                                                    <strong>说明：</strong>
-                                                    编号最大可以输入10个字符。
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-md-2 control-label">负责人</label>
-                                            <div class="col-md-10">
-                                                <select multiple style="width:100%" class="select2">
+                                            <label class="col-md-2 control-label"> 项目 <span class="txt-color-red">*</span></label>
+                                            <div class="col-md-5">
+                                                <select style="width:100%" class="select2">
                                                     <optgroup label="ZH/iASPEC">
                                                         <option value="PT">Peter Li</option>
                                                         <option value="WD">Wade</option>
@@ -665,26 +753,169 @@
                                                         <option value="AZ">Jak</option>
                                                     </optgroup>
                                                 </select>
-                                                <div class="note">
-                                                    <!--<strong>规则：</strong>-->
-                                                    输入负责人的名字。
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" > 问题类型 <span class="txt-color-red">*</span></label>
+                                            <div class="col-md-5">
+                                                <select style="width:100%" class="select2">
+                                                    <option value="PT">Bug</option>
+                                                    <option value="WD">任务</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" > 概述 <span class="txt-color-red">*</span></label>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control"/>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" > 优先级</label>
+                                            <div class="col-md-5">
+                                                <select style="width:100%" class="select2">
+                                                    <option value="PT" selected="selected">严重</option>
+                                                    <option value="WD">重要</option>
+                                                    <option value="VS">一般</option>
+                                                    <option value="VS">不重要</option>
+                                                    <option value="VS">微小</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" > 截止日期</label>
+                                            <div class="col-md-4">
+                                                <div class="input-group">
+                                                    <input type="text" name="mydate" placeholder="Select a date" class="form-control datepicker" data-dateformat="dd/mm/yy">
+                                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label" > 备注</label>
-                                            <div class="col-md-10">
-                                                <textarea class="form-control" rows="4"></textarea>
+                                            <label class="col-md-2 control-label" > 影响版本 </label>
+                                            <div class="col-md-8">
+                                                <select style="width:100%" class="select2">
+                                                    <option value="PT">0.1</option>
+                                                    <option value="WD">1</option>
+                                                    <option value="VS">1</option>
+                                                    <option value="VS">3</option>
+                                                    <option value="VS">4</option>
+                                                </select>
                                                 <div class="note">
-                                                    此项目的一些备注说明。
+                                                    输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <h3 style="margin-top:-3px;"><span style="color: #3B73AF;">创建新项目</span></h3>
-                                        指定一个可以描述项目概况的名称是很必要的，例如，可以使用您正开发的项目名称。<br><br>
-                                        您还需要选择项目负责人，这个人应该是管理该项目的负责人。
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" > 修复版本 </label>
+                                            <div class="col-md-8">
+                                                <select style="width:100%" class="select2">
+                                                    <option value="PT">0.1</option>
+                                                    <option value="WD">1</option>
+                                                    <option value="VS">1</option>
+                                                    <option value="VS">3</option>
+                                                    <option value="VS">4</option>
+                                                </select>
+                                                <div class="note">
+                                                    输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" > 分配给</label>
+                                            <div class="col-md-8">
+                                                <select style="width:100%" class="select2">
+                                                    <optgroup label="ZH/iASPEC">
+                                                        <option value="PT" >Peter Li</option>
+                                                        <option value="WD">Wade</option>
+                                                        <option value="VS" >Varson</option>
+                                                    </optgroup>
+                                                    <optgroup label="HK">
+                                                        <option value="CA">Fu</option>
+                                                        <option value="NV">Richard</option>
+                                                        <option value="OR">Kevin</option>
+                                                        <option value="WA">Ams</option>
+                                                    </optgroup>
+                                                    <optgroup label="NanH">
+                                                        <option value="AZ">Jak</option>
+                                                    </optgroup>
+                                                </select>
+                                                <a href="#">分配给我</a>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" > 提交者</label>
+                                            <div class="col-md-8">
+                                                <select style="width:100%" class="select2">
+                                                    <optgroup label="ZH/iASPEC">
+                                                        <option value="PT" selected="selected">Peter Li</option>
+                                                        <option value="WD" >Wade</option>
+                                                        <option value="VS" >Varson</option>
+                                                    </optgroup>
+                                                    <optgroup label="HK">
+                                                        <option value="CA">Fu</option>
+                                                        <option value="NV">Richard</option>
+                                                        <option value="OR">Kevin</option>
+                                                        <option value="WA">Ams</option>
+                                                    </optgroup>
+                                                    <optgroup label="NanH">
+                                                        <option value="AZ">Jak</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" > 环境</label>
+                                            <div class="col-md-8">
+                                               <textarea class="form-control" rows="4"></textarea>
+                                                <div class="note">
+                                                    例如 操作系统，软件平台，特殊硬件使用等。
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" > 描述 </label>
+                                            <div class="col-md-8">
+                                                <textarea class="form-control" rows="6"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" > 最初估算 </label>
+                                            <div class="col-md-4">
+                                                <input type="text" class="form-control"/> <span>(3w 4d 12h)</span>
+                                                <div class="note">
+                                                    对参与这个问题所花费的时间做一个初步估算。
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" > 仍需估算 </label>
+                                            <div class="col-md-4">
+                                                <input type="text" class="form-control"/> <span class="left">(3w 4d 12h)</span>
+                                                <div class="note">
+                                                    对这个问题还需要花费的时间做一个估算。
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" > 附件</label>
+                                            <div class="col-md-8">
+                                                <input type="file" class="btn btn-default" />
+                                                <div class="note">
+                                                    最大上传文件大小为 10.00 MB
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-2 control-label" > 标签</label>
+                                            <div class="col-md-8">
+                                                <input class="form-control tagsinput" data-role="tagsinput"/>
+                                                <div class="note">
+                                                    您可以输入字符创建一个标签，或者直接选择一个已存在的标签。
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                     </fieldset>
@@ -705,255 +936,93 @@
 
                 <!-- row -->
                 <div class="row">
-
                     <div class="col-sm-12">
-
                         <div class="well">
                             <div class="widget-body-toolbar">
 
                             </div>
-                            <table id="dt_issues" class="table table-striped table-bordered table-hover">
+                            <table id="dt_issues" class="table table-striped table-hover">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>项目</th>
-                                    <th>编号</th>
-                                    <th>负责人</th>
-                                    <th class="hidden-xs hidden-sm">备注</th>
-                                    <th class="hidden-xs hidden-sm">标签</th>
-                                    <th class="hidden-xs hidden-sm">状态</th>
-                                    <th>操作</th>
+                                    <th width="20">T</th>
+                                    <th width="80">编号</th>
+                                    <th class="hidden-xs hidden-sm">概况</th>
+                                    <th >分配给</th>
+                                    <th class="hidden-xs hidden-sm">提交者</th>
+                                    <th width="100">优先级</th>
+                                    <th width="100">状态</th>
+                                    <th class="hidden-xs hidden-sm">创建时间</th>
+                                    <th class="hidden-xs hidden-sm">修改时间</th>
+                                    <th class="hidden-xs hidden-sm">到期时间</th>
+                                    <th width="40">操作</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
+                                    <td><i class="fa fa-rocket txt-color-red"></i></td>
+                                    <td><a href="#">IDTS-1</a></td>
+                                    <td class="hidden-xs hidden-sm"><a href="#">UI 角色管理 字符校验.</a></td>
                                     <td>
-                                        <!--<img width="20" src="../img/avatars/male.png">-->
-                                        <i class="fa fa-leaf txt-color-green"></i>
                                         <a href="#">
-                                            IDTS
-                                        </a>
-                                        <a class="pull-right" href="#">
-                                            <i class="fa fa-external-link-square"></i>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        SP001
-                                    </td>
-                                    <td>
-                                        <a href="mailto:yang.li@iaspec.com">
                                             Peter Li
                                         </a>
-                                        <a class="pull-right" href="mailto:yang.li@iaspec.com">
-                                            <span class="email">yang.li@iaspec.com</span>
-                                            <i class="fa fa-envelope"></i>
-                                        </a>
-                                    </td>
-                                    <td class="hidden-xs hidden-sm">项目的一些说明文字。</td>
-                                    <td class="hidden-xs hidden-sm">
-                                        <span class="label label-info ">内部项目</span>
-                                        <span class="label label-info ">实验</span>
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <span class="label label-success">启用</span>
-                                        <!--<a href="#" class="btn btn-xs btn-success">启用</a>-->
-                                    </td>
-                                    <td>
-                                        <a href="#">修改</a>
-                                        <a href="#">删除</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <!--<img width="20" src="../img/avatars/male.png">-->
-                                        <i class="fa fa-leaf txt-color-green"></i>
                                         <a href="#">
-                                            IDTS
+                                           Wade
                                         </a>
-                                        <a class="pull-right" href="#">
-                                            <i class="fa fa-external-link-square"></i>
-                                        </a>
+                                    </td>
+                                    <td >
+                                        <i class="fa fa-arrow-up txt-color-red"></i>
                                     </td>
                                     <td>
-                                        SP001
+                                        <i class="fa fa-puzzle-piece txt-color-red"></i> 打开
                                     </td>
-                                    <td>
-                                        <a href="mailto:yang.li@iaspec.com">
-                                            Peter Li
-                                        </a>
-                                        <a class="pull-right" href="mailto:yang.li@iaspec.com">
-                                            <span class="email">yang.li@iaspec.com</span>
-                                            <i class="fa fa-envelope"></i>
-                                        </a>
-                                    </td>
-                                    <td class="hidden-xs hidden-sm">项目的一些说明文字。</td>
+                                    <td class="hidden-xs hidden-sm">07/Mar/14</td>
                                     <td class="hidden-xs hidden-sm">
-                                        <span class="label label-info ">内部项目</span>
-                                        <span class="label label-info ">实验</span>
+                                        07/Mar/14
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <span class="label label-success">启用</span>
-                                        <!--<a href="#" class="btn btn-xs btn-success">启用</a>-->
+                                        <span class="label label-danger">07/Mar/14</span>
                                     </td>
                                     <td>
-                                        <a href="#">修改</a>
-                                        <a href="#">删除</a>
+                                        <div>
+                                        <a class="btn btn-primary btn-xs dropdown-toggle " data-toggle="dropdown">
+                                            <i class="fa fa-gear"></i>
+                                            <i class="fa fa-caret-down"></i>
+                                        </a>
+                                        <ul class="dtable dropdown-menu pull-right">
+                                            <li>
+                                                <a href="javascript:void(0);">查看问题</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li>
+                                                <a href="javascript:void(0);">开始</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);">完成</a>
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li>
+                                                <a href="javascript:void(0);">修改问题</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);">分配</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);">添加评论</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);">添加附件</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0);">移动问题</a>
+                                            </li>
+                                        </ul>
+                                        </div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <!--<img width="20" src="../img/avatars/male.png">-->
-                                        <i class="fa fa-leaf txt-color-green"></i>
-                                        <a href="#">
-                                            IDTS
-                                        </a>
-                                        <a class="pull-right" href="#">
-                                            <i class="fa fa-external-link-square"></i>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        SP001
-                                    </td>
-                                    <td>
-                                        <a href="mailto:yang.li@iaspec.com">
-                                            Peter Li
-                                        </a>
-                                        <a class="pull-right" href="mailto:yang.li@iaspec.com">
-                                            <span class="email">yang.li@iaspec.com</span>
-                                            <i class="fa fa-envelope"></i>
-                                        </a>
-                                    </td>
-                                    <td class="hidden-xs hidden-sm">项目的一些说明文字。</td>
-                                    <td class="hidden-xs hidden-sm">
-                                        <span class="label label-info ">内部项目</span>
-                                        <span class="label label-info ">实验</span>
-                                    </td>
-                                    <td class="hidden-xs hidden-sm">
-                                        <span class="label label-success">启用</span>
-                                        <!--<a href="#" class="btn btn-xs btn-success">启用</a>-->
-                                    </td>
-                                    <td>
-                                        <a href="#">修改</a>
-                                        <a href="#">删除</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <!--<img width="20" src="../img/avatars/male.png">-->
-                                        <i class="fa fa-leaf txt-color-green"></i>
-                                        <a href="#">
-                                            IDTS
-                                        </a>
-                                        <a class="pull-right" href="#">
-                                            <i class="fa fa-external-link-square"></i>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        SP001
-                                    </td>
-                                    <td>
-                                        <a href="mailto:yang.li@iaspec.com">
-                                            Peter Li
-                                        </a>
-                                        <a class="pull-right" href="mailto:yang.li@iaspec.com">
-                                            <span class="email">yang.li@iaspec.com</span>
-                                            <i class="fa fa-envelope"></i>
-                                        </a>
-                                    </td>
-                                    <td class="hidden-xs hidden-sm">项目的一些说明文字。</td>
-                                    <td class="hidden-xs hidden-sm">
-                                        <span class="label label-info ">内部项目</span>
-                                        <span class="label label-info ">实验</span>
-                                    </td>
-                                    <td class="hidden-xs hidden-sm">
-                                        <span class="label label-success">启用</span>
-                                        <!--<a href="#" class="btn btn-xs btn-success">启用</a>-->
-                                    </td>
-                                    <td>
-                                        <a href="#">修改</a>
-                                        <a href="#">删除</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <!--<img width="20" src="../img/avatars/male.png">-->
-                                        <i class="fa fa-leaf txt-color-green"></i>
-                                        <a href="#">
-                                            IDTS
-                                        </a>
-                                        <a class="pull-right" href="#">
-                                            <i class="fa fa-external-link-square"></i>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        SP001
-                                    </td>
-                                    <td>
-                                        <a href="mailto:yang.li@iaspec.com">
-                                            Peter Li
-                                        </a>
-                                        <a class="pull-right" href="mailto:yang.li@iaspec.com">
-                                            <span class="email">yang.li@iaspec.com</span>
-                                            <i class="fa fa-envelope"></i>
-                                        </a>
-                                    </td>
-                                    <td class="hidden-xs hidden-sm">项目的一些说明文字。</td>
-                                    <td class="hidden-xs hidden-sm">
-                                        <span class="label label-info ">内部项目</span>
-                                        <span class="label label-info ">实验</span>
-                                    </td>
-                                    <td class="hidden-xs hidden-sm">
-                                        <span class="label label-success">启用</span>
-                                        <!--<a href="#" class="btn btn-xs btn-success">启用</a>-->
-                                    </td>
-                                    <td>
-                                        <a href="#">修改</a>
-                                        <a href="#">删除</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <!--<img width="20" src="../img/avatars/male.png">-->
-                                        <i class="fa fa-leaf txt-color-green"></i>
-                                        <a href="#">
-                                            IDTS
-                                        </a>
-                                        <a class="pull-right" href="#">
-                                            <i class="fa fa-external-link-square"></i>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        SP001
-                                    </td>
-                                    <td>
-                                        <a href="mailto:yang.li@iaspec.com">
-                                            Peter Li
-                                        </a>
-                                        <a class="pull-right" href="mailto:yang.li@iaspec.com">
-                                            <span class="email">yang.li@iaspec.com</span>
-                                            <i class="fa fa-envelope"></i>
-                                        </a>
-                                    </td>
-                                    <td class="hidden-xs hidden-sm">项目的一些说明文字。</td>
-                                    <td class="hidden-xs hidden-sm">
-                                        <span class="label label-info ">内部项目</span>
-                                        <span class="label label-info ">实验</span>
-                                    </td>
-                                    <td class="hidden-xs hidden-sm">
-                                        <span class="label label-success">启用</span>
-                                        <!--<a href="#" class="btn btn-xs btn-success">启用</a>-->
-                                    </td>
-                                    <td>
-                                        <a href="#">修改</a>
-                                        <a href="#">删除</a>
-                                    </td>
-                                </tr>
+
                             </tbody>
                             </table>
 
