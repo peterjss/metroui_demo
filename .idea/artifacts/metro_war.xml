@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="metro:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="metro-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="metro:war exploded" />
-    </root>
-  </artifact>
-</component>
