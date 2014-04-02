@@ -82,7 +82,7 @@
 
 				<!-- breadcrumb -->
 				<ol class="breadcrumb">
-                    <li>问题</li>
+                    <li>缺陷</li>
                     <li>基本信息</li>
 				</ol>
 				<!-- end breadcrumb -->
@@ -111,7 +111,7 @@
                     <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">
                         <h1 class="page-title txt-color-blueDark">
                             <!-- PAGE HEADER -->
-                            <i class="fa-fw fa fa-file-o"></i> 问题 <span>>
+                            <i class="fa-fw fa fa-file-o"></i> 缺陷 <span>>
 							基本信息 </span></h1>
                     </div>
                     <!-- end col -->
@@ -139,17 +139,17 @@
                             -->
                             <header>
                                 <h2>
-                                    <strong>问题</strong>
-                                    <span class="hidden-mobile hidden-tablet"><i> - 搜索条件：IDTS + [Peter Li, Varson] + [模板问题, 测试问题]</i></span>
+                                    <strong>缺陷</strong>
+                                    <span class="hidden-mobile hidden-tablet"><i> - 搜索条件：IDTS + [Peter Li, Varson] + [模板缺陷, 测试缺陷]</i></span>
                                 </h2>
                                 <div class="widget-toolbar">
                                     <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#addIssueModal"><i class="fa fa-lg fa-plus"></i>
-                                        <span class="hidden-mobile hidden-tablet">创建问题</span></a>
+                                        <span class="hidden-mobile hidden-tablet">创建缺陷</span></a>
                                 </div>
                                 <ul id="widget-tab-1" class="nav  nav-tabs pull-right">
                                     <!--nav-pills-->
                                     <li class="active">
-                                        <a data-toggle="tab" href="#hr1"> <i class="fa fa-lg fa-search"></i> <span class="hidden-mobile hidden-tablet"> 查询问题 </span> </a>
+                                        <a data-toggle="tab" href="#hr1"> <i class="fa fa-lg fa-search"></i> <span class="hidden-mobile hidden-tablet"> 查询缺陷 </span> </a>
                                     </li>
                                     <!--<li>-->
                                         <!--<a data-toggle="tab" href="#hr2"> <i class="fa fa-lg fa-plus"></i> <span class="hidden-mobile hidden-tablet"> 创建项目 </span></a>-->
@@ -232,7 +232,7 @@
                                                     <div class="col-sm-6 col-md-3 col-lg-3">
                                                         <div class="form-group">
                                                             <label>标签包含：</label>
-                                                            <input class="form-control tagsinput" value="模板问题,测试问题" data-role="tagsinput"/>
+                                                            <input class="form-control tagsinput" value="模板缺陷,测试缺陷" data-role="tagsinput"/>
                                                         </div>
                                                     </div>
 
@@ -359,7 +359,7 @@
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                                     &times;
                                 </button>
-                                <h4 class="modal-title" id="myModalLabel">新建问题</h4>
+                                <h4 class="modal-title" id="myModalLabel">新建缺陷</h4>
                             </div>
 
                             <div class="modal-body">
@@ -390,7 +390,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="col-md-2 control-label" > 问题类型 <span class="txt-color-red">*</span></label>
+                                            <label class="col-md-2 control-label" > 缺陷类型 <span class="txt-color-red">*</span></label>
                                             <div class="col-md-5">
                                                 <select style="width:100%" class="select2">
                                                     <option value="PT">Bug</option>
@@ -519,7 +519,7 @@
                                             <div class="col-md-4">
                                                 <input type="text" class="form-control"/> <span>(3w 4d 12h)</span>
                                                 <div class="note">
-                                                    对参与这个问题所花费的时间做一个初步估算。
+                                                    对参与这个缺陷所花费的时间做一个初步估算。
                                                 </div>
                                             </div>
                                         </div>
@@ -528,7 +528,7 @@
                                             <div class="col-md-4">
                                                 <input type="text" class="form-control"/> <span class="left">(3w 4d 12h)</span>
                                                 <div class="note">
-                                                    对这个问题还需要花费的时间做一个估算。
+                                                    对这个缺陷还需要花费的时间做一个估算。
                                                 </div>
                                             </div>
                                         </div>
@@ -598,12 +598,12 @@
                                     <td><a href="issues_specific.html">IDTS-1</a></td>
                                     <td class="hidden-xs hidden-sm"><a href="issues_specific.html">UI 角色管理 字符校验.</a></td>
                                     <td>
-                                        <a href="#">
+                                        <a href="profile.html">
                                             Peter Li
                                         </a>
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <a href="#">
+                                        <a href="profile.html">
                                            Wade
                                         </a>
                                     </td>
@@ -613,12 +613,12 @@
                                     <td>
                                         <i class="fa fa-puzzle-piece txt-color-red"></i> 打开
                                     </td>
-                                    <td class="hidden-xs hidden-sm">07/Mar/14</td>
+                                    <td class="hidden-xs hidden-sm">14年03月07日</td>
                                     <td class="hidden-xs hidden-sm">
-                                        07/Mar/14
+                                        14年03月07日
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <span class="label label-danger">07/Mar/14</span>
+                                        <span class="label label-danger">14年03月07日</span>
                                     </td>
                                     <td>
                                         <div>
@@ -628,7 +628,7 @@
                                         </a>
                                         <ul class="dtable dropdown-menu pull-right">
                                             <li>
-                                                <a href="javascript:void(0);">查看问题</a>
+                                                <a href="issues_specific.html">查看缺陷</a>
                                             </li>
                                             <li class="divider"></li>
                                             <li>
@@ -639,7 +639,7 @@
                                             </li>
                                             <li class="divider"></li>
                                             <li>
-                                                <a href="javascript:void(0);">修改问题</a>
+                                                <a href="javascript:void(0);">修改缺陷</a>
                                             </li>
                                             <li>
                                                 <a href="javascript:void(0);">分配</a>
@@ -651,7 +651,7 @@
                                                 <a href="javascript:void(0);">添加附件</a>
                                             </li>
                                             <li>
-                                                <a href="javascript:void(0);">移动问题</a>
+                                                <a href="javascript:void(0);">移动缺陷</a>
                                             </li>
                                         </ul>
                                         </div>
@@ -662,12 +662,12 @@
                                     <td><a href="issues_specific.html">IDTS-1</a></td>
                                     <td class="hidden-xs hidden-sm"><a href="issues_specific.html">UI 角色管理 字符校验.</a></td>
                                     <td>
-                                        <a href="#">
+                                        <a href="profile.html">
                                             Peter Li
                                         </a>
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <a href="#">
+                                        <a href="profile.html">
                                             Wade
                                         </a>
                                     </td>
@@ -677,12 +677,12 @@
                                     <td>
                                         <i class="fa fa-puzzle-piece txt-color-red"></i> 打开
                                     </td>
-                                    <td class="hidden-xs hidden-sm">07/Mar/14</td>
+                                    <td class="hidden-xs hidden-sm">14年03月07日</td>
                                     <td class="hidden-xs hidden-sm">
-                                        07/Mar/14
+                                        14年03月07日
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <span class="label label-danger">07/Mar/14</span>
+                                        <span class="label label-danger">14年03月07日</span>
                                     </td>
                                     <td>
                                         <div>
@@ -692,7 +692,7 @@
                                             </a>
                                             <ul class="dtable dropdown-menu pull-right">
                                                 <li>
-                                                    <a href="javascript:void(0);">查看问题</a>
+                                                    <a href="issues_specific.html">查看缺陷</a>
                                                 </li>
                                                 <li class="divider"></li>
                                                 <li>
@@ -703,7 +703,7 @@
                                                 </li>
                                                 <li class="divider"></li>
                                                 <li>
-                                                    <a href="javascript:void(0);">修改问题</a>
+                                                    <a href="javascript:void(0);">修改缺陷</a>
                                                 </li>
                                                 <li>
                                                     <a href="javascript:void(0);">分配</a>
@@ -715,7 +715,7 @@
                                                     <a href="javascript:void(0);">添加附件</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);">移动问题</a>
+                                                    <a href="javascript:void(0);">移动缺陷</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -726,12 +726,12 @@
                                     <td><a href="issues_specific.html">IDTS-1</a></td>
                                     <td class="hidden-xs hidden-sm"><a href="issues_specific.html">UI 角色管理 字符校验.</a></td>
                                     <td>
-                                        <a href="#">
+                                        <a href="profile.html">
                                             Peter Li
                                         </a>
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <a href="#">
+                                        <a href="profile.html">
                                             Wade
                                         </a>
                                     </td>
@@ -741,12 +741,12 @@
                                     <td>
                                         <i class="fa fa-puzzle-piece txt-color-red"></i> 打开
                                     </td>
-                                    <td class="hidden-xs hidden-sm">07/Mar/14</td>
+                                    <td class="hidden-xs hidden-sm">14年03月07日</td>
                                     <td class="hidden-xs hidden-sm">
-                                        07/Mar/14
+                                        14年03月07日
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <span class="label label-danger">07/Mar/14</span>
+                                        <span class="label label-danger">14年03月07日</span>
                                     </td>
                                     <td>
                                         <div>
@@ -756,7 +756,7 @@
                                             </a>
                                             <ul class="dtable dropdown-menu pull-right">
                                                 <li>
-                                                    <a href="javascript:void(0);">查看问题</a>
+                                                    <a href="issues_specific.html">查看缺陷</a>
                                                 </li>
                                                 <li class="divider"></li>
                                                 <li>
@@ -767,7 +767,7 @@
                                                 </li>
                                                 <li class="divider"></li>
                                                 <li>
-                                                    <a href="javascript:void(0);">修改问题</a>
+                                                    <a href="javascript:void(0);">修改缺陷</a>
                                                 </li>
                                                 <li>
                                                     <a href="javascript:void(0);">分配</a>
@@ -779,7 +779,7 @@
                                                     <a href="javascript:void(0);">添加附件</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);">移动问题</a>
+                                                    <a href="javascript:void(0);">移动缺陷</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -790,12 +790,12 @@
                                     <td><a href="issues_specific.html">IDTS-1</a></td>
                                     <td class="hidden-xs hidden-sm"><a href="issues_specific.html">UI 角色管理 字符校验.</a></td>
                                     <td>
-                                        <a href="#">
+                                        <a href="profile.html">
                                             Peter Li
                                         </a>
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <a href="#">
+                                        <a href="profile.html">
                                             Wade
                                         </a>
                                     </td>
@@ -805,12 +805,12 @@
                                     <td>
                                         <i class="fa fa-puzzle-piece txt-color-red"></i> 打开
                                     </td>
-                                    <td class="hidden-xs hidden-sm">07/Mar/14</td>
+                                    <td class="hidden-xs hidden-sm">14年03月07日</td>
                                     <td class="hidden-xs hidden-sm">
-                                        07/Mar/14
+                                        14年03月07日
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <span class="label label-danger">07/Mar/14</span>
+                                        <span class="label label-danger">14年03月07日</span>
                                     </td>
                                     <td>
                                         <div>
@@ -820,7 +820,7 @@
                                             </a>
                                             <ul class="dtable dropdown-menu pull-right">
                                                 <li>
-                                                    <a href="javascript:void(0);">查看问题</a>
+                                                    <a href="issues_specific.html">查看缺陷</a>
                                                 </li>
                                                 <li class="divider"></li>
                                                 <li>
@@ -831,7 +831,7 @@
                                                 </li>
                                                 <li class="divider"></li>
                                                 <li>
-                                                    <a href="javascript:void(0);">修改问题</a>
+                                                    <a href="javascript:void(0);">修改缺陷</a>
                                                 </li>
                                                 <li>
                                                     <a href="javascript:void(0);">分配</a>
@@ -843,7 +843,7 @@
                                                     <a href="javascript:void(0);">添加附件</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);">移动问题</a>
+                                                    <a href="javascript:void(0);">移动缺陷</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -854,12 +854,12 @@
                                     <td><a href="issues_specific.html">IDTS-1</a></td>
                                     <td class="hidden-xs hidden-sm"><a href="issues_specific.html">UI 角色管理 字符校验.</a></td>
                                     <td>
-                                        <a href="#">
+                                        <a href="profile.html">
                                             Peter Li
                                         </a>
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <a href="#">
+                                        <a href="profile.html">
                                             Wade
                                         </a>
                                     </td>
@@ -869,12 +869,12 @@
                                     <td>
                                         <i class="fa fa-puzzle-piece txt-color-red"></i> 打开
                                     </td>
-                                    <td class="hidden-xs hidden-sm">07/Mar/14</td>
+                                    <td class="hidden-xs hidden-sm">14年03月07日</td>
                                     <td class="hidden-xs hidden-sm">
-                                        07/Mar/14
+                                        14年03月07日
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <span class="label label-danger">07/Mar/14</span>
+                                        <span class="label label-danger">14年03月07日</span>
                                     </td>
                                     <td>
                                         <div>
@@ -884,7 +884,7 @@
                                             </a>
                                             <ul class="dtable dropdown-menu pull-right">
                                                 <li>
-                                                    <a href="javascript:void(0);">查看问题</a>
+                                                    <a href="issues_specific.html">查看缺陷</a>
                                                 </li>
                                                 <li class="divider"></li>
                                                 <li>
@@ -895,7 +895,7 @@
                                                 </li>
                                                 <li class="divider"></li>
                                                 <li>
-                                                    <a href="javascript:void(0);">修改问题</a>
+                                                    <a href="javascript:void(0);">修改缺陷</a>
                                                 </li>
                                                 <li>
                                                     <a href="javascript:void(0);">分配</a>
@@ -907,7 +907,7 @@
                                                     <a href="javascript:void(0);">添加附件</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);">移动问题</a>
+                                                    <a href="javascript:void(0);">移动缺陷</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -918,12 +918,12 @@
                                     <td><a href="issues_specific.html">IDTS-1</a></td>
                                     <td class="hidden-xs hidden-sm"><a href="issues_specific.html">UI 角色管理 字符校验.</a></td>
                                     <td>
-                                        <a href="#">
+                                        <a href="profile.html">
                                             Peter Li
                                         </a>
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <a href="#">
+                                        <a href="profile.html">
                                             Wade
                                         </a>
                                     </td>
@@ -933,12 +933,12 @@
                                     <td>
                                         <i class="fa fa-puzzle-piece txt-color-red"></i> 打开
                                     </td>
-                                    <td class="hidden-xs hidden-sm">07/Mar/14</td>
+                                    <td class="hidden-xs hidden-sm">14年03月07日</td>
                                     <td class="hidden-xs hidden-sm">
-                                        07/Mar/14
+                                        14年03月07日
                                     </td>
                                     <td class="hidden-xs hidden-sm">
-                                        <span class="label label-danger">07/Mar/14</span>
+                                        <span class="label label-danger">14年03月07日</span>
                                     </td>
                                     <td>
                                         <div>
@@ -948,7 +948,7 @@
                                             </a>
                                             <ul class="dtable dropdown-menu pull-right">
                                                 <li>
-                                                    <a href="javascript:void(0);">查看问题</a>
+                                                    <a href="issues_specific.html">查看缺陷</a>
                                                 </li>
                                                 <li class="divider"></li>
                                                 <li>
@@ -959,7 +959,7 @@
                                                 </li>
                                                 <li class="divider"></li>
                                                 <li>
-                                                    <a href="javascript:void(0);">修改问题</a>
+                                                    <a href="javascript:void(0);">修改缺陷</a>
                                                 </li>
                                                 <li>
                                                     <a href="javascript:void(0);">分配</a>
@@ -971,7 +971,7 @@
                                                     <a href="javascript:void(0);">添加附件</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);">移动问题</a>
+                                                    <a href="javascript:void(0);">移动缺陷</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1010,7 +1010,7 @@
                 <!--</li>-->
                 <!--<li>-->
                     <!--<a href="#invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox">-->
-                <!--<i class="fa fa-book fa-4x"></i> <span>问题 <span class="label pull-right bg-color-darken">99</span></span> </span>-->
+                <!--<i class="fa fa-book fa-4x"></i> <span>缺陷 <span class="label pull-right bg-color-darken">99</span></span> </span>-->
                     <!--</a>-->
                 <!--</li>-->
                 <!--<li>-->

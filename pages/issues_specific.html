@@ -346,9 +346,9 @@
 
 				<!-- breadcrumb -->
 				<ol class="breadcrumb">
-                    <li>问题</li>
-                    <li>搜索问题</li>
-                    <li>问题明细</li>
+                    <li>缺陷</li>
+                    <li>搜索缺陷</li>
+                    <li>缺陷明细</li>
 				</ol>
 				<!-- end breadcrumb -->
 
@@ -574,7 +574,7 @@
                                                                 <li >
                                                                     <p class="text-muted">
                                                                         <a href="#" id="description" data-type="select2" data-pk="1" data-select-search="true" data-value="TK" data-original-title="选择类型">
-                                                                            无法保证该问题在生产环境中保持稳定，只有重新界定需求的边界，才可以更准确的把握问题的关键。我认为我们可以举行会议进行讨论。
+                                                                            无法保证该缺陷在生产环境中保持稳定，只有重新界定需求的边界，才可以更准确的把握缺陷的关键。我认为我们可以举行会议进行讨论。
                                                                         </a>
                                                                     </p>
                                                                 </li>
@@ -655,9 +655,9 @@
                                                                     </div>
 
                                                                     <div class="col-xs-10 col-sm-11">
-                                                                        <h6 class="no-margin"><a href="javascript:void(0);">创建问题</a></h6>
+                                                                        <h6 class="no-margin"><a href="javascript:void(0);">创建缺陷</a></h6>
                                                                         <p>
-                                                                           Peter Li 在 2014-01-10 创建了问题。
+                                                                           Peter Li 在 2014-01-10 创建了缺陷。
                                                                         </p>
                                                                     </div>
                                                                     <div class="col-sm-12">
@@ -671,7 +671,7 @@
                                                                     </div>
 
                                                                     <div class="col-xs-10 col-sm-11">
-                                                                        <h6 class="no-margin"><a href="javascript:void(0);">修改问题状态</a></h6>
+                                                                        <h6 class="no-margin"><a href="javascript:void(0);">修改缺陷状态</a></h6>
                                                                         <p>
                                                                             Peter Li 在 2014-01-10 将状态 <span class="txt-color-green">新缺陷</span> 修改为 <span class="txt-color-green">开启</span>。
                                                                         </p>
@@ -692,7 +692,7 @@
                                                                         <p>
                                                                             Peter Li 在 2014-01-10 添加新留言。<br>
                                                                             <blockquote>
-                                                                                <p>问题的根源在于单元测试进行的不彻底，需要改进单元测试方法。</p>
+                                                                                <p>缺陷的根源在于单元测试进行的不彻底，需要改进单元测试方法。</p>
                                                                                 <small>2014-01-10 <cite title="14:05">14:05</cite></small>
                                                                             </blockquote>
                                                                         </p>
@@ -794,7 +794,7 @@
                                                                                 <a href="javascript:void(0);" class="username">Peter Li
                                                                                     <small class="text-muted pull-right ultra-light"> 2 分钟前 </small>
                                                                                 </a>
-                                                                                无法保证该问题在生产环境中保持稳定，只有重新界定需求的边界，才可以更准确的把握问题的关键。我认为我们可以举行会议进行讨论。 </span>
+                                                                                无法保证该缺陷在生产环境中保持稳定，只有重新界定需求的边界，才可以更准确的把握缺陷的关键。我认为我们可以举行会议进行讨论。 </span>
                                                                             <ul class="list-inline font-xs" style="margin-top: 5px;">
                                                                                 <li>
                                                                                     <a href="javascript:void(0);" class="text-info"><i class="fa fa-reply"></i> 回复</a>
@@ -1059,7 +1059,7 @@
                 <!--</li>-->
                 <!--<li>-->
                     <!--<a href="#invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox">-->
-                <!--<i class="fa fa-book fa-4x"></i> <span>问题 <span class="label pull-right bg-color-darken">99</span></span> </span>-->
+                <!--<i class="fa fa-book fa-4x"></i> <span>缺陷 <span class="label pull-right bg-color-darken">99</span></span> </span>-->
                     <!--</a>-->
                 <!--</li>-->
                 <!--<li>-->
@@ -1232,10 +1232,10 @@
                     //console.log(pageviews)
                     var plot = $.plot($("#issue-stats"), [{
                         data : d1,
-                        label : "已创建问题"
+                        label : "已创建缺陷"
                     }, {
                         data : d2,
-                        label : "被修复问题"
+                        label : "被修复缺陷"
                     }], {
                         series : {
                             lines : {

@@ -68,9 +68,12 @@
 
 $(document).ready(function() {
 
-    loadURL("top_nav.html", $("#navbar"));
-    loadURL("left_menu.html", $("#left-panel"));
-
+    if($("#navbar").length>0) {
+        loadURL("top_nav.html", $("#navbar"));
+    }
+    if($("#left-panel").length>0) {
+        loadURL("left_menu.html", $("#left-panel"));
+    }
 	/*
 	 * Fire tooltips
 	 */

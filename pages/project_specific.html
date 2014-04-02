@@ -121,20 +121,6 @@
 			<!-- MAIN CONTENT -->
 			<div id="content">
 
-                <!-- Bread crumb is created dynamically -->
-                <!-- row -->
-                <!--<div class="row">-->
-                    <!--&lt;!&ndash; col &ndash;&gt;-->
-                    <!--<div class="col-xs-12 col-sm-3 col-md-4 col-lg-4">-->
-                        <!--<h1 class="page-title txt-color-blueDark">-->
-                            <!--&lt;!&ndash; PAGE HEADER &ndash;&gt;-->
-                            <!--<i class="fa-fw fa fa-file-o"></i> 项目 <span> > 项目明细-->
-                        <!--</span></h1>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash; end col &ndash;&gt;-->
-                <!--</div>-->
-                <!-- end row -->
-
                 <!-- row -->
                 <div class="row">
                     <article class="col-sm-12 col-md-12 col-lg-12 sortable-grid ui-sortable">
@@ -172,7 +158,8 @@
                                 <div class="widget-body">
                                     <p>
                                         项目编号：<code>IDTS-SP001</code>
-                                        负责人：<a class="username" href="#" style="font-size: 14px;color: #3276B1;"><img src="../img/avatars/male.png" style="margin-top:-2px;" width="18"/> Peter Li</a>
+                                        负责人：<img src="../img/avatars/male.png" style="margin-top:-2px;" width="18"/> <a class="username" href="profile.html" style="font-size: 14px;color: #3276B1;">Peter Li</a>
+                                        &nbsp;&nbsp;<span class="label label-success">启动</span>
                                     </p>
                                     <hr class="simple">
                                     <ul id="myTab1" class="nav nav-tabs bordered">
@@ -180,7 +167,7 @@
                                             <a href="#s1" data-toggle="tab"><i class="fa fa-fw fa-lg fa-eye "></i>概况</a>
                                         </li>
                                         <li>
-                                            <a href="#s2" data-toggle="tab"><i class="fa fa-fw fa-lg  fa-list-ul "></i>问题</a>
+                                            <a href="#s2" data-toggle="tab"><i class="fa fa-fw fa-lg  fa-list-ul "></i>缺陷</a>
                                         </li>
                                         <li>
                                             <a href="#s3" data-toggle="tab"><i class="fa fa-fw fa-lg fa-bar-chart-o "></i>报表</a>
@@ -221,13 +208,13 @@
                                                                 </div>
                                                                 <div class="smart-timeline-content">
                                                                     <p>
-                                                                        <a href="javascript:void(0);"><strong>创建了问题!</strong></a>
+                                                                        <a href="javascript:void(0);"><strong>创建了缺陷!</strong></a>
                                                                     </p>
                                                                     <p>
                                                                         Peter Li 在IDTS项目中创建了 Issue-001!
                                                                     </p>
                                                                     <p>
-                                                                        <a href="issues_specific.html" class="btn btn-xs btn-primary"><i class="fa fa-file"></i> 查看此问题</a>
+                                                                        <a href="issues_specific.html" class="btn btn-xs btn-primary"><i class="fa fa-file"></i> 查看此缺陷</a>
                                                                     </p>
                                                                     <div class="row">
                                                                         <div class="col-sm-12">
@@ -245,11 +232,11 @@
                                                                 </div>
                                                                 <div class="smart-timeline-content">
                                                                     <p>
-                                                                        <strong>Peter Li 为项目 "IDTS" 修复问题 [<a href="javascript:void(0);"><i> 去看看 </i></a>]</strong>
+                                                                        <strong>Peter Li 为项目 "IDTS" 修复缺陷 [<a href="javascript:void(0);"><i> 去看看 </i></a>]</strong>
                                                                     </p>
 
                                                                     <div class="well well-sm display-inline">
-                                                                        <p>完全修复问题，问题得到完美解决。并附加了详细说明</p>
+                                                                        <p>完全修复缺陷，缺陷得到完美解决。并附加了详细说明</p>
                                                                         <button class="btn btn-xs btn-default">查看附件</button>
                                                                     </div>
                                                                 </div>
@@ -318,19 +305,19 @@
 
                                         <!-- tab2 issues -->
                                         <div class="tab-pane fade" id="s2">
-                                            <h3>问题</h3>
+                                            <h3>缺陷</h3>
                                             <div class="row">
                                                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                                    <a href="issues.html">所有问题</a>
+                                                    <a href="issues.html">所有缺陷</a>
                                                 </div>
                                                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                                    <a href="issues.html">刚添加的问题</a>
+                                                    <a href="issues.html">刚添加的缺陷</a>
                                                 </div>
                                                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                                    <a href="issues.html">分配给我的问题</a>
+                                                    <a href="issues.html">分配给我的缺陷</a>
                                                 </div>
                                                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                                                    <a href="issues.html">未完结的问题</a>
+                                                    <a href="issues.html">未完结的缺陷</a>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                     <hr />
@@ -345,7 +332,7 @@
                                                             <thead>
                                                             <tr>
                                                                 <th class="col-xs-5 col-sm-5 col-md-5 col-lg-5">接受人</th>
-                                                                <th  class="col-xs-2 col-sm-2 col-md-2 col-lg-2">问题</th>
+                                                                <th  class="col-xs-2 col-sm-2 col-md-2 col-lg-2">缺陷</th>
                                                                 <th class="col-xs-5 col-sm-5 col-md-5 col-lg-5">所占比例</th>
                                                             </tr>
                                                             </thead>
@@ -369,7 +356,7 @@
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td colspan="3"><a href="issues.html">查看问题</a> </td>
+                                                                <td colspan="3"><a href="issues.html">查看缺陷</a> </td>
                                                             </tr>
                                                             </tbody>
                                                         </table>
@@ -380,7 +367,7 @@
                                                             <thead>
                                                             <tr>
                                                                 <th class="col-xs-5 col-sm-5 col-md-5 col-lg-5">接受人</th>
-                                                                <th  class="col-xs-2 col-sm-2 col-md-2 col-lg-2">问题</th>
+                                                                <th  class="col-xs-2 col-sm-2 col-md-2 col-lg-2">缺陷</th>
                                                                 <th class="col-xs-5 col-sm-5 col-md-5 col-lg-5">所占比例</th>
                                                             </tr>
                                                             </thead>
@@ -404,7 +391,7 @@
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td colspan="3"><a href="issues.html">查看问题</a> </td>
+                                                                <td colspan="3"><a href="issues.html">查看缺陷</a> </td>
                                                             </tr>
                                                             </tbody>
                                                         </table>
@@ -419,7 +406,7 @@
                                                         <thead>
                                                         <tr>
                                                             <th class="col-xs-5 col-sm-5 col-md-5 col-lg-5">接受人</th>
-                                                            <th  class="col-xs-2 col-sm-2 col-md-2 col-lg-2">问题</th>
+                                                            <th  class="col-xs-2 col-sm-2 col-md-2 col-lg-2">缺陷</th>
                                                             <th class="col-xs-5 col-sm-5 col-md-5 col-lg-5">所占比例</th>
                                                         </tr>
                                                         </thead>
@@ -443,7 +430,7 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td colspan="3"><a href="issues.html">查看问题</a> </td>
+                                                            <td colspan="3"><a href="issues.html">查看缺陷</a> </td>
                                                         </tr>
                                                         </tbody>
                                                     </table>
@@ -454,7 +441,7 @@
                                                         <thead>
                                                         <tr>
                                                             <th class="col-xs-5 col-sm-5 col-md-5 col-lg-5">类型</th>
-                                                            <th  class="col-xs-2 col-sm-2 col-md-2 col-lg-2">问题</th>
+                                                            <th  class="col-xs-2 col-sm-2 col-md-2 col-lg-2">缺陷</th>
                                                             <th class="col-xs-5 col-sm-5 col-md-5 col-lg-5">所占比例</th>
                                                         </tr>
                                                         </thead>
@@ -478,7 +465,7 @@
                                                             </td>
                                                         </tr>
                                                         <tr>
-                                                            <td colspan="3"><a href="issues.html">查看问题</a> </td>
+                                                            <td colspan="3"><a href="issues.html">查看缺陷</a> </td>
                                                         </tr>
                                                         </tbody>
                                                     </table>
@@ -633,7 +620,7 @@
                 <!--</li>-->
                 <!--<li>-->
                     <!--<a href="#invoice.html" class="jarvismetro-tile big-cubes bg-color-blueDark"> <span class="iconbox">-->
-                <!--<i class="fa fa-book fa-4x"></i> <span>问题 <span class="label pull-right bg-color-darken">99</span></span> </span>-->
+                <!--<i class="fa fa-book fa-4x"></i> <span>缺陷 <span class="label pull-right bg-color-darken">99</span></span> </span>-->
                     <!--</a>-->
                 <!--</li>-->
                 <!--<li>-->
@@ -796,10 +783,10 @@
                     //console.log(pageviews)
                     var plot = $.plot($("#issue-stats"), [{
                         data : d1,
-                        label : "已创建问题"
+                        label : "已创建缺陷"
                     }, {
                         data : d2,
-                        label : "被修复问题"
+                        label : "被修复缺陷"
                     }], {
                         series : {
                             lines : {
