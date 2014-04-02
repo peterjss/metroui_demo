@@ -67,6 +67,10 @@
  */
 
 $(document).ready(function() {
+
+    loadURL("top_nav.html", $("#navbar"));
+    loadURL("left_menu.html", $("#left-panel"));
+
 	/*
 	 * Fire tooltips
 	 */
@@ -1271,13 +1275,13 @@ function loadURL(url, container) {
 		success : function(data) {
 			// cog replaced here...
 			// alert("success")
-			
-			container.css({
-				opacity : '0.0'
-			}).html(data).delay(50).animate({
-				opacity : '1.0'
-			}, 300);
-			
+
+//			container.css({
+//				opacity : '0.0'
+//			}).html(data).delay(50).animate({
+//				opacity : '1.0'
+//			}, 200);
+            container.html(data);
 
 		},
 		error : function(xhr, ajaxOptions, thrownError) {

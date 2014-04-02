@@ -90,6 +90,15 @@
         box-shadow: 0 0 0 9px #F0FFF0;
     }
 
+    .inbox-footer {
+        background: none repeat scroll 0 0 #F5F5F5;
+        border-top: 1px solid #E5E5E5;
+        bottom: -53px;
+        height: 52px;
+        padding: 15px 14px 0;
+        position: absolute;
+        width: 100%;
+    }
 
     /*div.smart-form, div.smart-form div:after, div.smart-form div:before {*/
         /*-moz-box-sizing: content-box;*/
@@ -127,6 +136,7 @@
 		line-height: 21px;
 		color: #757575;
 	}
+
 
 
 	/*
