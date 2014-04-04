@@ -1,11 +1,11 @@
 
 body {
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
 }
 
 body *{
     /*overflow-y: scroll;*/
-    font-family: "Microsoft Yahei", "Open Sans", Arial, Helvetica, Sans-Serif;
+    font-family: "Microsoft Yahei", "Open Sans", FontAwesome, Arial, Helvetica, Sans-Serif;
 }
 
 .btn {

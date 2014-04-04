@@ -270,244 +270,245 @@
 <!-- Create Issue Modal Dialog -->
 <div class="modal fade" id="addIssueModal" metod="post" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">
-<div class="modal-dialog modal-lg">
-<div class="modal-content">
-<div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-        &times;
-    </button>
-    <h4 class="modal-title" id="myModalLabel">新建缺陷</h4>
-</div>
-
-<div class="modal-body">
-    <form id="user-form" class="form-horizontal vlidate-form client-form">
-        <!--<div class="row">-->
-        <fieldset>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 项目 <span class="txt-color-red">*</span></label>
-
-                        <div class="col-md-5">
-                            <select style="width:100%" class="select2">
-                                <optgroup label="ZH/iASPEC">
-                                    <option value="PT">Peter Li</option>
-                                    <option value="WD">Wade</option>
-                                    <option value="VS">Varson</option>
-                                </optgroup>
-                                <optgroup label="HK">
-                                    <option value="CA">Fu</option>
-                                    <option value="NV">Richard</option>
-                                    <option value="OR">Kevin</option>
-                                    <option value="WA">Ams</option>
-                                </optgroup>
-                                <optgroup label="NanH">
-                                    <option value="AZ">Jak</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 缺陷类型 <span class="txt-color-red">*</span></label>
-
-                        <div class="col-md-5">
-                            <select style="width:100%" class="select2">
-                                <option value="PT">Bug</option>
-                                <option value="WD">任务</option>
-                            </select>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 概述 <span class="txt-color-red">*</span></label>
-
-                        <div class="col-md-8">
-                            <input type="text" class="form-control"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 优先级</label>
-
-                        <div class="col-md-5">
-                            <select style="width:100%" class="select2">
-                                <option value="PT" selected="selected">严重</option>
-                                <option value="WD">重要</option>
-                                <option value="VS">一般</option>
-                                <option value="VS">不重要</option>
-                                <option value="VS">微小</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 截止日期</label>
-
-                        <div class="col-md-4">
-                            <div class="input-group">
-                                <input type="text" name="mydate" placeholder="Select a date"
-                                       class="form-control datepicker" data-dateformat="dd/mm/yy">
-                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 影响版本 </label>
-
-                        <div class="col-md-8">
-                            <select style="width:100%" class="select2">
-                                <option value="PT">0.1</option>
-                                <option value="WD">1</option>
-                                <option value="VS">1</option>
-                                <option value="VS">3</option>
-                                <option value="VS">4</option>
-                            </select>
-
-                            <div class="note">
-                                输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 修复版本 </label>
-
-                        <div class="col-md-8">
-                            <select style="width:100%" class="select2">
-                                <option value="PT">0.1</option>
-                                <option value="WD">1</option>
-                                <option value="VS">1</option>
-                                <option value="VS">3</option>
-                                <option value="VS">4</option>
-                            </select>
-
-                            <div class="note">
-                                输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 分配给</label>
-
-                        <div class="col-md-8">
-                            <select style="width:100%" class="select2">
-                                <optgroup label="ZH/iASPEC">
-                                    <option value="PT">Peter Li</option>
-                                    <option value="WD">Wade</option>
-                                    <option value="VS">Varson</option>
-                                </optgroup>
-                                <optgroup label="HK">
-                                    <option value="CA">Fu</option>
-                                    <option value="NV">Richard</option>
-                                    <option value="OR">Kevin</option>
-                                    <option value="WA">Ams</option>
-                                </optgroup>
-                                <optgroup label="NanH">
-                                    <option value="AZ">Jak</option>
-                                </optgroup>
-                            </select>
-                            <a href="#">分配给我</a>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 提交者</label>
-
-                        <div class="col-md-8">
-                            <select style="width:100%" class="select2">
-                                <optgroup label="ZH/iASPEC">
-                                    <option value="PT" selected="selected">Peter Li</option>
-                                    <option value="WD">Wade</option>
-                                    <option value="VS">Varson</option>
-                                </optgroup>
-                                <optgroup label="HK">
-                                    <option value="CA">Fu</option>
-                                    <option value="NV">Richard</option>
-                                    <option value="OR">Kevin</option>
-                                    <option value="WA">Ams</option>
-                                </optgroup>
-                                <optgroup label="NanH">
-                                    <option value="AZ">Jak</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 环境</label>
-
-                        <div class="col-md-8">
-                            <textarea class="form-control" rows="4"></textarea>
-
-                            <div class="note">
-                                例如 操作系统，软件平台，特殊硬件使用等。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 描述 </label>
-
-                        <div class="col-md-8">
-                            <textarea class="form-control" rows="6"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 最初估算 </label>
-
-                        <div class="col-md-4">
-                            <input type="text" class="form-control"/> <span>(3w 4d 12h)</span>
-
-                            <div class="note">
-                                对参与这个缺陷所花费的时间做一个初步估算。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 仍需估算 </label>
-
-                        <div class="col-md-4">
-                            <input type="text" class="form-control"/> <span class="left">(3w 4d 12h)</span>
-
-                            <div class="note">
-                                对这个缺陷还需要花费的时间做一个估算。
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 附件</label>
-
-                        <div class="col-md-8">
-                            <input type="file" class="btn btn-default"/>
-
-                            <div class="note">
-                                最大上传文件大小为 10.00 MB
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-2 control-label"> 标签</label>
-
-                        <div class="col-md-8">
-                            <input class="form-control tagsinput" data-role="tagsinput"/>
-
-                            <div class="note">
-                                您可以输入字符创建一个标签，或者直接选择一个已存在的标签。
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">新建缺陷</h4>
             </div>
-        </fieldset>
-    </form>
-</div>
-<div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">
-        取消
-    </button>
-    <button type="submit" class="btn btn-primary">
-        提交
-    </button>
-</div>
 
-</div>
-<!-- /.modal-content -->
-</div>
-<!-- /.modal-dialog -->
+            <div class="modal-body">
+                <form id="user-form" class="form-horizontal vlidate-form client-form">
+                    <!--<div class="row">-->
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 项目 <span class="txt-color-red">*</span></label>
+
+                                    <div class="col-md-5">
+                                        <select style="width:100%" class="select2">
+                                            <optgroup label="ZH/iASPEC">
+                                                <option value="PT" selected="selected">IDTS</option>
+                                                <option value="WD">TEST</option>
+                                                <option value="VS">KOODOO</option>
+                                            </optgroup>
+                                            <optgroup label="HK">
+                                                <option value="CA">FFAA</option>
+                                                <option value="NV">FFBB</option>
+                                                <option value="OR">FFCC</option>
+                                                <option value="WA">FFDD</option>
+                                            </optgroup>
+                                            <optgroup label="NanH">
+                                                <option value="AZ">JJAP</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 缺陷类型 <span class="txt-color-red">*</span></label>
+
+                                    <div class="col-md-5">
+                                        <select style="width:100%" class="select2">
+                                            <option value="PT">Bug</option>
+                                            <option value="WD">任务</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 概述 <span class="txt-color-red">*</span></label>
+
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 优先级</label>
+
+                                    <div class="col-md-5">
+                                        <select style="width:100%" class="select2">
+                                            <option value="PT" selected="selected">严重</option>
+                                            <option value="WD">重要</option>
+                                            <option value="VS">一般</option>
+                                            <option value="VS">不重要</option>
+                                            <option value="VS">微小</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 截止日期</label>
+
+                                    <div class="col-md-4">
+                                        <div class="input-group">
+                                            <input type="text" name="mydate" placeholder="Select a date"
+                                                   class="form-control datepicker" data-dateformat="dd/mm/yy">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 影响版本 </label>
+
+                                    <div class="col-md-8">
+                                        <select style="width:100%" class="select2">
+                                            <option value="PT">0.1</option>
+                                            <option value="WD">1</option>
+                                            <option value="VS">1</option>
+                                            <option value="VS">3</option>
+                                            <option value="VS">4</option>
+                                        </select>
+
+                                        <div class="note">
+                                            输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 修复版本 </label>
+
+                                    <div class="col-md-8">
+                                        <select style="width:100%" class="select2">
+                                            <option value="PT">0.1</option>
+                                            <option value="WD">1</option>
+                                            <option value="VS">1</option>
+                                            <option value="VS">3</option>
+                                            <option value="VS">4</option>
+                                        </select>
+
+                                        <div class="note">
+                                            输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 分配给</label>
+
+                                    <div class="col-md-8">
+                                        <select style="width:100%" class="select2">
+                                            <optgroup label="ZH/iASPEC">
+                                                <option value="PT">Peter Li</option>
+                                                <option value="WD">Wade</option>
+                                                <option value="VS">Varson</option>
+                                            </optgroup>
+                                            <optgroup label="HK">
+                                                <option value="CA">Fu</option>
+                                                <option value="NV">Richard</option>
+                                                <option value="OR">Kevin</option>
+                                                <option value="WA">Ams</option>
+                                            </optgroup>
+                                            <optgroup label="NanH">
+                                                <option value="AZ">Jak</option>
+                                            </optgroup>
+                                        </select>
+                                        <a href="#">分配给我</a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 提交者</label>
+
+                                    <div class="col-md-8">
+                                        <select style="width:100%" class="select2">
+                                            <optgroup label="ZH/iASPEC">
+                                                <option value="PT" selected="selected">Peter Li</option>
+                                                <option value="WD">Wade</option>
+                                                <option value="VS">Varson</option>
+                                            </optgroup>
+                                            <optgroup label="HK">
+                                                <option value="CA">Fu</option>
+                                                <option value="NV">Richard</option>
+                                                <option value="OR">Kevin</option>
+                                                <option value="WA">Ams</option>
+                                            </optgroup>
+                                            <optgroup label="NanH">
+                                                <option value="AZ">Jak</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 环境</label>
+
+                                    <div class="col-md-8">
+                                        <textarea class="form-control" rows="4"></textarea>
+
+                                        <div class="note">
+                                            例如 操作系统，软件平台，特殊硬件使用等。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 描述 </label>
+
+                                    <div class="col-md-8">
+                                        <textarea class="form-control" rows="6"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 最初估算 </label>
+
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control"/> <span>(3w 4d 12h)</span>
+
+                                        <div class="note">
+                                            对参与这个缺陷所花费的时间做一个初步估算。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 仍需估算 </label>
+
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control"/> <span class="left">(3w 4d 12h)</span>
+
+                                        <div class="note">
+                                            对这个缺陷还需要花费的时间做一个估算。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 附件</label>
+
+                                    <div class="col-md-8">
+                                        <input type="file" class="btn btn-default"/>
+
+                                        <div class="note">
+                                            最大上传文件大小为 10.00 MB
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 标签</label>
+
+                                    <div class="col-md-8">
+                                        <input class="form-control tagsinput" data-role="tagsinput"/>
+
+                                        <div class="note">
+                                            您可以输入字符创建一个标签，或者直接选择一个已存在的标签。
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    取消
+                </button>
+                <button type="submit" class="btn btn-primary">
+                    提交
+                </button>
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 <!-- row -->

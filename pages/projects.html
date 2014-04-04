@@ -183,7 +183,7 @@
                                     <label class="col-md-2 control-label">负责人</label>
 
                                     <div class="col-md-10">
-                                        <select multiple style="width:100%" class="select2">
+                                        <select style="width:100%" class="select2">
                                             <optgroup label="ZH/iASPEC">
                                                 <option value="PT">Peter Li</option>
                                                 <option value="WD">Wade</option>
@@ -503,6 +503,10 @@
 <!-- end row -->
 
 <script type="text/javascript">
+    // DO NOT REMOVE : GLOBAL FUNCTIONS!
+
+    pageSetUp();
+
     /* remove previous elems */
 
     if ($('.DTTT_dropdown.dropdown-menu').length) {
@@ -544,9 +548,8 @@
     }
 
     function runDataTables() {
-        // DO NOT REMOVE : GLOBAL FUNCTIONS!
 
-        pageSetUp();
+
         /*
          * BASIC
          */
