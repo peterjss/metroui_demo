@@ -27,7 +27,7 @@
 	 * APP CONFIGURATION
 	 * Description: Enable / disable certain theme features here
 	 */		
-	$.navAsAjax = false; // Your left nav in your app will no longer fire ajax calls
+	$.navAsAjax = true; // Your left nav in your app will no longer fire ajax calls
 	
 	// Please make sure you have included "jarvis.widget.js" for this below feature to work
 	$.enableJarvisWidgets = true;
@@ -35,6 +35,7 @@
 	// Warning: Enabling mobile widgets could potentially crash your webApp if you have too many 
 	// 			widgets running at once (must have $.enableJarvisWidgets = true)
 	$.enableMobileWidgets = false;
+
 
 	/*
 	 * DETECT MOBILE DEVICES
@@ -56,7 +57,7 @@
 		
 		// Removes the tap delay in idevices
 		// dependency: js/plugin/fastclick/fastclick.js 
-		//FastClick.attach(document.body);
+		// FastClick.attach(document.body);
 	}
 
 /* ~ END: CHECK MOBILE DEVICE */
@@ -67,13 +68,6 @@
  */
 
 $(document).ready(function() {
-
-    if($("#navbar").length>0) {
-        loadURL("top_nav.html", $("#navbar"));
-    }
-    if($("#left-panel").length>0) {
-        loadURL("left_menu.html", $("#left-panel"));
-    }
 	/*
 	 * Fire tooltips
 	 */
@@ -193,9 +187,14 @@ $(document).ready(function() {
 
 	// RESET WIDGETS
 	$('#refresh').click(function(e) {
+		
+		var $this = $(this);
+		
+		$.widresetMSG = $this.data('reset-msg');
+		
 		$.SmartMessageBox({
 			title : "<i class='fa fa-refresh' style='color:green'></i> Clear Local Storage",
-			content : "Would you like to RESET all your saved widgets and clear LocalStorage?",
+			content : $.widresetMSG || "Would you like to RESET all your saved widgets and clear LocalStorage?",
 			buttons : '[No][Yes]'
 		}, function(ButtonPressed) {
 			if (ButtonPressed == "Yes" && localStorage) {
@@ -213,15 +212,15 @@ $(document).ready(function() {
 		var $this = $(this);
 		$.loginURL = $this.attr('href');
 		$.logoutMSG = $this.data('logout-msg');
-//
-//		// ask verification
+
+		// ask verification
 		$.SmartMessageBox({
-			title : "<i class='fa fa-sign-out txt-color-orangeDark'></i> 退出 <span class='txt-color-orangeDark'><strong>" + $('#show-shortcut').text() + "</strong></span> ?",
-			content : $.logoutMSG || "您可以在退出系统后关闭浏览器，以便进一步增加账户的安全性。",
-			buttons : '[否][是]'
+			title : "<i class='fa fa-sign-out txt-color-orangeDark'></i> Logout <span class='txt-color-orangeDark'><strong>" + $('#show-shortcut').text() + "</strong></span> ?",
+			content : $.logoutMSG || "You can improve your security further after logging out by closing this opened browser",
+			buttons : '[No][Yes]'
 
 		}, function(ButtonPressed) {
-			if (ButtonPressed == "是") {
+			if (ButtonPressed == "Yes") {
 				$.root_.addClass('animated fadeOutUp');
 				setTimeout(logout, 1000)
 			}
@@ -273,7 +272,7 @@ $(document).ready(function() {
 	function shortcut_buttons_show() {
 		$.shortcut_dropdown.animate({
 			height : "show"
-		}, 200, "easeOutCirc");
+		}, 200, "easeOutCirc")
 		$.root_.addClass('shortcut-on');
 	}
 
@@ -664,7 +663,7 @@ function runAllForms() {
 			$this.datepicker({
 				dateFormat : dataDateFormat,
 				prevText : '<i class="fa fa-chevron-left"></i>',
-				nextText : '<i class="fa fa-chevron-right"></i>'
+				nextText : '<i class="fa fa-chevron-right"></i>',
 			});
 		})
 	}
@@ -1278,13 +1277,13 @@ function loadURL(url, container) {
 		success : function(data) {
 			// cog replaced here...
 			// alert("success")
-
-//			container.css({
-//				opacity : '0.0'
-//			}).html(data).delay(50).animate({
-//				opacity : '1.0'
-//			}, 200);
-            container.html(data);
+			
+			container.css({
+				opacity : '0.0'
+			}).html(data).delay(50).animate({
+				opacity : '1.0'
+			}, 300);
+			
 
 		},
 		error : function(xhr, ajaxOptions, thrownError) {

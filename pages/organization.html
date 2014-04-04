@@ -1,0 +1,262 @@
+
+        <style>
+            /*.tree li > span:hover, .tree li > span:hover + ul li span {*/
+                /*background: none repeat scroll 0 0 #EEEEEE;*/
+                /*border: 1px solid #94A0B4;*/
+                /*color: #000000;*/
+            /*}*/
+            .tree li> span {
+                cursor: pointer;
+                padding: 7px;
+            }
+
+
+            .tree li > span:hover {
+                background-color: #DF8505;
+                border: 1px solid #C67605;
+                color: #FFFFFF;
+            }
+            .tree li > span:hover + ul li:before {
+                border-left-color: #F89406;
+            }
+            .tree li > span:hover + ul li:after {
+                border-top-color: #F89406;
+            }
+            .tree li > span:hover + ul li span {
+                background: none repeat scroll 0 0 #FDDFB3 !important;
+                border: 1px solid #FAA937;
+                color: #000000;
+            }
+            .tree li > span:hover + ul li span label {
+                color: #000000;
+            }
+
+            .tree .label{
+                font-size: 90%;
+            }
+            .tree .label label{
+                color: #FFFFFF;
+                font-size: 95%;
+            }
+            .tree.smart-form .label {
+                font-size: 90%;
+                color: #FFFFFF;
+                display:inline-table;
+                /*font-size: 13px;*/
+                font-weight: 400;
+                /*line-height: 19px;*/
+                /*margin-bottom: 6px;*/
+                /*text-align: left;*/
+            }
+
+        </style>
+
+                <!-- row -->
+                <div class="row">
+                    <article class="col-sm-12 col-md-12 col-lg-12 sortable-grid ui-sortable">
+                        <!-- Widget ID (each widget will need unique ID)-->
+                        <div class="jarviswidget well" id="wid-id-3" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false" data-widget-sortable="false">
+                            <!-- widget options:
+                            usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+                            data-widget-colorbutton="false"
+                            data-widget-editbutton="false"
+                            data-widget-togglebutton="false"
+                            data-widget-deletebutton="false"
+                            data-widget-fullscreenbutton="false"
+                            data-widget-custombutton="false"
+                            data-widget-collapsed="true"
+                            data-widget-sortable="false"
+
+                            -->
+                            <header>
+                                <!--<span class="widget-icon"> <i class="fa fa-comments"></i> </span>-->
+                                <!--<h2>Default Tabs with border </h2>-->
+
+                            </header>
+
+                            <!-- widget div-->
+                            <div>
+                                <!-- widget edit box -->
+                                <div class="jarviswidget-editbox">
+                                    <!-- This area used as dropdown edit box -->
+
+                                </div>
+                                <!-- end widget edit box -->
+
+                                <!-- widget content -->
+                                <div class="widget-body">
+                                    <p>
+                                        <h4>组织机构</h4>
+                                    </p>
+                                    <hr class="simple">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                                            <strong>欢迎进入组织机构设定页面</strong>
+                                            <br>
+                                            <br>
+                                            <p>
+                                                在这里您可以设定组织机构的所有信息。 对于组织的成员状况，页面信息可以实时更新，使用上面的标签来进行具体信息页面的导航。
+                                                <br>
+                                                <br>
+                                                <!--修改<a href="#">组织信息</a>。-->
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                                            <div class="well">
+
+                                                <div class="widget-body-toolbar bg-color-white">
+                                                    <form class="form-inline" role="form" onsubmit="return false;">
+                                                        <div class="row">
+                                                            <div class="col-sm-12 col-md-10">
+                                                                <span>当前部门：</span><span class="label label-success">研发部</span>
+
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-2 text-align-right">
+                                                                <button type="submit" class="btn btn-default btn-xs">
+                                                                    <i class="fa fa-plus"></i> 添加
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <div class="tree smart-form">
+                                                    <ul>
+                                                        <li>
+                                                            <span><i class="fa fa-lg fa-calendar"></i> iASPEC-ZH</span>
+                                                            <ul>
+                                                                <li>
+                                                                    <span class="label label-success">
+                                                                        <label class="checkbox inline-block">
+                                                                        <input type="checkbox" name="checkbox-inline">
+                                                                            <i></i>研发部</label>
+                                                                    </span>
+                                                                    <!--<span class="label label-success"><i class="fa fa-lg fa-star"></i> 研发部</span>-->
+                                                                    <!--<ul>-->
+                                                                        <!--<li>-->
+                                                                            <!--<span><i class="fa fa-clock-o"></i> 8.00</span> &ndash; <a href="javascript:void(0);">Changed CSS to accomodate...</a>-->
+                                                                        <!--</li>-->
+                                                                    <!--</ul>-->
+                                                                </li>
+                                                                <li>
+                                                                    <span class="label label-success">
+                                                                        <label class="checkbox inline-block">
+                                                                            <input type="checkbox" name="checkbox-inline">
+                                                                            <i></i>行政部
+                                                                        </label>
+                                                                    </span>
+                                                                    <!--<ul>-->
+                                                                        <!--<li>-->
+                                                                            <!--<span><i class="fa fa-clock-o"></i> 6.00</span> &ndash; <a href="javascript:void(0);">Altered code...</a>-->
+                                                                        <!--</li>-->
+                                                                        <!--<li>-->
+                                                                            <!--<span><i class="fa fa-clock-o"></i> 2.00</span> &ndash; <a href="javascript:void(0);">Simplified our approach to...</a>-->
+                                                                        <!--</li>-->
+                                                                    <!--</ul>-->
+                                                                </li>
+                                                                <li>
+                                                                    <span class="label label-info">
+                                                                        <label class="checkbox inline-block">
+                                                                            <input type="checkbox" name="checkbox-inline">
+                                                                            <i></i>市场部
+                                                                        </label>
+                                                                    </span>
+                                                                    <!--<ul>-->
+                                                                        <!--<li>-->
+                                                                            <!--<span><i class="fa fa-clock-o"></i> 3.00</span> &ndash; <a href="javascript:void(0);">Fixed bug caused by...</a>-->
+                                                                        <!--</li>-->
+                                                                        <!--<li>-->
+                                                                            <!--<span><i class="fa fa-clock-o"></i> 3.00</span> &ndash; <a href="javascript:void(0);">Comitting latest code to Git...</a>-->
+                                                                        <!--</li>-->
+                                                                    <!--</ul>-->
+                                                                </li>
+                                                                <li>
+                                                                    <span class="label label-danger">
+                                                                        <label class="checkbox inline-block">
+                                                                            <input type="checkbox" name="checkbox-inline">
+                                                                            <i></i>公共安全部
+                                                                        </label>
+                                                                    </span>
+                                                                    <!--<ul>-->
+                                                                        <!--<li>-->
+                                                                            <!--<span><i class="fa fa-clock-o"></i> 2.00</span> &ndash; <a href="javascript:void(0);">Create component that...</a>-->
+                                                                        <!--</li>-->
+                                                                    <!--</ul>-->
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <span><i class="fa fa-lg fa-calendar"></i> iASPEC-SZ</span>
+                                                            <ul>
+                                                                <li>
+                                                                    <span class="label label-success">
+                                                                        <label class="checkbox inline-block">
+                                                                            <input type="checkbox" name="checkbox-inline">
+                                                                            <i></i>广告部
+                                                                        </label>
+                                                                    </span>
+                                                                </li>
+                                                                <li>
+                                                                    <span class="label label-info">
+                                                                        <label class="checkbox inline-block">
+                                                                            <input type="checkbox" name="checkbox-inline">
+                                                                            <i></i>印刷部
+                                                                        </label>
+                                                                    </span>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="well">
+                                            <h4>组织信息</h4>
+                                                <ul>
+                                                    <li>组织名称</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- end widget content -->
+                            </div>
+                            <!-- end widget div -->
+                        </div>
+                        <!-- end widget -->
+                    </article>
+
+                </div>
+                <!-- end row -->
+
+
+		<script type="text/javascript">
+
+		    // DO NOT REMOVE : GLOBAL FUNCTIONS!
+                pageSetUp();
+
+            // PAGE RELATED SCRIPTS
+
+            $('.tree > ul').attr('role', 'tree').find('ul').attr('role', 'group');
+            $('.tree').find('li:has(ul)').addClass('parent_li').attr('role', 'treeitem').find(' > span').attr('title', 'Collapse this branch').on('click', function(e) {
+                var children = $(this).parent('li.parent_li').find(' > ul > li');
+                if (children.is(':visible')) {
+                    children.hide('fast');
+                    $(this).attr('title', 'Expand this branch').find(' > i').removeClass().addClass('fa fa-lg fa-plus-circle');
+                } else {
+                    children.show('fast');
+                    $(this).attr('title', 'Collapse this branch').find(' > i').removeClass().addClass('fa fa-lg fa-minus-circle');
+                }
+                e.stopPropagation();
+            });
+		</script>
+	</body>
+
+</html>
