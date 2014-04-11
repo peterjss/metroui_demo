@@ -73,14 +73,6 @@
             IDTS-缺陷跟踪管理系统
         </small>
     </a><!-- /.brand -->
-    <!--<ul class="nav ace-nav" style="width:50px;float:left;">-->
-        <!--<li >-->
-            <a href="#pages/issues_new.html" class="btn btn-primary" style="margin-top: 6px;">
-                <!--<i class="fa fa-fire  "></i>-->
-                新建缺陷
-            </a>
-        <!--</li>-->
-    <!--</ul>-->
 
 </div>
 <!-- /.navbar-header -->
@@ -335,6 +327,29 @@
    (the reference to the nav > ul) after page load. Or the navigation
    will not initialize.
    -->
+    <style>
+        .login-info a.btn {
+            color:#FFFFFF;
+            width:21px;
+            margin: 3px 0 3px 3px;
+        }
+        .login-info a.btn :hover {
+            color: #F3F3F3;
+        }
+    </style>
+    <div class="login-info hidden-sm">
+    <div>
+        <!--<div class="col-sm-12 col-md-12 col-lg-12">-->
+        <!--<div >-->
+            <!--<a class="btn btn-default" data-html="true" data-original-title="<i class='fa fa-check text-success'></i> Tooltip Right" data-placement="right" rel="tooltip" href="javascript:void(0);">-->
+            <a href="#pages/dashboard.html" class="btn btn-success" rel="tooltip" data-original-title="仪表盘" data-placement="bottom"><i class="fa fa-dashboard"></i></a>
+            <a href="#pages/search.html" class="btn btn-primary" rel="tooltip" data-original-title="搜索" data-placement="bottom"><i class="fa fa-search"></i></a>
+            <a href="#pages/issues_new.html" class="btn btn-warning" rel="tooltip" data-original-title="缺陷" data-placement="bottom"><i class="fa fa-plus"></i></a>
+            <a href="#pages/profile.html" class="btn btn-danger" rel="tooltip" data-original-title="设置" data-placement="bottom"><i class="fa fa-cog"></i></a>
+        <!--</div>-->
+    </div>
+    </div>
+
     <nav>
         <!-- NOTE: Notice the gaps after each icon usage <i></i>..
         Please note that these links work a bit different than
@@ -343,9 +358,17 @@
 
         <ul>
             <li class="active">
-                <a href="pages/dashboard.html" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i>
+                <a href="#" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i>
                     <span class="menu-item-parent">首页</span>
                 </a>
+                <ul>
+                    <li>
+                        <a href="#pages/dashboard.html">仪表盘</a>
+                    </li>
+                    <li>
+                        <a href="#pages/search.html">搜索</a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="pages/inbox.html" title="Inbox"><i class="fa fa-lg fa-fw fa-inbox"></i>
