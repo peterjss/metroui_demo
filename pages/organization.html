@@ -32,14 +32,14 @@
             }
 
             .tree .label{
-                font-size: 90%;
+                font-size: 85%;
             }
             .tree .label label{
                 color: #FFFFFF;
-                font-size: 95%;
+                font-size: 85%;
             }
             .tree.smart-form .label {
-                font-size: 90%;
+                font-size: 85%;
                 color: #FFFFFF;
                 display:inline-table;
                 /*font-size: 13px;*/
@@ -49,6 +49,49 @@
                 /*text-align: left;*/
             }
 
+             .radio,  .checkbox {
+                display: block;
+                margin-bottom: 2px;
+                margin-top: 2px;
+                min-height: 2px;
+                padding-left: 20px;
+            }
+            .smart-form   .radio,  .smart-form  .checkbox {
+                color: #404040;
+                cursor: pointer;
+                font-size: 13px;
+                line-height: 5px;
+                margin-bottom: 4px;
+                padding-left: 25px;
+            }
+             .smart-form   .checkbox input + i:after {
+                font: 400 12px/15px FontAwesome;
+                height: 10px;
+                left: 1px;
+                text-align: center;
+                top: -1px;
+                width: 8px;
+            }
+            .smart-form  .radio i, .smart-form  .checkbox i {
+                background: none repeat scroll 0 0 #FFFFFF;
+                border-style: solid;
+                border-width: 1px;
+                display: block;
+                height: 13px;
+                left: 0;
+                outline: 0 none;
+                position: absolute;
+                top: -5px;
+                width: 13px;
+            }
+            .widget-body-toolbar, .smart-form.widget-body-toolbar {
+                background: none repeat scroll 0 0 #FAFAFA;
+                border-bottom: 1px solid #CCCCCC;
+                display: block;
+                margin: -10px -13px 13px 0;
+                max-height: 42px;
+                padding: 8px 10px 0 0;
+            }
         </style>
 
                 <!-- row -->
@@ -106,7 +149,6 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
-                                            <div class="well">
 
                                                 <div class="widget-body-toolbar bg-color-white">
                                                     <form class="form-inline" role="form" onsubmit="return false;">
@@ -119,6 +161,7 @@
                                                                 <button type="submit" class="btn btn-default btn-xs">
                                                                     <i class="fa fa-plus"></i> 添加
                                                                 </button>
+
                                                             </div>
                                                         </div>
                                                     </form>
@@ -130,25 +173,23 @@
                                                             <span><i class="fa fa-lg fa-calendar"></i> iASPEC-ZH</span>
                                                             <ul>
                                                                 <li>
-                                                                    <span class="label label-success">
-                                                                        <label class="checkbox inline-block">
-                                                                        <input type="checkbox" name="checkbox-inline">
-                                                                            <i></i>研发部</label>
-                                                                    </span>
-                                                                    <!--<span class="label label-success"><i class="fa fa-lg fa-star"></i> 研发部</span>-->
-                                                                    <!--<ul>-->
-                                                                        <!--<li>-->
-                                                                            <!--<span><i class="fa fa-clock-o"></i> 8.00</span> &ndash; <a href="javascript:void(0);">Changed CSS to accomodate...</a>-->
-                                                                        <!--</li>-->
-                                                                    <!--</ul>-->
+                                                                    <span class="label label-success"><i class="fa fa-lg fa-minus-circle"></i> 研发部</span>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <span class="label label-success"><i class="fa fa-lg fa-code-fork "></i> 研发二部</span>
+                                                                        </li>
+                                                                    </ul>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="label label-success">
-                                                                        <label class="checkbox inline-block">
-                                                                            <input type="checkbox" name="checkbox-inline">
-                                                                            <i></i>行政部
-                                                                        </label>
-                                                                    </span>
+                                                                    <span class="label label-success"><i class="fa fa-lg fa-code-fork"></i> 行政部</span>
+                                                                </li>
+                                                                <!--<li>-->
+                                                                    <!--<span class="label label-success">-->
+                                                                        <!--<label class="checkbox inline-block">-->
+                                                                            <!--<input type="checkbox" name="checkbox-inline">-->
+                                                                            <!--<i></i>行政部-->
+                                                                        <!--</label>-->
+                                                                    <!--</span>-->
                                                                     <!--<ul>-->
                                                                         <!--<li>-->
                                                                             <!--<span><i class="fa fa-clock-o"></i> 6.00</span> &ndash; <a href="javascript:void(0);">Altered code...</a>-->
@@ -157,35 +198,12 @@
                                                                             <!--<span><i class="fa fa-clock-o"></i> 2.00</span> &ndash; <a href="javascript:void(0);">Simplified our approach to...</a>-->
                                                                         <!--</li>-->
                                                                     <!--</ul>-->
+                                                                <!--</li>-->
+                                                                <li>
+                                                                    <span class="label label-info"><i class="fa fa-lg fa-code-fork"></i> 市场部</span>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="label label-info">
-                                                                        <label class="checkbox inline-block">
-                                                                            <input type="checkbox" name="checkbox-inline">
-                                                                            <i></i>市场部
-                                                                        </label>
-                                                                    </span>
-                                                                    <!--<ul>-->
-                                                                        <!--<li>-->
-                                                                            <!--<span><i class="fa fa-clock-o"></i> 3.00</span> &ndash; <a href="javascript:void(0);">Fixed bug caused by...</a>-->
-                                                                        <!--</li>-->
-                                                                        <!--<li>-->
-                                                                            <!--<span><i class="fa fa-clock-o"></i> 3.00</span> &ndash; <a href="javascript:void(0);">Comitting latest code to Git...</a>-->
-                                                                        <!--</li>-->
-                                                                    <!--</ul>-->
-                                                                </li>
-                                                                <li>
-                                                                    <span class="label label-danger">
-                                                                        <label class="checkbox inline-block">
-                                                                            <input type="checkbox" name="checkbox-inline">
-                                                                            <i></i>公共安全部
-                                                                        </label>
-                                                                    </span>
-                                                                    <!--<ul>-->
-                                                                        <!--<li>-->
-                                                                            <!--<span><i class="fa fa-clock-o"></i> 2.00</span> &ndash; <a href="javascript:void(0);">Create component that...</a>-->
-                                                                        <!--</li>-->
-                                                                    <!--</ul>-->
+                                                                    <span class="label label-danger"><i class="fa fa-lg fa-code-fork"></i> 公共安全部</span>
                                                                 </li>
                                                             </ul>
                                                         </li>
@@ -193,35 +211,44 @@
                                                             <span><i class="fa fa-lg fa-calendar"></i> iASPEC-SZ</span>
                                                             <ul>
                                                                 <li>
-                                                                    <span class="label label-success">
-                                                                        <label class="checkbox inline-block">
-                                                                            <input type="checkbox" name="checkbox-inline">
-                                                                            <i></i>广告部
-                                                                        </label>
-                                                                    </span>
+                                                                    <span class="label label-success"><i class="fa fa-lg fa-code-fork"></i> 广告部</span>
                                                                 </li>
                                                                 <li>
-                                                                    <span class="label label-info">
-                                                                        <label class="checkbox inline-block">
-                                                                            <input type="checkbox" name="checkbox-inline">
-                                                                            <i></i>印刷部
-                                                                        </label>
-                                                                    </span>
+                                                                    <span class="label label-info"><i class="fa fa-lg fa-code-fork"></i> 印刷部</span>
                                                                 </li>
+
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
-                                            </div>
+                                            <!--</div>-->
                                         </div>
 
-                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                            <div class="well">
-                                            <h4>组织信息</h4>
-                                                <ul>
-                                                    <li>组织名称</li>
-                                                </ul>
-                                            </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
+                                            <!--<div >-->
+                                                <span>组织信息</span>
+                                            <!--</div>-->
+                                            <hr>
+
+                                            <dl class="dl-horizontal" style="margin-left: -50px;">
+                                                <dt>部门名称</dt>
+                                                <dd>行政部</dd>
+                                                <dt>编号</dt>
+                                                <dd>ORG-10</dd>
+                                                <dt>成员数量</dt>
+                                                <dd>210 人</dd>
+                                                <dt>传真</dt>
+                                                <dd>000-123456-456</dd>
+                                            </dl>
+                                            <hr>
+
+                                            <!--<div class="form-group">-->
+                                                <!--<label class="col-md-2 control-label"> 部门名称</label>-->
+
+                                                <!--<div class="col-md-4">-->
+                                                        <!--<span >行政部</span>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
                                         </div>
                                     </div>
 
