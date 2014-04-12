@@ -16,6 +16,9 @@
         overflow-x: hidden;
         overflow-y: auto;
     }
+    .radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+        margin-left: 0px;
+    }
 </style>
 
 <!-- Bread crumb is created dynamically -->
@@ -244,10 +247,258 @@
                         <!--</section>-->
                     </div>
                     <!--</fieldset>-->
+                    <div id="moreConditions" class="" style="display: none;margin-top:5px;">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h4>更多标签</h4>
+                            <br>
+                            <table class="table table-hover table-noborder">
+                            <tbody>
+                            <tr>
+                                <td width="80">部门</td>
+                                <td>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>COS一部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>COS二部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>应用开发</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>个人化中心</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>技术拓展部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>国际部技术组</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>产品部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>增值业务部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>测试组</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>客户</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="80">项目类别</td>
+                                <td>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>平台项目</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>产品项目</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="80">产品分类</td>
+                                <td>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>电信</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>金融</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>社保</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>一卡通</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>建设事业</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>健康卡</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>移动支付</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="80">平台分类</td>
+                                <td>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>Native</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>JAVA</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>GP</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>N3</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>M1</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>系统</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="80">技术分类</td>
+                                <td>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>电气特性</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>接触协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>非接协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>天线</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>USB协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>SWP协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>HCI API</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>BIP</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>Https协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>CAP-TP</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>GMS</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>CDMA</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="80">故障分类</td>
+                                <td>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>功能缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>性能缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>安全缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>稳定性</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>兼容性</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>物理</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>需求缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>COS缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>文件系统</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>应用缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>个人化</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>芯片</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>终端</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+
                 </form>
                 <div>
                     <button class="btn btn-default"><i class="fa fa-search"></i> 查询</button>
                     <a href="javascript:void(0);">重置查询条件</a>
+                    <div class="pull-right">
+                        <!--<a href="javascript:void(0);">更多搜索条件</a><i class="fa fa-caret-down fa-lg"></i>-->
+                        <a href="#" id="show_moreConditions" class="dropdown-toggle" data-toggle="dropdown">更多搜索条件<b class="caret"></b></a>
+
+                    </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="hr2">
@@ -1065,6 +1316,9 @@
             timeout: 5000
         });
     }
+    $('#show_moreConditions').click(function(e){
+        $('#moreConditions').slideToggle();
+    });
 </script>
 
 </body>
