@@ -336,18 +336,33 @@
         .login-info a.btn :hover {
             color: #F3F3F3;
         }
+
+        .minified  .login-info .shortbtn a.btn{
+            height:10px;
+            width:15px;
+            margin: 1px;
+        }
+
+        .minified .login-info {
+            height: 105px;
+        }
+
+        .minified .login-info a span, .minified .login-info a i {
+            display: block;
+        }
+
     </style>
     <div class="login-info hidden-sm">
-    <div>
-        <!--<div class="col-sm-12 col-md-12 col-lg-12">-->
-        <!--<div >-->
-            <!--<a class="btn btn-default" data-html="true" data-original-title="<i class='fa fa-check text-success'></i> Tooltip Right" data-placement="right" rel="tooltip" href="javascript:void(0);">-->
-            <a href="#pages/dashboard.html" class="btn btn-success" rel="tooltip" data-original-title="仪表盘" data-placement="bottom"><i class="fa fa-dashboard"></i></a>
-            <a href="#pages/search.html" class="btn btn-primary" rel="tooltip" data-original-title="搜索" data-placement="bottom"><i class="fa fa-search"></i></a>
-            <a href="#pages/issues_new.html" class="btn btn-warning" rel="tooltip" data-original-title="缺陷" data-placement="bottom"><i class="fa fa-plus"></i></a>
-            <a href="#pages/profile.html" class="btn btn-danger" rel="tooltip" data-original-title="设置" data-placement="bottom"><i class="fa fa-cog"></i></a>
-        <!--</div>-->
-    </div>
+        <div class="shortbtn">
+            <!--<div class="col-sm-12 col-md-12 col-lg-12">-->
+            <!--<div >-->
+                <!--<a class="btn btn-default" data-html="true" data-original-title="<i class='fa fa-check text-success'></i> Tooltip Right" data-placement="right" rel="tooltip" href="javascript:void(0);">-->
+                <a href="#pages/dashboard.html" class="btn btn-success" rel="tooltip" data-original-title="仪表盘" data-placement="bottom"><i class="fa fa-dashboard"></i></a>
+                <a href="#pages/search.html" class="btn btn-primary" rel="tooltip" data-original-title="搜索" data-placement="bottom"><i class="fa fa-search"></i></a>
+                <a href="#pages/issues_new.html" class="btn btn-warning" rel="tooltip" data-original-title="缺陷" data-placement="bottom"><i class="fa fa-plus"></i></a>
+                <a href="#pages/profile.html" class="btn btn-danger" rel="tooltip" data-original-title="设置" data-placement="bottom"><i class="fa fa-cog"></i></a>
+            <!--</div>-->
+        </div>
     </div>
 
     <nav>
@@ -358,11 +373,11 @@
 
         <ul>
             <li class="active">
-                <a href="#" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i>
+                <a href="#pages/dashboard.html" title="Dashboard"><i class="fa fa-lg fa-fw fa-home"></i>
                     <span class="menu-item-parent">首页</span>
                 </a>
                 <ul>
-                    <li>
+                    <li >
                         <a href="#pages/dashboard.html">仪表盘</a>
                     </li>
                     <li>
@@ -525,7 +540,7 @@ you can add as many as you like
             </a>
         </li>
         <li>
-            <a href="../pms/main.html" class="jarvismetro-tile big-cubes bg-color-red">
+            <a href="#pages/knowledge.html" class="jarvismetro-tile big-cubes bg-color-red">
                 <span class="iconbox">
                     <i class="fa fa-book fa-4x"></i>
                     <span> 知识库管理

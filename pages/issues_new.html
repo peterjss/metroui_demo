@@ -31,6 +31,13 @@
     .smart-form .popover-content {
         padding: 9px 14px;
     }
+
+    .btn {
+        padding: 5.7px 12px;
+    }
+    /*.ad-container table {*/
+        /*background-color: #FFFFFF;*/
+    /*}*/
     /*.table-noborder, .table-noborder >tbody > tr, .table-noborder >tbody > tr > td {*/
         /*border-top: 0px solid #ddd;*/
     /*}*/
@@ -57,16 +64,35 @@
         -->
         <header>
             <h2>
-                <strong>项目</strong>
-                <span class="hidden-mobile hidden-tablet"> - 公共信息</span>
+                <strong>新建缺陷</strong>
+                <span class="hidden-mobile hidden-tablet"> - 项目信息</span>
             </h2>
 
-            <div class="widget-toolbar">
-                <a href="javascript:void(0);" id="show_add_project" class="btn btn-primary">
-                    <i class="fa fa-lg fa-plus"></i>
-                <span class="hidden-mobile hidden-tablet">创建项目</span></a>
-            </div>
+            <!--<div class="widget-toolbar">-->
+                <!--<a href="javascript:void(0);" id="show_add_project" class="btn btn-primary">-->
+                    <!--<i class="fa fa-lg fa-plus"></i>-->
+                    <!--<span class="hidden-mobile hidden-tablet">创建项目</span>-->
+                <!--</a>-->
+                <!--<a href="javascript:void(0);"  class="btn btn-default">-->
+                    <!--<i class="fa fa-lg fa-return"></i>-->
+                    <!--<span class="hidden-mobile hidden-tablet">取消创建</span>-->
+                <!--</a>-->
 
+            <!--</div>-->
+
+            <div id="switch-1" class="widget-toolbar" role="menu" style="display: block;">
+                <span class="onoffswitch-title">
+                    <i class="fa fa-location-arrow"></i>
+                     同时新建项目
+                </span>
+                <span class="onoffswitch">
+                    <input id="myonoffswitch" class="onoffswitch-checkbox" type="checkbox" name="onoffswitch">
+                    <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner" data-swchoff-text="OFF" data-swchon-text="ON"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </span>
+            </div>
         </header>
 
         <!-- widget div-->
@@ -84,7 +110,7 @@
                         <!--项目信息-->
                     <!--</legend>-->
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-sm-6">
                             <div class="form-group">
                                 <label>项目名称</label>
                                 <select style="width:100%" class="select2">
@@ -96,52 +122,38 @@
                                 <div class=" note">若系统中还未有项目信息，您可以点击右侧的 创建项目 按钮 添加项目信息，系统可同时创建新的项目。</div>
                             </div>
                         </div>
-                        </div>
-                </fieldset>
-
-                <div id="project_add_content" class="hide">
-                    <hr style="margin: 0 0 10px 0;">
-                    <fieldset >
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label>项目类型</label>
-                                    <select style="width:100%" class="select2">
-                                        <option value="A">新产品</option>
-                                        <option value="B">需求升级</option>
-                                        <option value="C">COS升级</option>
-                                        <option value="D">应用升级</option>
-                                        <option value="E">个人化升级</option>
-                                        <option value="F">二次个人化</option>
-                                        <option value="G">平台转移</option>
-                                        <option value="H">设备转移</option>
-                                    </select>
-                                </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label>项目类型</label>
+                                <select style="width:100%" class="select2">
+                                    <option value="A">新产品</option>
+                                    <option value="B">需求升级</option>
+                                    <option value="C">COS升级</option>
+                                    <option value="D">应用升级</option>
+                                    <option value="E">个人化升级</option>
+                                    <option value="F">二次个人化</option>
+                                    <option value="G">平台转移</option>
+                                    <option value="H">设备转移</option>
+                                </select>
                             </div>
                         </div>
-                        <!--<section>-->
-                            <!--<label class="label">项目类型</label>-->
-                            <!--<label class="input">-->
-                                <!--<input type="email" name="email" placeholder="项目类型">-->
-                            <!--</label>-->
-                        <!--</section>-->
+                    </div>
+                </fieldset>
+
+                <div id="project_add_content" style="display:none;">
+                    <hr style="margin: 0 0 10px 0;">
+                    <fieldset >
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
                                 <label>需求编号</label>
-                                <!--<label class="input">-->
-                                    <!--<input type="text" name="lname" placeholder="需求编号">-->
-                                <!--</label>-->
                                 <input type="email" name="email" class="form-control" placeholder="需求编号" data-mask="(999) 999-9999"/>
                              </div>
                             </div>
                             <div class="col col-sm-6">
                                 <div class="form-group">
                                     <label>芯片型号</label>
-                                    <!--<label class="input">-->
                                     <input type="email" name="email" class="form-control" placeholder="芯片型号" data-mask="(999) 999-9999"/>
-                                        <!--<input type="tel" name="phone" placeholder="芯片型号" data-mask="(999) 999-9999">-->
-                                    <!--</label>-->
                                 </div>
                             </div>
                         </div>
@@ -149,10 +161,7 @@
                             <div class="col col-sm-6">
                                 <div class="form-group">
                                 <label>COS版本</label>
-                                <!--<label class="input">-->
-                                    <!--<input type="email" name="email" placeholder="COS版本">-->
                                 <input type="email" name="email" class="form-control" placeholder="COS版本" />
-                                <!--</label>-->
                                 </div>
                             </div>
                             <div class="col col-sm-6">
@@ -174,16 +183,10 @@
                                 </select>
                                 </div>
                             </div>
-
                             <section class="col col-sm-6">
                                 <div class="form-group">
-                                <label>应用开发者</label>
-                                <select style="width:100%" class="select2">
-                                    <optgroup label="Alaskan/Hawaiian Time Zone">
-                                        <option value="AK">Alaska</option>
-                                        <option value="HI">Hawaii</option>
-                                    </optgroup>
-                                </select>
+                                    <label >生产设备</label>
+                                    <input type="email" name="email" class="form-control" placeholder="生产设备" />
                                 </div>
                             </section>
                         </div>
@@ -201,11 +204,15 @@
                             </section>
                             <section class="col col-sm-6">
                                 <div class="form-group">
-                                <label >生产设备</label>
-                                <input type="email" name="email" class="form-control" placeholder="生产设备" />
+                                    <label>应用开发者</label>
+                                    <select style="width:100%" class="select2">
+                                        <optgroup label="Alaskan/Hawaiian Time Zone">
+                                            <option value="AK">Alaska</option>
+                                            <option value="HI">Hawaii</option>
+                                        </optgroup>
+                                    </select>
                                 </div>
                             </section>
-
                         </div>
                         <div class="row">
                             <section class="col col-sm-6">
@@ -290,7 +297,7 @@ data-widget-sortable="false"
 <div class="widget-body widget-hide-overflow">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
-            <span class="font-md text-primary" >新建缺陷</span>
+            <span class="font-md text-primary" >缺陷信息</span>
         </div>
     </div>
 
@@ -304,56 +311,78 @@ data-widget-sortable="false"
                 <fieldset>
                     <div class="form-group">
                         <label>概述</label>
-                        <input type="text" name="fname" class="form-control " placeholder="概述">
-                    </div>
-
-                    <div class="form-group">
-                        <label class=" control-label"> 优先级</label>
-                            <select style="width:100%" class="select2">
-                                <option value="PT" selected="selected">严重</option>
-                                <option value="WD">重要</option>
-                                <option value="VS">一般</option>
-                                <option value="VS">不重要</option>
-                                <option value="VS">微小</option>
-                            </select>
-                    </div>
-                    <div class="form-group">
-                        <label class=" control-label"> 截止日期</label>
-                        <div class="input-group">
-                            <input type="text" name="mydate" placeholder="选择日期"
-                                   class="form-control datepicker" data-dateformat="yy-mm-dd">
-                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        <div class="input-icon-right">
+                            <input type="text" name="fname" class="form-control ">
+                            <!--<i class="fa fa-comment "></i>-->
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class=" control-label"> 影响版本 </label>
 
-                        <select style="width:100%" class="select2">
-                            <option value="PT">0.1</option>
-                            <option value="WD">1</option>
-                            <option value="VS">1</option>
-                            <option value="VS">3</option>
-                            <option value="VS">4</option>
-                        </select>
-
-                        <div class="note">
-                            输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class=" control-label"> 优先级</label>
+                                <select style="width:100%" class="select2">
+                                    <option value="PT" selected="selected">严重</option>
+                                    <option value="WD">重要</option>
+                                    <option value="VS">一般</option>
+                                    <option value="VS">不重要</option>
+                                    <option value="VS">微小</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class=" control-label"> 截止日期</label>
+                                <div class="input-group">
+                                    <input type="text" name="mydate"
+                                           class="form-control datepicker" data-dateformat="yy-mm-dd">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class=" control-label"> 修复版本 </label>
-                        <select style="width:100%" class="select2">
-                            <option value="PT">0.1</option>
-                            <option value="WD">1</option>
-                            <option value="VS">1</option>
-                            <option value="VS">3</option>
-                            <option value="VS">4</option>
-                        </select>
 
-                        <div class="note">
-                            输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label class=" control-label"> 影响版本 </label>
+
+                                    <select style="width:100%" class="select2">
+                                        <option value="PT">0.1</option>
+                                        <option value="WD">1</option>
+                                        <option value="VS">1</option>
+                                        <option value="VS">3</option>
+                                        <option value="VS">4</option>
+                                    </select>
+
+                                    <div class="note">
+                                        输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class=" control-label"> 修复版本 </label>
+                                <select style="width:100%" class="select2">
+                                    <option value="PT">0.1</option>
+                                    <option value="WD">1</option>
+                                    <option value="VS">1</option>
+                                    <option value="VS">3</option>
+                                    <option value="VS">4</option>
+                                </select>
+
+                                <div class="note">
+                                    输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+
                     <div class="form-group">
                         <label class=" control-label"> 分配给</label>
 
@@ -406,25 +435,33 @@ data-widget-sortable="false"
                         <label class=" control-label"> 描述 </label>
                         <textarea class="form-control" rows="6"></textarea>
                     </div>
-                    <div class="form-group">
-                        <label class=" control-label"> 最初估算 </label>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class=" control-label"> 最初估算 </label>
+                                <div class="input-icon-right">
+                                    <input type="text" class="form-control"/>
+                                    <i class="fa  fa-clock-o"></i>
+                                </div>
 
-                        <input type="text" class="form-control"/> <span>(3w 4d 12h)</span>
-                        <div class="note">
-                            对参与这个缺陷所花费的时间做一个初步估算。
+                                <div class="note">
+                                    对参与这个缺陷所花费的时间做一个初步估算。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class=" control-label"> 仍需估算 </label>
+                                <div class="input-icon-right">
+                                    <input type="text" class="form-control"/>
+                                    <i class="fa  fa-clock-o"></i>
+                                </div>
+                                <div class="note">
+                                    对这个缺陷还需要花费的时间做一个估算。
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class=" control-label"> 仍需估算 </label>
-
-                            <input type="text" class="form-control"/> <span class="left">(3w 4d 12h)</span>
-
-                            <div class="note">
-                                对这个缺陷还需要花费的时间做一个估算。
-                            </div>
-                    </div>
-
-
                 </fieldset>
             </div>
 
@@ -490,7 +527,39 @@ data-widget-sortable="false"
                         </tr>
                         </tbody>
                     </table>
-                    <!--</div>-->
+                </div>
+
+                <!--<span>增加新标签</span>-->
+                <!--<div class="alert alert-info">-->
+                    <!--可以通过下面的输入框来创建新的标签-->
+                <!--</div>-->
+                <div class="alert alert-info fade in">
+                    <button class="close" data-dismiss="alert"> × </button>
+                    <i class="fa-fw fa fa-info"></i>
+                    <strong>提示!</strong>
+                    可以通过下面的输入框来创建新的标签。
+                </div>
+
+                <div class="well well-sm text-info " >
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control col-6" placeholder="标签类别">
+                            <!--<select  style="width:100%" class="select2">-->
+                                <!--<option value="1">部门</option>-->
+                                <!--<option value="2">故障分类</option>-->
+                                <!--<option value="3">产品分类</option>-->
+                            <!--</select>-->
+                        </div>
+                        <div class="col-sm-5">
+
+                            <div class="input-group">
+                                <input type="text" class="form-control col-6" placeholder="标签内容">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="fa fa-check "></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div>
@@ -499,14 +568,24 @@ data-widget-sortable="false"
                 </div>
 
                 <fieldset>
-                    <div class="form-group">
-                        <input type="file" class="btn btn-default"/>
+                    <div class="row">
+                        <div class="smart-form col-sm-6">
+                            <!--<input type="file" class="btn btn-default"/>-->
+                            <label class="input input-file" for="file">
+                                <div class="button">
+                                    <input id="file-upload" type="file"  name="file">
+                                    Browse
+                                </div>
+                                <input type="text" readonly="" placeholder="选择文件...">
+                            </label>
 
-                        <div class="note">
-                            最大上传文件大小为 10.00 MB
+                            <div class="note">
+                                最大上传文件大小为 10.00 MB
+                            </div>
                         </div>
                     </div>
                 </fieldset>
+                <br>
 
                 <div class="chat-body no-padding profile-message">
                     <table class="table table-hover table-noborder">
@@ -532,8 +611,8 @@ data-widget-sortable="false"
                 <hr>
                 <div class="pull-right">
 
-                    <button class="btn btn-primary">提交</button>&nbsp;&nbsp;
-                    <button class="btn btn-default">取消</button>
+                    <a href="javascript:void(0);"  class="btn btn-primary"><i class="fa fa-save"></i> 保存</a>&nbsp;&nbsp;
+                    <a href="javascript:void(0);"  class="btn btn-default">取消</a>
 
                 </div>
 
@@ -544,14 +623,14 @@ data-widget-sortable="false"
 
     <!-- SEARCH CONTAINER -->
     <div class="ad-container hidden-xs">
-        <span class="chat-list-open-close"><i class="fa fa-map-marker "></i></span>
+        <span class="chat-list-open-close"><i class="fa fa-tag txt-color-blue"></i></span>
 
         <div class="chat-list-body custom-scroll">
 
             <div class=" no-padding profile-message">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <br>
-                    <h4><i class="fa fa-flag txt-color-green"></i> 为缺陷选择标签</h4>
+                    <h4> 为缺陷设定标签</h4>
                     <br>
                     <table class="table table-hover table-noborder">
                         <tbody>
@@ -793,8 +872,8 @@ data-widget-sortable="false"
         </div>
         <div class="chat-list-footer ">
             <div class="pull-right">
-                <button id="chooseLable" class="btn btn-success">确定</button>
-                <button id="cancleChooseLable" class="btn btn-default">取消</button>
+                <a href="javascript:void(0);" id="chooseLable" class="btn btn-success"><i class="fa fa-check"></i> 确定</a>
+                <a href="javascript:void(0);" id="cancleChooseLable" class="btn btn-default"><i class="fa fa-rotate-left "></i> 取消</a>
             </div>
         </div>
 
@@ -889,25 +968,26 @@ $('#chooseLable, #cancleChooseLable').click(function (e) {
     e.preventDefault();
 });
 
-$('#show_add_project,#closeProjectForm').click(function (e) {
-    if($("#project_add_content").hasClass("hide")){
-        $("#project_add_content").removeClass('hide').delay(50).animate({
-            height : "show"
-        }, 300, "easeInCirc");
-    }else{
-        $("#project_add_content").addClass('hide').delay(50).animate({
-            height : "hide"
-        }, 300, "easeOutCirc");
-    }
-    e.preventDefault();
-//    container.css({
-//        opacity : '0.0'
-//    }).html(data).delay(50).animate({
-//        opacity : '1.0'
-//    }, 300);
+$('#myonoffswitch, #closeProjectForm').click(function (e) {
+    var $btn_add_project = $("#project_add_content");
 
-
-})
+    $btn_add_project.slideToggle(function(){
+        console.log($btn_add_project.is(':visible'));
+        if($btn_add_project.is(':visible')){
+            $('#myonoffswitch').attr('checked',true);
+        }else
+        {
+            $('#myonoffswitch').attr('checked',false);
+        }
+    });
+});
+$('#file-upload').change(function(e){
+//   alert('aa');
+//   alert($(this).parent().html());
+   $(this).parent().next().val($(this).val());
+//       this.parentNode.nextSibling.value = this.value
+   e.preventDefault();
+});
 </script>
 
 <!-- Your GOOGLE ANALYTICS CODE Below -->
