@@ -92,6 +92,50 @@
                 max-height: 42px;
                 padding: 8px 10px 0 0;
             }
+
+
+            .info-right {
+                border-left: 1px solid #DDDDDD;
+                padding-left: 30px;
+                 margin-top: -15px;
+            }
+            .info-right > div {
+                margin-bottom: 20px;
+            }
+
+            .data-row {
+                margin-bottom: 0;
+            }
+            .data-row .data-name, .data-row .data-value {
+                display: inline-block;
+                padding: 5px;
+                vertical-align: middle;
+            }
+
+            .data-row .data-name {
+                background-color: #ECECEC;
+                color: #B9B9B9;
+                font-size: 0.9em;
+                vertical-align: top;
+                width: 12em;
+            }
+            .data-row .data-value {
+                padding-left: 10px;
+            }
+
+            .dd-item img, table img {
+                border-left: 3px solid #FFFFFF;
+                display: inline-block;
+                height: auto;
+                margin-left: 0;
+                margin-right: 5px;
+                margin-top: 1px;
+                vertical-align: middle;
+                width: 25px;
+            }
+            .dd-item img .online{
+                border-left-color: #40AC2B !important;
+            }
         </style>
 
                 <!-- row -->
@@ -133,6 +177,8 @@
                                         <h4>组织机构</h4>
                                     </p>
                                     <hr class="simple">
+
+
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
@@ -147,109 +193,442 @@
                                             </p>
                                         </div>
                                     </div>
+
+
                                     <div class="row">
-                                        <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+                                        <div class="col-sm-12 col-md-3 col-lg-3">
+                                            <!--<div class="tree smart-form">-->
+                                                <!--<ul>-->
+                                                    <!--<li>-->
+                                                        <!--<span><i class="fa fa-lg fa-calendar"></i> iASPEC-ZH</span>-->
+                                                        <!--<ul>-->
+                                                            <!--<li>-->
+                                                                <!--<span class="label label-success"><i class="fa fa-lg fa-minus-circle"></i> 研发部</span>-->
+                                                                <!--<ul>-->
+                                                                    <!--<li>-->
+                                                                        <!--<span class="label label-success"><i class="fa fa-lg fa-code-fork "></i> 研发二部</span>-->
+                                                                    <!--</li>-->
+                                                                <!--</ul>-->
+                                                            <!--</li>-->
+                                                            <!--<li>-->
+                                                                <!--<span class="label label-success"><i class="fa fa-lg fa-code-fork"></i> 行政部</span>-->
+                                                            <!--</li>-->
+                                                            <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;<span class="label label-success">&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;<label class="checkbox inline-block">&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;<input type="checkbox" name="checkbox-inline">&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;<i></i>行政部&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;</label>&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;<ul>&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;<span><i class="fa fa-clock-o"></i> 6.00</span> &ndash; <a href="javascript:void(0);">Altered code...</a>&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;<span><i class="fa fa-clock-o"></i> 2.00</span> &ndash; <a href="javascript:void(0);">Simplified our approach to...</a>&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                                            <!--<li>-->
+                                                                <!--<span class="label label-info"><i class="fa fa-lg fa-code-fork"></i> 市场部</span>-->
+                                                            <!--</li>-->
+                                                            <!--<li>-->
+                                                                <!--<span class="label label-danger"><i class="fa fa-lg fa-code-fork"></i> 公共安全部</span>-->
+                                                            <!--</li>-->
+                                                        <!--</ul>-->
+                                                    <!--</li>-->
+                                                    <!--<li>-->
+                                                        <!--<span><i class="fa fa-lg fa-calendar"></i> iASPEC-SZ</span>-->
+                                                        <!--<ul>-->
+                                                            <!--<li>-->
+                                                                <!--<span class="label label-success"><i class="fa fa-lg fa-code-fork"></i> 广告部</span>-->
+                                                            <!--</li>-->
+                                                            <!--<li>-->
+                                                                <!--<span class="label label-info"><i class="fa fa-lg fa-code-fork"></i> 印刷部</span>-->
+                                                            <!--</li>-->
 
-                                                <div class="widget-body-toolbar bg-color-white">
-                                                    <form class="form-inline" role="form" onsubmit="return false;">
-                                                        <div class="row">
-                                                            <div class="col-sm-12 col-md-10">
-                                                                <span>当前部门：</span><span class="label label-success">研发部</span>
-
-                                                            </div>
-                                                            <div class="col-sm-12 col-md-2 text-align-right">
-                                                                <button type="submit" class="btn btn-default btn-xs">
-                                                                    <i class="fa fa-plus"></i> 添加
-                                                                </button>
-
-                                                            </div>
+                                                        <!--</ul>-->
+                                                    <!--</li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                            <div class="dd" id="nestable">
+                                                <ol class="dd-list">
+                                                    <li class="dd-item" data-id="1">
+                                                        <div class="dd-handle ">
+                                                            行政部 <span> - DEP236</span>
                                                         </div>
-                                                    </form>
-                                                </div>
+                                                    </li>
+                                                    <li class="dd-item" data-id="2">
+                                                        <div class="dd-handle  bg-color-blue txt-color-white">
+                                                            研发部
+                                                            <span class="txt-color-white">- DEP255</span>
+                                                            <em class="badge pull-right">
+                                                                200 人
+                                                            </em>
+                                                        </div>
+                                                        <ol class="dd-list">
+                                                            <li class="dd-item" data-id="3">
+                                                                <div class="dd-handle">
+                                                                    研发一部
+                                                                    <em class="badge pull-right bg-color-purple">
+                                                                        10 人
+                                                                    </em>
+                                                                </div>
 
-                                                <div class="tree smart-form">
-                                                    <ul>
-                                                        <li>
-                                                            <span><i class="fa fa-lg fa-calendar"></i> iASPEC-ZH</span>
-                                                            <ul>
-                                                                <li>
-                                                                    <span class="label label-success"><i class="fa fa-lg fa-minus-circle"></i> 研发部</span>
-                                                                    <ul>
-                                                                        <li>
-                                                                            <span class="label label-success"><i class="fa fa-lg fa-code-fork "></i> 研发二部</span>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li>
-                                                                    <span class="label label-success"><i class="fa fa-lg fa-code-fork"></i> 行政部</span>
-                                                                </li>
-                                                                <!--<li>-->
-                                                                    <!--<span class="label label-success">-->
-                                                                        <!--<label class="checkbox inline-block">-->
-                                                                            <!--<input type="checkbox" name="checkbox-inline">-->
-                                                                            <!--<i></i>行政部-->
-                                                                        <!--</label>-->
-                                                                    <!--</span>-->
-                                                                    <!--<ul>-->
-                                                                        <!--<li>-->
-                                                                            <!--<span><i class="fa fa-clock-o"></i> 6.00</span> &ndash; <a href="javascript:void(0);">Altered code...</a>-->
-                                                                        <!--</li>-->
-                                                                        <!--<li>-->
-                                                                            <!--<span><i class="fa fa-clock-o"></i> 2.00</span> &ndash; <a href="javascript:void(0);">Simplified our approach to...</a>-->
-                                                                        <!--</li>-->
-                                                                    <!--</ul>-->
-                                                                <!--</li>-->
-                                                                <li>
-                                                                    <span class="label label-info"><i class="fa fa-lg fa-code-fork"></i> 市场部</span>
-                                                                </li>
-                                                                <li>
-                                                                    <span class="label label-danger"><i class="fa fa-lg fa-code-fork"></i> 公共安全部</span>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li>
-                                                            <span><i class="fa fa-lg fa-calendar"></i> iASPEC-SZ</span>
-                                                            <ul>
-                                                                <li>
-                                                                    <span class="label label-success"><i class="fa fa-lg fa-code-fork"></i> 广告部</span>
-                                                                </li>
-                                                                <li>
-                                                                    <span class="label label-info"><i class="fa fa-lg fa-code-fork"></i> 印刷部</span>
-                                                                </li>
+                                                            </li>
+                                                            <li class="dd-item" data-id="4">
+                                                                <div class="dd-handle">
+                                                                    研发二部
+                                                                    <em class="label pull-right label-primary">
+                                                                        已注销
+                                                                    </em>
+                                                                </div>
+                                                            </li>
+                                                            <li class="dd-item" data-id="5">
+                                                                <div class="dd-handle">
+                                                                    COS部
+                                                                </div>
+                                                            </li>
+                                                            <li class="dd-item" data-id="9">
+                                                                <div class="dd-handle">
+                                                                    策划部
 
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            <!--</div>-->
+                                                                    <em class="badge pull-right bg-color-purple">
+                                                                        99 人
+                                                                    </em>
+                                                                </div>
+                                                            </li>
+                                                        </ol>
+                                                    </li>
+                                                    <li class="dd-item" data-id="11">
+                                                        <div class="dd-handle">
+
+                                                            <div class="row">
+                                                                <div class="col-xs-8">
+                                                                    市场部
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </li>
+                                                    <li class="dd-item" data-id="12">
+                                                        <div class="dd-handle">
+
+                                                            <div class="row">
+                                                                <div class="col-xs-8 text-success">
+                                                                    <strong>后勤部 </strong>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </li>
+                                                </ol>
+                                            </div>
+
                                         </div>
 
-                                        <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
-                                            <!--<div >-->
-                                                <span>组织信息</span>
-                                            <!--</div>-->
-                                            <hr>
+                                        <div class="col-sm-12 col-md-9 col-lg-9">
+                                            <div class="info-right">
+                                                <div class="basic-info">
+                                                    <h3>
+                                                        <i class="fa fa-square"></i>
+                                                        基本信息
+                                                        <a href="javascript:void(0);"><i class="fa fa-edit"></i></a>
+                                                    </h3>
+                                                    <p class="data-row">
+                                                        <span class="data-name">名称</span>
+                                                        <span class="data-value">研发部</span>
+                                                    </p>
+                                                    <p class="data-row">
+                                                        <span class="data-name">创建日期</span>
+                                                        <span class="data-value">Nov 20, 1988</span>
+                                                    </p>
+                                                    <p class="data-row">
+                                                        <span class="data-name">电话</span>
+                                                        <span class="data-value">(123)-123-4567</span>
+                                                    </p>
+                                                    <p class="data-row">
+                                                        <span class="data-name">主页</span>
+                                                        <span class="data-value"><a href="#">www.demo.com</a></span>
+                                                    </p>
+                                                    <p class="data-row">
+                                                        <span class="data-name">部门主管</span>
+                                                        <span class="data-value">Peter Li</span>
+                                                    </p>
+                                                </div>
 
-                                            <dl class="dl-horizontal" style="margin-left: -50px;">
-                                                <dt>部门名称</dt>
-                                                <dd>行政部</dd>
-                                                <dt>编号</dt>
-                                                <dd>ORG-10</dd>
-                                                <dt>成员数量</dt>
-                                                <dd>210 人</dd>
-                                                <dt>传真</dt>
-                                                <dd>000-123456-456</dd>
-                                            </dl>
-                                            <hr>
+                                                <div class="basic-info">
 
-                                            <!--<div class="form-group">-->
-                                                <!--<label class="col-md-2 control-label"> 部门名称</label>-->
+                                                    <h3>
+                                                        <i class="fa fa-user"></i>
+                                                        成员信息
+                                                    </h3>
 
-                                                <!--<div class="col-md-4">-->
-                                                        <!--<span >行政部</span>-->
-                                                <!--</div>-->
-                                            <!--</div>-->
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-6 col-lg-6">
+                                                            <span>当前部门</span>
+                                                            <div class="pull-right" style="margin-bottom: 5px;">
+
+                                                                <a href="javascript:void(0);" class="btn btn-primary btn-xs"><i class="fa fa-arrow-right "></i> 移出</a>
+                                                            </div>
+
+                                                            <table class="table table-hover">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="checkbox">
+                                                                                <label>
+                                                                                    <input class="checkbox style-0" type="checkbox" checked="checked">
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <img class="online" src="img/avatars/sunny.png"/>
+                                                                                <a href="javascript:void(0);">Peter Li</a>
+                                                                            </div>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            <small><abbr title="Phone">P:</abbr> (123) 123-45678</small>
+                                                                            <a href="mailto:demo@mail.com">
+                                                                                <i class="fa  fa-envelope-o "></i>
+                                                                            </a>
+                                                                        </td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="checkbox">
+                                                                                <label>
+                                                                                    <input class="checkbox style-0" type="checkbox" checked="checked">
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <img class="online" src="img/avatars/male.png"/>
+                                                                                <a href="javascript:void(0);">Bob Su</a>
+                                                                            </div>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            <small><abbr title="Phone">P:</abbr> (123) 123-45678</small>
+                                                                            <a href="mailto:demo@mail.com">
+                                                                                <i class="fa  fa-envelope-o "></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="checkbox">
+                                                                                <label>
+                                                                                    <input class="checkbox style-0" type="checkbox" checked="checked">
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <img class="online" src="img/avatars/female.png"/>
+                                                                                <a href="javascript:void(0);">Gaden J</a>
+                                                                            </div>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            <small><abbr title="Phone">P:</abbr> (123) 123-45678</small>
+                                                                            <a href="mailto:demo@mail.com">
+                                                                                <i class="fa  fa-envelope-o "></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <div class="checkbox">
+                                                                                <label>
+                                                                                    <input class="checkbox style-0" type="checkbox" checked="checked">
+                                                                                    <span></span>
+                                                                                </label>
+                                                                                <img class="online" src="img/avatars/male.png"/>
+                                                                                <a href="javascript:void(0);">Peng New</a>
+                                                                            </div>
+
+                                                                        </td>
+                                                                        <td>
+                                                                            <small><abbr title="Phone">P:</abbr> (123) 123-45678</small>
+                                                                            <a href="mailto:demo@mail.com">
+                                                                                <i class="fa  fa-envelope-o "></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+
+
+                                                            <!--<div class="dd" id="nestable2">-->
+                                                                <!--<ol class="dd-list">-->
+                                                                    <!--<li class="dd-item" data-id="13">-->
+                                                                        <!--<div class="dd-handle">-->
+                                                                            <!--<a href="#">-->
+                                                                                <!--<img class="online" src="img/avatars/sunny.png"/>-->
+                                                                            <!--</a>-->
+                                                                            <!--Peter Li-->
+
+                                                                            <!--<div class="pull-right">-->
+                                                                                <!--<a href="#">-->
+                                                                                    <!--<i class="fa  fa-envelope-o "></i>-->
+                                                                                <!--</a>-->
+                                                                            <!--</div>-->
+                                                                        <!--</div>-->
+                                                                    <!--</li>-->
+                                                                    <!--<li class="dd-item" data-id="13">-->
+                                                                        <!--<div class="dd-handle">-->
+                                                                            <!--<a href="#">-->
+                                                                                <!--<img class="online" src="img/avatars/male.png"/>-->
+                                                                            <!--</a>-->
+                                                                            <!--Bob Su-->
+
+                                                                            <!--<div class="pull-right">-->
+                                                                                <!--<a href="#">-->
+                                                                                    <!--<i class="fa  fa-envelope-o "></i>-->
+                                                                                <!--</a>-->
+                                                                            <!--</div>-->
+                                                                        <!--</div>-->
+                                                                    <!--</li>-->
+                                                                    <!--<li class="dd-item" data-id="13">-->
+                                                                        <!--<div class="dd-handle">-->
+                                                                            <!--<a href="#">-->
+                                                                                <!--<img class="online" src="img/avatars/female.png"/>-->
+                                                                            <!--</a>-->
+                                                                            <!--Gaden J-->
+
+                                                                            <!--<div class="pull-right">-->
+                                                                                <!--<a href="#">-->
+                                                                                    <!--<i class="fa  fa-envelope-o "></i>-->
+                                                                                <!--</a>-->
+                                                                            <!--</div>-->
+                                                                        <!--</div>-->
+                                                                    <!--</li>-->
+                                                                    <!--<li class="dd-item" data-id="13">-->
+                                                                        <!--<div class="dd-handle">-->
+                                                                            <!--<a href="#">-->
+                                                                                <!--<img class="online" src="img/avatars/male.png"/>-->
+                                                                            <!--</a>-->
+                                                                            <!--Peter Li-->
+
+                                                                            <!--<div class="pull-right">-->
+                                                                                <!--<a href="#">-->
+                                                                                    <!--<i class="fa  fa-envelope-o "></i>-->
+                                                                                <!--</a>-->
+                                                                            <!--</div>-->
+                                                                        <!--</div>-->
+                                                                    <!--</li>-->
+                                                                <!--</ol>-->
+                                                            <!--</div>-->
+                                                        </div>
+                                                        <!--<div class="col-md-4">-->
+                                                            <!---->
+
+                                                        <!--</div>-->
+
+                                                        <div class="col-sm-12 col-md-6 col-lg-6">
+                                                            <span>其他部门</span>
+                                                           <div class="pull-right" style="margin-bottom: 5px;">
+
+                                                                <a href="javascript:void(0);" class="btn btn-primary btn-xs"><i class="fa fa-arrow-left "></i> 加入</a>
+                                                           </div>
+
+                                                            <table class="table table-hover">
+                                                                <!--<thead>-->
+                                                                <!--<tr>-->
+                                                                    <!--<td>name</td>-->
+                                                                    <!--<td>desc</td>-->
+                                                                <!--</tr>-->
+                                                                <!--</thead>-->
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="checkbox">
+                                                                            <label>
+                                                                                <input class="checkbox style-0" type="checkbox" checked="checked">
+                                                                                <span></span>
+                                                                            </label>
+                                                                            <img class="online" src="img/avatars/sunny.png"/>
+                                                                            <a href="javascript:void(0);">Peter Li</a>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <small><abbr title="Phone">P:</abbr> (123) 123-45678</small>
+                                                                        <a href="mailto:demo@mail.com">
+                                                                            <i class="fa  fa-envelope-o "></i>
+                                                                        </a>
+
+                                                                    </td>
+                                                                    <td><span class="label label-info">市场部</span></td>
+
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="checkbox">
+                                                                            <label>
+                                                                                <input class="checkbox style-0" type="checkbox" checked="checked">
+                                                                                <span></span>
+                                                                            </label>
+                                                                            <img class="online" src="img/avatars/male.png"/>
+                                                                            <a href="javascript:void(0);">Bob Su</a>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <small><abbr title="Phone">P:</abbr> (123) 123-45678</small>
+                                                                        <a href="mailto:demo@mail.com">
+                                                                            <i class="fa  fa-envelope-o "></i>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td><span class="label label-info">行政部</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="checkbox">
+                                                                            <label>
+                                                                                <input class="checkbox style-0" type="checkbox" checked="checked">
+                                                                                <span></span>
+                                                                            </label>
+                                                                            <img class="online" src="img/avatars/female.png"/>
+                                                                            <a href="javascript:void(0);">Gaden J</a>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <small><abbr title="Phone">P:</abbr> (123) 123-45678</small>
+                                                                        <a href="mailto:demo@mail.com">
+                                                                            <i class="fa  fa-envelope-o "></i>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td><span class="label label-info">后勤部</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="checkbox">
+                                                                            <label>
+                                                                                <input class="checkbox style-0" type="checkbox" checked="checked">
+                                                                                <span></span>
+                                                                            </label>
+                                                                            <img class="online" src="img/avatars/male.png"/>
+                                                                            <a href="javascript:void(0);">Peng New</a>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <small><abbr title="Phone">P:</abbr> (123) 123-45678</small>
+                                                                        <a href="mailto:demo@mail.com">
+                                                                            <i class="fa  fa-envelope-o "></i>
+                                                                        </a>
+                                                                    </td>
+                                                                    <td><span class="label label-warning">未分配</span></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
                                         </div>
+
+
+
+
                                     </div>
 
                                 </div>
