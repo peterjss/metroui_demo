@@ -11,7 +11,7 @@
 	// Note: You will also need to change this variable in the "variable.less" file.
 	$.navbar_height = 49;
 
-    $.footer_height = 40;
+    $.footer_height = 45;
 
 	/*
 	 * APP DOM REFERENCES
@@ -376,17 +376,18 @@ function nav_page_height() {
 	var setHeight = $('#main').height();
 	//menuHeight = $.left_panel.height();
 	
-	var windowHeight = $(window).height() - $.navbar_height;
+	var windowHeight = $(window).height() - $.navbar_height ;
 	//set height
 
 	if (setHeight > windowHeight) {// if content height exceedes actual window height and menuHeight
-		$.left_panel.css('min-height', setHeight + $.footer_height+ 'px');
+		$.left_panel.css('min-height', setHeight + $.footer_height + 'px');
 		$.root_.css('min-height', setHeight + $.navbar_height + $.footer_height + 'px');
-//        $.footer.css('min-height', setHeight + $.navbar_height + 45 + 'px');
+        $.footer.css('top', setHeight + $.navbar_height + $.footer_height -5 + 'px');
 
 	} else {
-		$.left_panel.css('min-height', windowHeight + $.footer_height+ 'px');
+		$.left_panel.css('min-height', windowHeight - $.footer_height+ 'px');
 		$.root_.css('min-height', windowHeight + $.footer_height + 'px');
+        $.footer.css('top', windowHeight + $.navbar_height - $.footer_height -5 + 'px');
 	}
 }
 
