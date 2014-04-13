@@ -9,7 +9,9 @@
 	$.menu_speed = 235;
 	
 	// Note: You will also need to change this variable in the "variable.less" file.
-	$.navbar_height = 49; 
+	$.navbar_height = 49;
+
+    $.footer_height = 40;
 
 	/*
 	 * APP DOM REFERENCES
@@ -17,6 +19,7 @@
 	 */	
 	$.root_ = $('body');
 	$.left_panel = $('#left-panel');
+    $.footer = $('#footer');
 	$.shortcut_dropdown = $('#shortcut');
 	$.bread_crumb = $('#ribbon ol.breadcrumb');
 
@@ -377,12 +380,13 @@ function nav_page_height() {
 	//set height
 
 	if (setHeight > windowHeight) {// if content height exceedes actual window height and menuHeight
-		$.left_panel.css('min-height', setHeight + 'px');
-		$.root_.css('min-height', setHeight + $.navbar_height + 'px');
+		$.left_panel.css('min-height', setHeight + $.footer_height+ 'px');
+		$.root_.css('min-height', setHeight + $.navbar_height + $.footer_height + 'px');
+//        $.footer.css('min-height', setHeight + $.navbar_height + 45 + 'px');
 
 	} else {
-		$.left_panel.css('min-height', windowHeight + 'px');
-		$.root_.css('min-height', windowHeight + 'px');
+		$.left_panel.css('min-height', windowHeight + $.footer_height+ 'px');
+		$.root_.css('min-height', windowHeight + $.footer_height + 'px');
 	}
 }
 

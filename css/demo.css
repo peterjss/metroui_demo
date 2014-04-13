@@ -9,6 +9,20 @@ body *{
     font-family: "Microsoft Yahei", "Open Sans", FontAwesome, Arial, Helvetica, Sans-Serif;
 }
 
+.footer {
+    background-color: #F5F5F5;
+    color: #333333;
+    border-top: 1px solid #DDDDDD;
+    font-size: 0.8em;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    min-height: 45px;
+    bottom:0;
+    z-index: 1003;
+    clear:both;
+}
+
 .btn {
     border-radius: 1px;
     box-shadow: 0 0px 0 rgba(0, 0, 0, 0.05) inset;
