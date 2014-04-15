@@ -19574,7 +19574,7 @@ img.away {
     position: absolute;
     display: block;
     right: 0;
-    content: ".";
+    content: " ";
     top: 0;
     z-index: 1
 }

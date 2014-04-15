@@ -42,6 +42,41 @@
         /*border-top: 0px solid #ddd;*/
     /*}*/
 </style>
+<style>
+    .tile ul {
+        border-bottom: 0px solid #423F3F;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+        list-style: none outside none;
+        margin: 0;
+        padding: 0px 0px 10px 0px;
+    }
+
+    .tile ul li {
+        display: inline-block;
+        width: auto;
+    }
+
+    .tile ul li .jarvismetro-tile {
+        border: 0 none;
+        border-radius: 0;
+        margin: 0 3px 3px;
+    }
+
+    .tile ul li .jarvismetro-tile:hover {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    .tile ul li .jarvismetro-tile:active, .tile ul li .jarvismetro-tile:focus {
+        left: 0;
+        top: 0;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    .tile ul .fa-2x {
+        font-size: 1.5em;
+    }
+</style>
 <!-- row -->
 <div class="row">
 
@@ -83,7 +118,7 @@
             <div id="switch-1" class="widget-toolbar" role="menu" style="display: block;">
                 <span class="onoffswitch-title">
                     <i class="fa fa-location-arrow"></i>
-                     同时新建项目
+                     项目信息
                 </span>
                 <span class="onoffswitch">
                     <input id="myonoffswitch" class="onoffswitch-checkbox" type="checkbox" name="onoffswitch">
@@ -245,8 +280,6 @@
 
                 </div>
 
-
-
             </div>
             <!-- end widget content -->
 
@@ -307,7 +340,33 @@ data-widget-sortable="false"
         <!--row-->
         <div class="row">
 
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 tile">
+
+               <span class="txt-color-red">*</span> 请选择一种缺陷的类别。
+                    <ul class="pull-right">
+                        <li>
+                            <a href="#" class="jarvismetro-tile  bg-color-purple selected">
+                            <span class="iconbox ">
+                                <i class="fa fa-2x">卡产品</i>
+                            </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="jarvismetro-tile  bg-color-orange">
+                            <span class="iconbox">
+                                <i class="fa fa-2x">系统产品</i> <span>系统产品 </span>
+                            </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="jarvismetro-tile  bg-color-green">
+                            <span class="iconbox">
+                                <i class="fa fa-2x">终端产品</i> <span>终端产品 </span>
+                            </span>
+                            </a>
+                        </li>
+                    </ul>
+                <div class="clearfix"></div>
                 <fieldset>
                     <div class="form-group">
                         <label>概述</label>
