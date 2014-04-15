@@ -152,37 +152,45 @@
                             <hr>
                             <div class="row">
                                 <div  class="col-sm-12">
-                                    <div class="widget-body-toolbar bg-color-white smart-form" id="rev-toggles">
-                                        <div class="inline-group">
+                                    <div class="widget-body-toolbar bg-color-white " id="rev-toggles">
 
-                                            <label for="gra-0" class="checkbox">
-                                                <input type="checkbox" name="gra-0" id="gra-0" checked="checked">
-                                                <i></i> IMS系统开发
-                                            </label>
-                                            <label for="gra-1" class="checkbox">
-                                                <input type="checkbox" name="gra-1" id="gra-1" checked="checked">
-                                                <i></i> <span class="">DD卡片</span>
-                                            </label>
-                                            <label for="gra-2" class="checkbox">
-                                                <input type="checkbox" name="gra-2" id="gra-2" checked="checked">
-                                                <i></i> ADC卡片
-                                            </label>
-                                            <label for="gra-3" class="checkbox">
-                                                <input type="checkbox" name="gra-3" id="gra-3" checked="checked">
-                                                <i></i> 随便的卡片
-                                            </label>
-                                        </div>
+                                       <div class="smart-form pull-left">
+                                           <div class="inline-group ">
 
+                                                <label for="gra-0" class="checkbox">
+                                                    <input type="checkbox" name="gra-0" id="gra-0" checked="checked">
+                                                    <i></i> IMS系统开发
+                                                </label>
+                                                <label for="gra-1" class="checkbox">
+                                                    <input type="checkbox" name="gra-1" id="gra-1" checked="checked">
+                                                    <i></i> <span class="">DD卡片</span>
+                                                </label>
+                                                <label for="gra-2" class="checkbox">
+                                                    <input type="checkbox" name="gra-2" id="gra-2" checked="checked">
+                                                    <i></i> ADC卡片
+                                                </label>
+                                                <label for="gra-3" class="checkbox">
+                                                    <input type="checkbox" name="gra-3" id="gra-3" checked="checked">
+                                                    <i></i> 随便的卡片
+                                                </label>
+                                            </div>
+                                       </div>
                                         <div class="btn-group hidden-phone pull-right">
                                             <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
                                                     class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
                                             <ul class="dropdown-menu pull-right">
-                                                <li>
-                                                    <a href="javascript:void(0);"><i class="fa fa-file-text-alt"></i> 导出至
-                                                        PDF</a>
+                                                <li style="display: none;">
+                                                    <a href="javascript:void(0);" id="change_to_bar"><i class="fa fa-random "></i> 切换为柱状图</a>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0);"><i class="fa fa-question-sign"></i> 帮助</a>
+                                                    <a href="javascript:void(0);" id="change_to_pie"><i class="fa fa-random "></i> 切换为饼状图</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="javascript:void(0);"><i class="fa fa-file-text"></i> 导出至PDF</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);"><i class="fa fa-question "></i> 帮助</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -190,7 +198,8 @@
                                     </div>
 
                                     <div class="padding-10">
-                                        <div id="flotcontainer" class="chart-large has-legend-unique"></div>
+                                        <div id="flotcontainer" class="chart-large has-legend-unique "></div>
+                                        <div id="pie_chart" class="chart-large" style="display: none;"></div>
                                     </div>
                                 </div>
                             </div>
@@ -319,8 +328,21 @@
     // Load FLOAT dependencies (related to page)
     loadScript("js/plugin/flot/jquery.flot.cust.js", loadFlotResize);
 
+
     function loadFlotResize() {
-        loadScript("js/plugin/flot/jquery.flot.resize.js", loadFlotToolTip);
+        loadScript("js/plugin/flot/jquery.flot.resize.js", loadFlotFillbetween);
+    }
+
+    function loadFlotFillbetween() {
+        loadScript("js/plugin/flot/jquery.flot.fillbetween.js", loadFlotOrderBar);
+    }
+
+    function loadFlotOrderBar() {
+        loadScript("js/plugin/flot/jquery.flot.orderBar.js", loadFlotPie);
+    }
+
+    function loadFlotPie() {
+        loadScript("js/plugin/flot/jquery.flot.pie.js", loadFlotToolTip);
     }
 
     function loadFlotToolTip() {
@@ -402,7 +424,30 @@
                 bars: {
                     show: true,
                     align: "center",
-                    barWidth: 30 * 30 * 60 * 1000 * 80
+//                    horizontal : true,
+//                    barWidth : 0.5,
+                    barWidth: 15 * 30 * 60 * 1000 * 80,
+                    order : 1
+                }
+            },
+            {
+                label: "随便的卡片",
+                data: d4,
+                color: '#6E587A',
+//                lines: {
+//                    show: true,
+//                    lineWidth: 2
+//                },
+//                points: {
+//                    show: true
+//                }
+                bars: {
+                    show: true,
+                    align: "center",
+//                    horizontal : true,
+//                    barWidth : 0.5,
+                    barWidth: 15 * 30 * 60 * 1000 * 80,
+                    order : 2
                 }
             },
             {
@@ -428,25 +473,16 @@
                 points: {
                     show: true
                 }
-            },
-            {
-                label: "随便的卡片",
-                data: d4,
-                color: '#6E587A',
-                lines: {
-                    show: true,
-                    lineWidth: 2
-                },
-                points: {
-                    show: true
-                }
             }
         ];
 
         var options = {
             grid: {
+                show : true,
+                borderWidth : 0,
                 hoverable: true
             },
+            legend : true,
             tooltip: true,
             tooltipOpts: {
                 //content: '%x - %y',
@@ -489,5 +525,80 @@
         });
         plotNow();
     });
+
+//        $('#myonoffswitch, #closeProjectForm').click(function (e) {
+//            var $btn_add_project = $("#project_add_content");
+//
+//            $btn_add_project.slideToggle(function(){
+//                console.log($btn_add_project.is(':visible'));
+//                if($btn_add_project.is(':visible')){
+//                    $('#myonoffswitch').attr('checked',true);
+//                }else
+//                {
+//                    $('#myonoffswitch').attr('checked',false);
+//                }
+//            });
+//        });
+
+        $('#change_to_pie, #change_to_bar').click(function(){
+            $(this).parent('li').toggle(function(){
+                $('#change_to_bar').parent('li').toggle();
+            });
+
+
+            $('#flotcontainer').fadeToggle(250,function(){
+                $('#pie_chart').fadeToggle(250, function(){
+                    if ($(this).is(':visible')) {
+                        plotPieNow();
+                    }
+                });
+            });
+        });
+
+        /* pie chart */
+        function plotPieNow() {
+            var data_pie = [];
+            var series = Math.floor(Math.random() * 10) + 1;
+            for (var i = 0; i < series; i++) {
+                data_pie[i] = {
+                    label : "Series" + (i + 1),
+                    data : Math.floor(Math.random() * 100) + 1
+                }
+            }
+            $.plot($("#pie_chart"), data_pie, {
+                series : {
+                    pie : {
+                        show : true,
+//                        innerRadius : 0.5,
+                        radius : 1,
+                        label : {
+                            show : true,
+                            radius : 2 / 3,
+                            formatter : function(label, series) {
+                                return '<div style="font-size:11px;text-align:center;padding:4px;color:white;">' + label + '<br/>' + Math.round(series.percent) + '%</div>';
+                            },
+                            threshold : 0.1
+                        }
+                    }
+                },
+                legend : {
+                    show : true,
+                    noColumns : 1, // number of colums in legend table
+                    labelFormatter : null, // fn: string -> string
+                    labelBoxBorderColor : "#000", // border color for the little label boxes
+                    container : null, // container (as jQuery object) to put legend in, null means default on top of graph
+                    position : "ne", // position of default legend container within plot
+                    margin : [5, 10], // distance from grid edge to default legend container within plot
+                    backgroundColor : "#efefef", // null means auto-detect
+                    backgroundOpacity : 1 // set to 0 to avoid background
+                },
+                grid : {
+                    hoverable : true,
+                    clickable : true
+                }
+            });
+        }
+
+        /* end pie chart */
     }
 </script>
