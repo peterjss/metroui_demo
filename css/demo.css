@@ -30,6 +30,9 @@ body *{
     border-radius: 1px;
     box-shadow: 0 0px 0 rgba(0, 0, 0, 0.05) inset;
 }
+.btn-circle {
+    border-radius: 50%;
+}
 
 h1, h2, h3, h4 {
     font-family: "Microsoft Yahei", "Open Sans", Arial, Helvetica, Sans-Serif;
