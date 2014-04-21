@@ -43,6 +43,8 @@
         float:left;
         width:100%;
     }
+
+
 </style>
 
 <!-- row -->
@@ -157,8 +159,8 @@
                                                         </label>
                                                         </span>
                                                     </div>
-                                                    <button class="btn btn-xs btn-default plus"><i class="fa fa-plus"></i></button>
-                                                    <button class="btn btn-xs btn-default minus" style="display: none;"><i class="fa fa-minus"></i></button>
+                                                    <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></i></a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -176,8 +178,8 @@
                                                             </label>
                                                         </span>
                                                     </div>
-                                                    <button class="btn btn-xs btn-default plus"><i class="fa fa-plus"></i></button>
-                                                    <button class="btn btn-xs btn-default minus" style="display: none;"><i class="fa fa-minus"></i></button>
+                                                    <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></
                                                 </td>
                                             </tr>
                                             <tr>
@@ -215,8 +217,8 @@
                                                             </label>
                                                         </span>
                                                     </div>
-                                                    <button class="btn btn-xs btn-default plus"><i class="fa fa-plus"></i></button>
-                                                    <button class="btn btn-xs btn-default minus" style="display: none;"><i class="fa fa-minus"></i></button>
+                                                    <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></
                                                 </td>
                                             </tr>
                                             <tr>
@@ -250,8 +252,8 @@
                                                             </label>
                                                         </span>
                                                     </div>
-                                                    <button class="btn btn-xs btn-default plus"><i class="fa fa-plus"></i></button>
-                                                    <button class="btn btn-xs btn-default minus" style="display: none;"><i class="fa fa-minus"></i></button>
+                                                    <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></
                                                 </td>
                                             </tr>
                                             <tr>
@@ -309,8 +311,8 @@
                                                             </label>
                                                         </span>
                                                     </div>
-                                                    <button class="btn btn-xs btn-default plus"><i class="fa fa-plus"></i></button>
-                                                    <button class="btn btn-xs btn-default minus" style="display: none;"><i class="fa fa-minus"></i></button>
+                                                    <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></
                                                 </td>
                                             </tr>
                                             <tr>
@@ -372,8 +374,8 @@
                                                             </label>
                                                         </span>
                                                     </div>
-                                                    <button class="btn btn-xs btn-default plus"><i class="fa fa-plus"></i></button>
-                                                    <button class="btn btn-xs btn-default minus" style="display: none;"><i class="fa fa-minus"></i></button>
+                                                    <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                                                    <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -842,8 +844,8 @@
 
         div.each(function(index,ele) {
             div.width($('#main').width() - 210);
-            var btn_plus =  $(this).parent().find('button.plus');
-            var btn_minus =  $(this).parent().find('button.minus');
+            var btn_plus =  $(this).parent().find('a.plus');
+            var btn_minus =  $(this).parent().find('a.minus');
 
             console.log('index'+index);
             if($(this).width() > $(this).children('span.nout').width()){
@@ -860,7 +862,7 @@
         });
     }
 
-    $('#moreConditions .table td button.plus').click(function(e){
+    $('#moreConditions .table td a.plus').click(function(e){
 //        var div = $('#moreConditions .table div.nowrap-inline');
         var div = $(this).parent('td').find('div.nin');
         if(div.hasClass('nowrap-inline')){
@@ -871,15 +873,15 @@
             div.removeClass('outline');
         }
         $(this).toggle();
-        $(this).next('button.minus').toggle();
+        $(this).next('a.minus').toggle();
     });
 
-    $('#moreConditions .table td button.minus').click(function(e){
+    $('#moreConditions .table td a.minus').click(function(e){
         var div = $(this).parent('td').find('div.nin');
         div.removeClass('outline');
         div.addClass('nowrap-inline');
         $(this).toggle();
-        $(this).prev('button.plus').toggle();
+        $(this).prev('a.plus').toggle();
     });
 
 </script>

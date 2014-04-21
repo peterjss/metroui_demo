@@ -538,14 +538,20 @@
             });
 
 
-            if($('#flotcontainer').is)
-            $('#flotcontainer').fadeToggle(250,function(){
-                $('#pie_chart').fadeToggle(250, function(){
-                    if ($(this).is(':visible')) {
-                        plotPieNow();
-                    }
+            if($('#flotcontainer').is(':visible')){
+                $('#flotcontainer').fadeToggle(250,function(){
+                    $('#pie_chart').fadeToggle(250, function(){
+                        if ($(this).is(':visible')) {
+                            plotPieNow();
+                        }
+                    });
                 });
-            });
+            } else {
+                $('#pie_chart').fadeToggle(250,function(){
+                    $('#flotcontainer').fadeToggle(250);
+                });
+            }
+            
         });
 
         /* pie chart */
