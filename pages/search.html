@@ -816,28 +816,17 @@
 
 	// PAGE RELATED SCRIPTS
 	$("#myonoffswitch").click(function(e){
-//        console.log($(this).attr('checked'));
-//        if($(this).attr('checked')) {
-            $('.search-results:first').fadeToggle(250);
-//        }
+        $('.search-results:first').fadeToggle(250);
     });
 
     $('#show_moreConditions').click(function(e){
-        $('#moreConditions').slideToggle(function(){
-//            console.log($btn_add_project.is(':visible'));
-//            if($btn_add_project.is(':visible')){
-//                $('#myonoffswitch').attr('checked',true);
-//            }
-//            else
-//            {
-//                $('#myonoffswitch').attr('checked',false);
-//            }
-        });
+        $('#moreConditions').slideToggle();
     });
 
     $('#moreConditions').resize(function() {
         table_line_width();
     });
+
     function table_line_width(){
         var div = $('#moreConditions .table div.nin');
         var sp = $('#moreConditions .table div.nin > span.nout');
@@ -882,6 +871,10 @@
         div.addClass('nowrap-inline');
         $(this).toggle();
         $(this).prev('a.plus').toggle();
+    });
+
+    $('.checkbox-inline > :checkbox').click(function(e){
+        $('.search-results:first').fadeToggle(250);
     });
 
 </script>

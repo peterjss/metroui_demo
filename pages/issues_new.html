@@ -607,7 +607,7 @@ data-widget-sortable="false"
                     </div>
                     <div class="form-group">
                         <label class=" control-label"> 环境</label>
-                        <textarea class="form-control" rows="4"></textarea>
+                        <textarea class="form-control" rows="4" style="resize: none;"></textarea>
 
                         <div class="note">
                             例如 操作系统，软件平台，特殊硬件使用等。
@@ -615,7 +615,7 @@ data-widget-sortable="false"
                     </div>
                     <div class="form-group">
                         <label class=" control-label"> 描述 </label>
-                        <textarea class="form-control" rows="6"></textarea>
+                        <textarea name="ckeditor" class="form-control" rows="6"></textarea>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
@@ -1137,6 +1137,18 @@ function startDropzone (){
         dictResponseError: 'Error uploading file!'
     });
 }
+
+loadScript("js/plugin/ckeditor/ckeditor.js", ckeditorStart);
+
+function ckeditorStart() {
+    CKEDITOR.replace( 'ckeditor', {
+        toolbar : 'Standard',
+        height: '150px',
+        startupFocus : false
+    });
+}
+
+
 $.chat_list_btn = $('.ad-container > .chat-list-open-close');
 $.chat_body = $('#chat-body');
 
