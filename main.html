@@ -39,7 +39,31 @@
           media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)"
           rel="apple-touch-startup-image">
     <link href="img/splash/iphone.png" media="screen and (max-device-width: 320px)" rel="apple-touch-startup-image">
+    <style>
+        .login-info a.btn {
+            color:#FFFFFF;
+            width:21px;
+            margin: 3px 0 3px 3px;
+        }
+        .login-info a.btn :hover {
+            color: #F3F3F3;
+        }
 
+        .minified  .login-info .shortbtn a.btn{
+            height:10px;
+            width:15px;
+            margin: 1px;
+        }
+
+        .minified .login-info {
+            height: 105px;
+        }
+
+        .minified .login-info a span, .minified .login-info a i {
+            display: block;
+        }
+
+    </style>
 </head>
 <body class="">
 
@@ -328,31 +352,7 @@
        (the reference to the nav > ul) after page load. Or the navigation
        will not initialize.
        -->
-        <style>
-            .login-info a.btn {
-                color:#FFFFFF;
-                width:21px;
-                margin: 3px 0 3px 3px;
-            }
-            .login-info a.btn :hover {
-                color: #F3F3F3;
-            }
 
-            .minified  .login-info .shortbtn a.btn{
-                height:10px;
-                width:15px;
-                margin: 1px;
-            }
-
-            .minified .login-info {
-                height: 105px;
-            }
-
-            .minified .login-info a span, .minified .login-info a i {
-                display: block;
-            }
-
-        </style>
         <div class="login-info hidden-sm">
             <div class="shortbtn">
                 <!--<div class="col-sm-12 col-md-12 col-lg-12">-->
@@ -429,7 +429,7 @@
                     <a href="#pages/report.html"><i class="fa fa-lg fa-fw fa-bar-chart-o "></i> <span class="menu-item-parent">统计</span></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-lg fa-fw  fa-cogs "></i> <span class="menu-item-parent">系统管理</span></a>
+                    <a href="#"><i class="fa fa-lg fa-fw  fa-cogs "></i> <span class="menu-item-parent">系统</span></a>
                     <ul>
                         <li>
                             <a href="pages/sys_users.html">用户管理</a>
@@ -441,13 +441,13 @@
                             <a href="pages/role.html">角色</a>
                         </li>
                         <li>
-                            <a href="form-elements.html">资源</a>
+                            <a href="pages/resource.html">授权</a>
                         </li>
                         <li>
-                            <a href="fa.html">系统监控信息</a>
+                            <a href="pages/sysinfo.html">系统信息监控</a>
                         </li>
                         <li>
-                            <a href="glyph.html"> Email 设定 </a>
+                            <a href="pages/email.html"> Email 设定 </a>
                         </li>
                         <li>
                             <a href="glyph.html">备份与还原 </a>
