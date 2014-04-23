@@ -1086,16 +1086,29 @@
     function deleteUser(element) {
         var $this = $(element);
         $.targetElement = element.name;
-        $.SmartMessageBox({
-            title: "<i class='fa fa-sign-out txt-color-orangeDark'></i> 删除 <span class='txt-color-orangeDark'><strong>" + $.targetElement + "</strong></span> ?",
-            content: $.confirmMSG || "删除用户意味着将用户从系统中永远移除，包括一切相关信息，是否真的确认删除此用户？",
-            buttons: '[否][是]'
+//        $.SmartMessageBox({
+//            title: "<i class='fa fa-sign-out txt-color-orangeDark'></i> 删除 <span class='txt-color-orangeDark'><strong>" + $.targetElement + "</strong></span> ?",
+//            content: $.confirmMSG || "删除用户意味着将用户从系统中永远移除，包括一切相关信息，是否真的确认删除此用户？",
+//            buttons: '[否][是]'
+//
+//        }, function (ButtonPressed) {
+//            if (ButtonPressed == "是") {
+//                setTimeout(closedthis, 500);
+//            }
+//        });
 
-        }, function (ButtonPressed) {
+        $.smallBox({
+            title : "<i class='fa fa-sign-out txt-color-orangeDark'></i> 删除 <d class='txt-color-orangeDark'><strong>" + $.targetElement + "</strong></d> ?",
+            content : $.confirmMSG || "删除用户意味着将用户从系统中永远移除，包括一切相关信息，是否真的确认删除此用户？ <p class='text-align-right'><a href='javascript:void(0);' class='btn btn-danger btn-sm'>是</a> <a href='javascript:void(0);'  class='btn btn-primary btn-sm'>否</a></p>",
+            color : "#296191",
+            //timeout: 8000,
+            icon : "fa fa-bell swing animated"
+        },function (ButtonPressed) {
             if (ButtonPressed == "是") {
                 setTimeout(closedthis, 500);
             }
         });
+
 //                e.preventDefault();
     }
     function closedthis() {
