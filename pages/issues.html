@@ -19,6 +19,24 @@
     .radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
         margin-left: 0px;
     }
+
+    .nowrap-inline{
+        /*white-space: nowrap;*/
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        float:left;
+    }
+    .nowrap-inline .checkbox-inline span{
+        /*white-space: nowrap;*/
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        /*overflow: hidden;*/
+    }
+    .outline {
+        float:left;
+        width:100%;
+    }
 </style>
 
 <!-- Bread crumb is created dynamically -->
@@ -247,16 +265,38 @@
                         <!--</section>-->
                     </div>
                     <!--</fieldset>-->
-                    <div id="moreConditions" class="" style="display: none;margin-top:5px;">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <h4>更多标签</h4>
-                            <br>
-                            <table class="table table-hover table-noborder">
-                            <tbody>
-                            <tr>
-                                <td width="80">部门</td>
-                                <td>
+                    <div id="moreConditions" class="well " style="display: none;margin-top:5px;">
+                    <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <!--<h4>更多标签</h4>-->
+                    <ul class="nav nav-tabs  tabs-pull-right" id="demo-pill-nav">
+                        <!--<li class="pull-left">-->
+                        <!--<a href="javascript:void(0);"> 更多标签 </a>-->
+                        <!--</li>-->
+
+                        <li class="active">
+                            <a href="#tab-r1" data-toggle="tab"><span class="badge bg-color-blue txt-color-white">12</span> 卡产品 </a>
+                        </li>
+                        <li>
+                            <a href="#tab-r2" data-toggle="tab"><span class="badge bg-color-blueDark txt-color-white">3</span> 系统产品</a>
+                        </li>
+                        <li>
+                            <a href="#tab-r3" data-toggle="tab"><span class="badge bg-color-greenLight txt-color-white">0</span> 终端产品</a>
+                        </li>
+                        <li>
+                            <a href="#tab-r4" data-toggle="tab"><span class="badge bg-color-orange txt-color-white">0</span> 白盒</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content ">
+
+                    <div class="tab-pane active" id="tab-r1">
+                    <table class="table table-hover table-noborder ">
+                    <tbody>
+                    <tr>
+                        <td style="width:80px">部门</td>
+                        <td >
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
                                     <label class="checkbox-inline">
                                         <input type="checkbox" class="checkbox style-0">
                                         <span>COS一部</span>
@@ -297,11 +337,17 @@
                                         <input type="checkbox" class="checkbox style-0">
                                         <span>客户</span>
                                     </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="80">项目类别</td>
-                                <td>
+                                </span>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="80">项目类别</td>
+                        <td>
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
                                     <label class="checkbox-inline">
                                         <input type="checkbox" class="checkbox style-0">
                                         <span>平台项目</span>
@@ -310,11 +356,17 @@
                                         <input type="checkbox" class="checkbox style-0">
                                         <span>产品项目</span>
                                     </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="80">产品分类</td>
-                                <td>
+                                </span>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="80">产品分类</td>
+                        <td>
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
                                     <label class="checkbox-inline">
                                         <input type="checkbox" class="checkbox style-0">
                                         <span>电信</span>
@@ -343,11 +395,17 @@
                                         <input type="checkbox" class="checkbox style-0">
                                         <span>移动支付</span>
                                     </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="80">平台分类</td>
-                                <td>
+                                </span>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="80">平台分类</td>
+                        <td>
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
                                     <label class="checkbox-inline">
                                         <input type="checkbox" class="checkbox style-0">
                                         <span>Native</span>
@@ -372,11 +430,17 @@
                                         <input type="checkbox" class="checkbox style-0">
                                         <span>系统</span>
                                     </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="80">技术分类</td>
-                                <td>
+                                </span>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="80">技术分类</td>
+                        <td>
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
                                     <label class="checkbox-inline">
                                         <input type="checkbox" class="checkbox style-0">
                                         <span>电气特性</span>
@@ -425,11 +489,17 @@
                                         <input type="checkbox" class="checkbox style-0">
                                         <span>CDMA</span>
                                     </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td width="80">故障分类</td>
-                                <td>
+                                </span>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="80">故障分类</td>
+                        <td >
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
                                     <label class="checkbox-inline">
                                         <input type="checkbox" class="checkbox style-0">
                                         <span>功能缺陷</span>
@@ -482,15 +552,52 @@
                                         <input type="checkbox" class="checkbox style-0">
                                         <span>终端</span>
                                     </label>
-                                </td>
-                            </tr>
-                            </tbody>
-                            </table>
+                                </span>
                             </div>
+                            <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    </div>
+                    <div class="tab-pane padding-10" id="tab-r2">
+                        <p>
+                            在这里显示 系统产品 查询条件。
+                        </p>
+                    </div>
+                    <div class="tab-pane padding-10" id="tab-r3">
+                        <p>
+                            在这里显示 终端产品 查询条件。
+                        </p>
+                    </div>
+                    <div class="tab-pane padding-10" id="tab-r4">
+                        <p>
+                            在这里显示 白盒 查询条件。
+                        </p>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <span class="onoffswitch-title">
+                                <i class="fa fa-magnet"></i> 精确匹配
+                            </span>
+                            <span class="onoffswitch">
+                                <input id="myonoffswitch" class="onoffswitch-checkbox" type="checkbox" name="onoffswitch">
+                                <label class="onoffswitch-label" for="myonoffswitch">
+                                    <span class="onoffswitch-inner" data-swchoff-text="NO" data-swchon-text="YES"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </span>
                         </div>
                     </div>
 
+                    </div>
+
                 </form>
+                <br>
                 <div>
                     <button class="btn btn-default"><i class="fa fa-search"></i> 查询</button>
                     <a href="javascript:void(0);">重置查询条件</a>
@@ -781,68 +888,12 @@
     <th width="100">优先级</th>
     <th width="100">状态</th>
     <th class="hidden-xs hidden-sm">创建时间</th>
-    <th class="hidden-xs hidden-sm">修改时间</th>
-    <th class="hidden-xs hidden-sm">到期时间</th>
     <th width="40">操作</th>
 </tr>
-<!--<tr class="second">-->
-    <!--<td></td>-->
-    <!--<td>-->
-        <!--<label class="input">-->
-            <!--<input type="text" name="search_engine" class="search_init">-->
-        <!--</label>-->
-    <!--</td>-->
-    <!--<td>-->
-        <!--<label class="input">-->
-            <!--<input type="text" name="search_browser" class="search_init">-->
-        <!--</label>-->
-    <!--</td>-->
-    <!--<td>-->
-        <!--<label class="input">-->
-            <!--<input type="text" name="search_platform" class="search_init">-->
-        <!--</label>-->
-    <!--</td>-->
-    <!--<td>-->
-        <!--<label class="input">-->
-            <!--<input type="text" name="search_version" class="search_init">-->
-        <!--</label>-->
-    <!--</td>-->
-    <!--<td>-->
-        <!--<label class="input">-->
-            <!--<input type="text" name="search_grade" class="search_init">-->
-        <!--</label>-->
-    <!--</td>-->
-    <!--<td>-->
-        <!--<label class="input">-->
-            <!--<input type="text" name="search_grade" class="search_init">-->
-        <!--</label>-->
-    <!--</td>-->
-    <!--<td>-->
-        <!--<label class="input">-->
-            <!--<input type="text" name="search_grade" class="search_init">-->
-        <!--</label>-->
-    <!--</td>-->
-    <!--<td>-->
-        <!--<label class="input">-->
-            <!--<input type="text" name="search_grade" class="search_init">-->
-        <!--</label>-->
-    <!--</td>-->
-    <!--<td>-->
-        <!--<label class="input">-->
-            <!--<input type="text" name="search_grade" class="search_init">-->
-        <!--</label>-->
-    <!--</td>-->
-    <!--<td>-->
-        <!--<label class="input">-->
-            <!--<input type="text" name="search_grade" class="search_init">-->
-        <!--</label>-->
-    <!--</td>-->
-    <!--<td></td>-->
-<!--</tr>-->
 </thead>
 <tbody>
 <tr>
-    <td><i class="fa fa-rocket txt-color-red"></i></td>
+    <td><i class="fa fa-rocket txt-color-green"></i></td>
     <td><a href="#pages/issues_specific.html">IDTS-1</a></td>
     <td class="hidden-xs hidden-sm"><a href="#pages/issues_specific.html">UI 角色管理 字符校验.</a></td>
     <td>
@@ -859,15 +910,9 @@
         <i class="fa fa-arrow-up txt-color-red"></i>
     </td>
     <td>
-        <i class="fa fa-puzzle-piece txt-color-red"></i> 打开
+         关闭
     </td>
-    <td class="hidden-xs hidden-sm">14年03月07日</td>
-    <td class="hidden-xs hidden-sm">
-        14年03月07日
-    </td>
-    <td class="hidden-xs hidden-sm">
-        <span class="label label-danger">14年03月07日</span>
-    </td>
+    <td class="hidden-xs hidden-sm">2014-03-07</td>
     <td>
         <div>
             <a class="btn btn-primary btn-xs dropdown-toggle " data-toggle="dropdown">
@@ -906,7 +951,7 @@
     </td>
 </tr>
 <tr>
-    <td><i class="fa fa-rocket txt-color-red"></i></td>
+    <td><i class="fa fa-rocket txt-color-green"></i></td>
     <td><a href="#pages/issues_specific.html">IDTS-1</a></td>
     <td class="hidden-xs hidden-sm"><a href="#pages/issues_specific.html">UI 角色管理 字符校验.</a></td>
     <td>
@@ -923,15 +968,9 @@
         <i class="fa fa-arrow-up txt-color-red"></i>
     </td>
     <td>
-        <i class="fa fa-puzzle-piece txt-color-red"></i> 打开
+         审核中
     </td>
-    <td class="hidden-xs hidden-sm">14年03月07日</td>
-    <td class="hidden-xs hidden-sm">
-        14年03月07日
-    </td>
-    <td class="hidden-xs hidden-sm">
-        <span class="label label-danger">14年03月07日</span>
-    </td>
+    <td class="hidden-xs hidden-sm">2014-03-07</td>
     <td>
         <div>
             <a class="btn btn-primary btn-xs dropdown-toggle " data-toggle="dropdown">
@@ -970,7 +1009,7 @@
     </td>
 </tr>
 <tr>
-    <td><i class="fa fa-rocket txt-color-red"></i></td>
+    <td><i class="fa fa-rocket txt-color-green"></i></td>
     <td><a href="#pages/issues_specific.html">IDTS-1</a></td>
     <td class="hidden-xs hidden-sm"><a href="#pages/issues_specific.html">UI 角色管理 字符校验.</a></td>
     <td>
@@ -987,15 +1026,9 @@
         <i class="fa fa-arrow-down txt-color-green"></i>
     </td>
     <td>
-        <i class="fa fa-puzzle-piece txt-color-red"></i> 打开
+         打开
     </td>
-    <td class="hidden-xs hidden-sm">14年03月07日</td>
-    <td class="hidden-xs hidden-sm">
-        14年03月07日
-    </td>
-    <td class="hidden-xs hidden-sm">
-        <span class="label label-danger">14年03月07日</span>
-    </td>
+    <td class="hidden-xs hidden-sm">2014-03-07</td>
     <td>
         <div>
             <a class="btn btn-primary btn-xs dropdown-toggle " data-toggle="dropdown">
@@ -1034,7 +1067,7 @@
     </td>
 </tr>
 <tr>
-    <td><i class="fa fa-rocket txt-color-red"></i></td>
+    <td><i class="fa fa-rocket txt-color-green"></i></td>
     <td><a href="#pages/issues_specific.html">IDTS-1</a></td>
     <td class="hidden-xs hidden-sm"><a href="#pages/issues_specific.html">UI 角色管理 字符校验.</a></td>
     <td>
@@ -1048,18 +1081,12 @@
         </a>
     </td>
     <td>
-        <i class="fa fa-arrow-up txt-color-red"></i>
+        <i class="fa fa-minus  text-warning"></i>
     </td>
     <td>
-        <i class="fa fa-puzzle-piece txt-color-red"></i> 打开
+        关闭
     </td>
-    <td class="hidden-xs hidden-sm">14年03月07日</td>
-    <td class="hidden-xs hidden-sm">
-        14年03月07日
-    </td>
-    <td class="hidden-xs hidden-sm">
-        <span class="label label-danger">14年03月07日</span>
-    </td>
+    <td class="hidden-xs hidden-sm">2014-03-07</td>
     <td>
         <div>
             <a class="btn btn-primary btn-xs dropdown-toggle " data-toggle="dropdown">
@@ -1098,7 +1125,7 @@
     </td>
 </tr>
 <tr>
-    <td><i class="fa fa-rocket txt-color-red"></i></td>
+    <td><i class="fa fa-rocket txt-color-green"></i></td>
     <td><a href="#pages/issues_specific.html">IDTS-1</a></td>
     <td class="hidden-xs hidden-sm"><a href="#pages/issues_specific.html">UI 角色管理 字符校验.</a></td>
     <td>
@@ -1115,15 +1142,9 @@
         <i class="fa fa-arrow-up txt-color-red"></i>
     </td>
     <td>
-        <i class="fa fa-puzzle-piece txt-color-red"></i> 打开
+         打开
     </td>
-    <td class="hidden-xs hidden-sm">14年03月07日</td>
-    <td class="hidden-xs hidden-sm">
-        14年03月07日
-    </td>
-    <td class="hidden-xs hidden-sm">
-        <span class="label label-danger">14年03月07日</span>
-    </td>
+    <td class="hidden-xs hidden-sm">2014-03-07</td>
     <td>
         <div>
             <a class="btn btn-primary btn-xs dropdown-toggle " data-toggle="dropdown">
@@ -1162,7 +1183,7 @@
     </td>
 </tr>
 <tr>
-    <td><i class="fa fa-rocket txt-color-red"></i></td>
+    <td><i class="fa fa-rocket txt-color-green"></i></td>
     <td><a href="#pages/issues_specific.html">IDTS-1</a></td>
     <td class="hidden-xs hidden-sm"><a href="#pages/issues_specific.html">UI 角色管理 字符校验.</a></td>
     <td>
@@ -1179,15 +1200,9 @@
         <i class="fa fa-arrow-up txt-color-red"></i>
     </td>
     <td>
-        <i class="fa fa-puzzle-piece txt-color-red"></i> 打开
+      打开
     </td>
-    <td class="hidden-xs hidden-sm">14年03月07日</td>
-    <td class="hidden-xs hidden-sm">
-        14年03月07日
-    </td>
-    <td class="hidden-xs hidden-sm">
-        <span class="label label-danger">14年03月07日</span>
-    </td>
+    <td class="hidden-xs hidden-sm">2014-03-07</td>
     <td>
         <div>
             <a class="btn btn-primary btn-xs dropdown-toggle " data-toggle="dropdown">
@@ -1240,13 +1255,13 @@
 <script type="text/javascript">
 
     // DO NOT REMOVE : GLOBAL FUNCTIONS!
-
+    pageSetUp();
 
     /* remove previous elems */
 
-    if ($('.DTTT_dropdown.dropdown-menu').length) {
-        $('.DTTT_dropdown.dropdown-menu').remove();
-    }
+//    if ($('.DTTT_dropdown.dropdown-menu').length) {
+//        $('.DTTT_dropdown.dropdown-menu').remove();
+//    }
 
     loadScript("js/plugin/x-editable/x-editable.min.js", loadDataTableScripts);
 
@@ -1285,15 +1300,18 @@
     }
 
     function runDataTables() {
-        pageSetUp();
         /*
          * BASIC
          */
         $('#dt_issues').dataTable({
+            "bSortCellsTop": false,
+            "bFilter": false,
+            "bLengthChange": false
             //"sPaginationType" : "bootstrap_full"
         });
 
         /* END BASIC */
+
         /* event for delete button */
         $('#dt_issues tbody > tr').find('td:last> a:last').click(function () {
             deleteIssue({name: 'IDTS'});
@@ -1372,6 +1390,56 @@
     }
     $('#show_moreConditions').click(function(e){
         $('#moreConditions').slideToggle();
+    });
+
+    $('#moreConditions').resize(function() {
+        table_line_width();
+    });
+
+    function table_line_width(){
+        var div = $('#moreConditions .table div.nin');
+        var sp = $('#moreConditions .table div.nin > span.nout');
+
+        div.each(function(index,ele) {
+            div.width($('#main').width() - 210);
+            var btn_plus =  $(this).parent().find('a.plus');
+            var btn_minus =  $(this).parent().find('a.minus');
+
+            console.log('index'+index);
+            if($(this).width() > $(this).children('span.nout').width()){
+                btn_plus.hide();
+            } else {
+                if(div.hasClass('nowrap-inline')) {
+                    btn_plus.show();
+                    btn_minus.hide();
+                } else {
+                    btn_plus.hide();
+                    btn_minus.show();
+                }
+            }
+        });
+    }
+
+    $('#moreConditions .table td a.plus').click(function(e){
+//        var div = $('#moreConditions .table div.nowrap-inline');
+        var div = $(this).parent('td').find('div.nin');
+        if(div.hasClass('nowrap-inline')){
+            div.removeClass('nowrap-inline');
+            div.addClass('outline');
+        }else{
+            div.addClass('nowrap-inline');
+            div.removeClass('outline');
+        }
+        $(this).toggle();
+        $(this).next('a.minus').toggle();
+    });
+
+    $('#moreConditions .table td a.minus').click(function(e){
+        var div = $(this).parent('td').find('div.nin');
+        div.removeClass('outline');
+        div.addClass('nowrap-inline');
+        $(this).toggle();
+        $(this).prev('a.plus').toggle();
     });
 </script>
 
