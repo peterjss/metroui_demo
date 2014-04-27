@@ -63,6 +63,9 @@ h1, h2, h3, h4 {
     line-height: normal;
 }
 
+.jarviswidget .widget-body{
+    min-height: 50px;
+}
 .vlidate-form .state-error + em {
     color: #D56161;
     display: block;
