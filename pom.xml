@@ -12,9 +12,9 @@
     </properties>
 
     <scm>
-        <connection>scm:git:ssh://git@172.16.20.52:eipd_ui/ims</connection>
-        <url>scm:git:ssh://git@172.16.20.52:eipd_ui/ims.git</url>
-        <developerConnection>scm:git:ssh://git@172.16.20.52:eipd_ui/ims.git</developerConnection>
+        <connection>scm:git:git@172.16.20.52:eipd_ui/ims</connection>
+        <url>scm:git:git@172.16.20.52:eipd_ui/ims.git</url>
+        <developerConnection>scm:git:git@172.16.20.52:eipd_ui/ims.git</developerConnection>
   </scm>
 
     <build>
@@ -24,7 +24,7 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.1</version>
                 <configuration>
-                    <tagBase>scm:git:ssh://git@172.16.20.52:eipd_ui/ims.git</tagBase>
+                    <tagBase>scm:git:git@172.16.20.52:eipd_ui/ims.git</tagBase>
                 </configuration>
             </plugin>
         </plugins>
