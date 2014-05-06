@@ -3,7 +3,7 @@
 
     <artifactId>ims</artifactId>
     <groupId>com.iaspec.eipd</groupId>
-    <version>1.2.2-SNAPSHOT</version>
+    <version>1.2.2</version>
 
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
@@ -15,7 +15,8 @@
         <connection>scm:git:git@172.16.20.52:eipd_ui/ims</connection>
         <url>scm:git:git@172.16.20.52:eipd_ui/ims.git</url>
         <developerConnection>scm:git:git@172.16.20.52:eipd_ui/ims.git</developerConnection>
-   </scm>
+     <tag>ims-1.2.2</tag>
+  </scm>
 
     <build>
         <plugins>
