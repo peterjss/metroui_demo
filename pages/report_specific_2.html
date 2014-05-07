@@ -46,14 +46,31 @@
 						<div class="widget-body-toolbar">
 							<div class="row">
 								<div class="col-sm-6">
-                                    <!--<div class="row">-->
-                                        <!--<div class="col-sm-4">-->
-                                            <div class="btn-group" style="float:left;">
-                                                <a href="javascript:void(0);" class="btn btn-default">周</a>
-                                                <a href="javascript:void(0);" class="btn btn-default">月</a>
-                                                <a href="javascript:void(0);" class="btn btn-default">年</a>
 
-                                            </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <span class="font-md">近年缺陷比较</span>
+                                            <!--<div class="btn-group" style="float:left;">-->
+                                                <!--<a href="javascript:void(0);" class="btn btn-default">周</a>-->
+                                                <!--<a href="javascript:void(0);" class="btn btn-default">月</a>-->
+                                                <!--<a href="javascript:void(0);" class="btn btn-default">年</a>-->
+                                        <!--</div>-->
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input id="range-slider-1" type="text" name="range_1" value="">
+                                            <!--<select multiple style="width:100%" class="select2">-->
+                                                <!--<optgroup label="Eastern Time Zone">-->
+                                                    <!--<option value="1" >2009</option>-->
+                                                    <!--<option value="2" >2010</option>-->
+                                                    <!--<option value="3">2011</option>-->
+                                                    <!--<option value="4" selected="selected">2012</option>-->
+                                                    <!--<option value="5" selected="selected">2013</option>-->
+                                                    <!--<option value="6" selected="selected">2014</option>-->
+                                                <!--</optgroup>-->
+                                            <!--</select>-->
+                                            <!--<input class="form-control" type="text" placeholder="选择年份...">-->
+                                        </div>
+                                    </div>
                                     <!--<input class="form-control" type="text" style="float:left;" placeholder="选择时间...">-->
                                         <!--</div>-->
                                         <!--<div class="col-sm-8">-->
@@ -457,9 +474,9 @@
                                         <thead>
                                         <tr>
                                             <th class="text-center" style="width:40px">No.</th>
-                                            <th>项目/产品</th>
-                                            <th>打开中</th>
-                                            <th>已关闭</th>
+                                            <th>类别</th>
+                                            <th>2013</th>
+                                            <th>2014</th>
                                             <th style="width:100px">总缺陷</th>
                                         </tr>
                                         </thead>
@@ -496,10 +513,7 @@
                                             <td colspan="4">总缺陷数量</td>
                                             <td><strong>95</strong></td>
                                         </tr>
-                                        <tr>
-                                            <td colspan="4">修复/总量</td>
-                                            <td><strong>77%</strong></td>
-                                        </tr>
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -635,8 +649,7 @@
                                 </div>
 
                                 <div class="padding-10">
-                                    <!--<div id="flotcontainer_B" class="chart-large has-legend-unique "></div>-->
-                                    <div id="pie_chart_B" class="chart-large" ></div>
+                                    <div id="flotcontainer_B" class="chart-large has-legend-unique "></div>
                                 </div>
                             </div>
                         </div>
@@ -664,9 +677,9 @@
                                     <thead>
                                     <tr>
                                         <th class="text-center" style="width:40px">No.</th>
-                                        <th>项目/产品</th>
-                                        <th>打开中</th>
-                                        <th>已关闭</th>
+                                        <th>类别</th>
+                                        <th>2013</th>
+                                        <th>2014</th>
                                         <th style="width:100px">总缺陷</th>
                                     </tr>
                                     </thead>
@@ -717,10 +730,7 @@
                                         <td colspan="4">总缺陷数量</td>
                                         <td><strong>110</strong></td>
                                     </tr>
-                                    <tr>
-                                        <td colspan="4">修复/总量</td>
-                                        <td><strong>51%</strong></td>
-                                    </tr>
+
                                     </tbody>
                                 </table>
                             </div>
@@ -856,7 +866,7 @@
                                 </div>
 
                                 <div class="padding-10">
-                                    <div id="pie_chart_C" class="chart-large" ></div>
+                                    <div id="flotcontainer_C" class="chart-large has-legend-unique "></div>
                                 </div>
                             </div>
                         </div>
@@ -884,9 +894,9 @@
                                     <thead>
                                     <tr>
                                         <th class="text-center" style="width:40px">No.</th>
-                                        <th>项目/产品</th>
-                                        <th>打开中</th>
-                                        <th>已关闭</th>
+                                        <th>类别</th>
+                                        <th>2013</th>
+                                        <th>2014</th>
                                         <th style="width:100px">总缺陷</th>
                                     </tr>
                                     </thead>
@@ -943,10 +953,6 @@
                                     <tr>
                                         <td colspan="4">总缺陷数量</td>
                                         <td><strong>114</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4">修复/总量</td>
-                                        <td><strong>52%</strong></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -1038,10 +1044,8 @@
                         <div class="row">
                             <div  class="col-sm-12">
                                 <div class="widget-body-toolbar bg-color-white " id="rev-toggles_D">
-
                                     <div class="smart-form pull-left">
                                         <div class="inline-group ">
-
                                             <label for="gra-0_D" class="checkbox">
                                                 <input type="checkbox" name="gra-0" id="gra-0_D" checked="checked">
                                                 <i></i> GSM
@@ -1095,7 +1099,7 @@
                                 </div>
 
                                 <div class="padding-10">
-                                    <div id="bar-chart-h_D" class="chart-large" ></div>
+                                    <div id="flotcontainer_D" class="chart-large has-legend-unique "></div>
                                 </div>
                             </div>
                         </div>
@@ -1122,9 +1126,9 @@
                                     <thead>
                                     <tr>
                                         <th class="text-center" style="width:40px">No.</th>
-                                        <th>项目/产品</th>
-                                        <th>打开中</th>
-                                        <th>已关闭</th>
+                                        <th>类别</th>
+                                        <th>2013</th>
+                                        <th>2014</th>
                                         <th style="width:100px">总缺陷</th>
                                     </tr>
                                     </thead>
@@ -1182,10 +1186,7 @@
                                         <td colspan="4">总缺陷数量</td>
                                         <td><strong>114</strong></td>
                                     </tr>
-                                    <tr>
-                                        <td colspan="4">修复/总量</td>
-                                        <td><strong>52%</strong></td>
-                                    </tr>
+
                                     </tbody>
                                 </table>
                             </div>
@@ -1240,6 +1241,27 @@
 	// DO NOT REMOVE : GLOBAL FUNCTIONS!
 	pageSetUp();
 
+    /*
+     * ION SLIDER
+     */
+    loadScript("js/plugin/ion-slider/ion.rangeSlider.min.js", ion_slider);
+
+    function ion_slider() {
+        // Spinners
+        $("#range-slider-1").ionRangeSlider({
+            min: 2004,
+            max: 2014,
+            from: 2009,
+            to: 2014,
+            type: 'double',
+            step: 1,
+            prefix: "",
+            postfix:"年",
+            prettify: false,
+            hasGrid: true
+        });
+    }
+
     // Load FLOAT dependencies (related to page)
     loadScript("js/plugin/flot/jquery.flot.cust.js", loadFlotResize);
 
@@ -1269,240 +1291,168 @@
 
     var selValue = "";
 
+    /* chart colors default */
+    var $chrt_border_color = "#efefef";
+    var $chrt_grid_color = "#DDD"
+    var $chrt_main = "#E24913";			/* red       */
+    var $chrt_second = "#6595b4";		/* blue      */
+    var $chrt_third = "#FF9F01";		/* orange    */
+    var $chrt_fourth = "#7e9d3a";		/* green     */
+    var $chrt_fifth = "#BD362F";		/* dark red  */
+    var $chrt_mono = "#000";
+
     function typeSelected(){
         eval('chart'+selValue +'()');
     }
 
     function chartA(){
-// PAGE RELATED SCRIPTS
-        /* TAB 3: 分类信息  */
-        var d1 = [
-                    [1354586000000, 153],
-                    [1364587000000, 658],
-                    [1374588000000, 198],
-                    [1384589000000, 663],
-                    [1394590000000, 801],
-                    [1404591000000, 1080],
-                    [1414592000000, 353],
-                    [1424593000000, 749],
-                    [1434594000000, 523],
-                    [1444595000000, 258],
-                    [1454596000000, 688],
-                    [1464597000000, 364]
-                ],
-                d2 = [
-                    [1354586000000, 53],
-                    [1364587000000, 65],
-                    [1374588000000, 98],
-                    [1384589000000, 83],
-                    [1394590000000, 980],
-                    [1404591000000, 808],
-                    [1414592000000, 720],
-                    [1424593000000, 674],
-                    [1434594000000, 23],
-                    [1444595000000, 79],
-                    [1454596000000, 88],
-                    [1464597000000, 36]
-                ],
-                d3 = [
-                    [1354586000000, 647],
-                    [1364587000000, 435],
-                    [1374588000000, 784],
-                    [1384589000000, 346],
-                    [1394590000000, 487],
-                    [1404591000000, 463],
-                    [1414592000000, 479],
-                    [1424593000000, 236],
-                    [1434594000000, 843],
-                    [1444595000000, 657],
-                    [1454596000000, 241],
-                    [1464597000000, 341]
-                ],
-                d4 = [
-                    [1354586000000, 547],
-                    [1364587000000, 335],
-                    [1374588000000, 684],
-                    [1384589000000, 746],
-                    [1394590000000, 287],
-                    [1404591000000, 563],
-                    [1414592000000, 979],
-                    [1424593000000, 136],
-                    [1434594000000, 743],
-                    [1444595000000, 857],
-                    [1454596000000, 441],
-                    [1464597000000, 641]
-                ],
-                toggles = $("#rev-toggles_" + selValue),
-                target = $("#flotcontainer_" + selValue);
-        var data = [
-            {
-                label: "COS一部",
-                data: d1,
-                bars: {
-                    show: true,
-                    align: "center",
-                    //                    horizontal : true,
-                    //                    barWidth : 0.5,
-                    barWidth: 15 * 30 * 60 * 1000 * 80,
-                    order : 1
-                }
-            },
-            {
-                label: "随便的卡片",
-                data: d4,
-                color: '#6E587A',
-                //                lines: {
-                //                    show: true,
-                //                    lineWidth: 2
-                //                },
-                //                points: {
-                //                    show: true
-                //                }
-                bars: {
-                    show: true,
-                    align: "center",
-                    //                    horizontal : true,
-                    //                    barWidth : 0.5,
-                    barWidth: 15 * 30 * 60 * 1000 * 80,
-                    order : 2
-                }
-            },
-            {
-                label: "DD卡片",
-                data: d2,
-                color: '#3276B1',
-                lines: {
-                    show: true,
-                    lineWidth: 3
-                },
-                points: {
-                    show: true
-                }
-            },
-            {
-                label: "ADC卡片",
-                data: d3,
-                color: '#71843F',
-                lines: {
-                    show: true,
-                    lineWidth: 1
-                },
-                points: {
-                    show: true
-                }
-            }
+
+        var data1 = [];
+        for (var i = 0; i <= 3; i += 1)
+            data1.push([i, parseInt(Math.random() * 30)]);
+
+        var data2 = [];
+        for (var i = 0; i <= 3; i += 1)
+            data2.push([i, parseInt(Math.random() * 30)]);
+
+        var data3 = [];
+        for (var i = 0; i <= 3; i += 1)
+            data3.push([i, parseInt(Math.random() * 30)]);
+
+        var ticks = [
+            [0, "COS一部"],
+            [1, "COS二部"],
+            [2, "应用开发"],
+            [3, "个人化中心"]
         ];
 
-        var options = {
-            grid: {
-                show : true,
-                borderWidth : 0,
-                hoverable: true
-            },
-            legend : true,
-            tooltip: true,
-            tooltipOpts: {
-                //content: '%x - %y',
-                //dateFormat: '%b %y',
-                defaultTheme: false
-            },
-            xaxis: {
-                mode: "time"
-            },
-            yaxes: {
-                tickFormatter: function (val, axis) {
-                    return "$" + val;
-                },
-                max: 1200
-            }
-        };
-        plot2 = null;
-        function plotNow() {
-            var d = [];
-            toggles.find(':checkbox').each(function () {
-                if ($(this).is(':checked')) {
-                    d.push(data[$(this).attr("name").substr(4, 1)]);
-                }
-            });
-            if (d.length > 0) {
-                if (plot2) {
-                    plot2.setData(d);
-                    plot2.draw();
-                } else {
-                    plot2 = $.plot(target, d, options);
-                }
-            }
+        var ds = new Array();
 
-        };
-        toggles.find(':checkbox').on('change', function () {
-            plotNow();
+        ds.push({
+            label:"2013",
+            data : data1,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                order : 1
+            }
+        });
+        ds.push({
+            label:"2014",
+            data : data2,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                order : 2
+            }
+        });
+        ds.push({
+            label:"2015",
+            data : data3,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                order : 3
+            }
         });
 
-        plotNow();
-    }
-    function chartB(){
-// PAGE RELATED SCRIPTS
-        /* pie chart */
-//        var data_pie = [];
-//        var series = Math.floor(Math.random() * 10) + 1;
-//        for (var i = 0; i < series; i++) {
-//            data_pie[i] = {
-//                label : "Series" + (i + 1),
-//                data : Math.floor(Math.random() * 100) + 1
-//            }
-//        }
-        var data_pie = [{
-            label : "功能缺陷",
-            data : 20
-        },{
-            label : "性能缺陷",
-            data : 12
-        },{
-            label : "安全缺陷",
-            data : 32
-        },{
-            label : "稳定性",
-            data : 21
-        },{
-            label : "兼容性",
-            data : 15
-        },{
-            label : "物理",
-            data : 10
-        }]
-        $.plot($("#pie_chart_" + selValue), data_pie, {
-            series : {
-                pie : {
-                    show : true,
-//                        innerRadius : 0.5,
-                    radius : 1,
-                    label : {
-                        show : true,
-                        radius : 2 / 3,
-                        formatter : function(label, series) {
-                            return '<div style="font-size:11px;text-align:center;padding:4px;color:white;">' + series.label + '<br/>' + series.percent.toFixed(1) + '%</div>';
-                        },
-                        threshold : 0.05
-                    }
-                }
+        //Display graph
+        $.plot($("#flotcontainer_" + selValue), ds, {
+            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB"],
+            grid : {
+                show : true,
+                hoverable : true,
+                clickable : true,
+                tickColor : $chrt_border_color,
+                borderWidth : 0,
+                borderColor : $chrt_border_color
             },
             legend : {
-                show : true,
-                noColumns : 1, // number of colums in legend table
-                labelFormatter : function(label, series) {
-                    return label + ': ' + series.data[0][1] + ' (' + series.percent.toFixed(1) + '%)';
-                }, // fn: string -> string
-
-                labelBoxBorderColor : "#000", // border color for the little label boxes
-                container : null, // container (as jQuery object) to put legend in, null means default on top of graph
-                position : "ne", // position of default legend container within plot
-                margin : [5, 10], // distance from grid edge to default legend container within plot
-                backgroundColor : "#efefef", // null means auto-detect
-                backgroundOpacity : 1 // set to 0 to avoid background
+                show : true
             },
+            tooltip : true,
+            tooltipOpts : {
+                content : "<b>%s</b> 年产生 <span>%y</span> 个问题",
+                defaultTheme : false
+            },xaxis: {
+                ticks: ticks
+            }
+        });
+    }
+
+    function chartB(){
+
+        var data1 = [];
+        for (var i = 0; i <= 5; i += 1)
+            data1.push([i, parseInt(Math.random() * 130)]);
+
+        var data2 = [];
+        for (var i = 0; i <= 5; i += 1)
+            data2.push([i, parseInt(Math.random() * 130)]);
+
+        var data3 = [];
+        for (var i = 0; i <= 5; i += 1)
+            data3.push([i, parseInt(Math.random() * 130)]);
+
+        var ticks = [
+            [0, "功能缺陷"],
+            [1, "性能缺陷"],
+            [2, "安全缺陷"],
+            [3, "稳定性"],
+            [4, "兼容性"],
+            [5, "物理 "]
+        ];
+
+        var ds = new Array();
+
+        ds.push({
+            label:"2012",
+            data : data1,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                order : 1
+            }
+        });
+        ds.push({
+            label:"2013",
+            data : data2,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                order : 2
+            }
+        });
+        ds.push({
+            label:"2014",
+            data : data3,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                order : 3
+            }
+        });
+
+        //Display graph
+        $.plot($("#flotcontainer_" + selValue), ds, {
+            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB"],
             grid : {
+                show : true,
                 hoverable : true,
-                clickable : true
+                clickable : true,
+                tickColor : $chrt_border_color,
+                borderWidth : 0,
+                borderColor : $chrt_border_color
+            },
+            legend : {
+                show : true
+            },
+            tooltip : true,
+            tooltipOpts : {
+                content : "<b>%s</b> 年产生 <span>%y</span> 个问题",
+                defaultTheme : false
+            },xaxis: {
+                ticks: ticks
             }
         });
 
@@ -1510,16 +1460,7 @@
     }
 
     function chartC(){
-// PAGE RELATED SCRIPTS
-        /* pie chart */
-//        var data_pie = [];
-//        var series = Math.floor(Math.random() * 10) + 1;
-//        for (var i = 0; i < series; i++) {
-//            data_pie[i] = {
-//                label : "Series" + (i + 1),
-//                data : Math.floor(Math.random() * 100) + 1
-//            }
-//        }
+
         var data_pie = [{
             label : "电信",
             data : 20
@@ -1542,42 +1483,78 @@
             label : "移动支付",
             data : 4
         }]
-        console.log(selValue);
+        var data1 = [];
+        for (var i = 0; i <= 6; i += 1)
+            data1.push([i, parseInt(Math.random() * 130)]);
 
-        $.plot($("#pie_chart_" + selValue), data_pie, {
-            series : {
-                pie : {
-                    show : true,
-//                        innerRadius : 0.5,
-                    radius : 1,
-                    label : {
-                        show : true,
-                        radius : 2 / 3,
-                        formatter : function(label, series) {
-                            console.log('in formater');
-                            return '<div style="font-size:11px;text-align:center;padding:4px;color:white;">' + series.label + '<br/>' + series.percent.toFixed(1) + '%</div>';
-                        },
-                        threshold : 0.05
-                    }
-                }
+        var data2 = [];
+        for (var i = 0; i <= 6; i += 1)
+            data2.push([i, parseInt(Math.random() * 130)]);
+
+        var data3 = [];
+        for (var i = 0; i <= 6; i += 1)
+            data3.push([i, parseInt(Math.random() * 130)]);
+
+        var ticks = [
+            [0, "电信"],
+            [1, "金融"],
+            [2, "社保"],
+            [3, "一卡通"],
+            [4, "建设事业"],
+            [5, "健康卡 "],
+            [6, "移动支付 "]
+        ];
+
+        var ds = new Array();
+
+        ds.push({
+            label:"2012",
+            data : data1,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                order : 1
+            }
+        });
+        ds.push({
+            label:"2013",
+            data : data2,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                order : 2
+            }
+        });
+        ds.push({
+            label:"2014",
+            data : data3,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                order : 3
+            }
+        });
+
+        //Display graph
+        $.plot($("#flotcontainer_" + selValue), ds, {
+            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB"],
+            grid : {
+                show : true,
+                hoverable : true,
+                clickable : true,
+                tickColor : $chrt_border_color,
+                borderWidth : 0,
+                borderColor : $chrt_border_color
             },
             legend : {
-                show : true,
-                noColumns : 2, // number of colums in legend table
-                labelFormatter : function(label, series) {
-                    console.log('in labelFormatter');
-                    return label + ': ' + series.data[0][1] + ' (' + series.percent.toFixed(1) + '%)';
-                }, // fn: string -> string
-                labelBoxBorderColor : "#000", // border color for the little label boxes
-                container : null, // container (as jQuery object) to put legend in, null means default on top of graph
-                position : "ne", // position of default legend container within plot
-                margin : [5, 10], // distance from grid edge to default legend container within plot
-                backgroundColor : "#efefef", // null means auto-detect
-                backgroundOpacity : 1 // set to 0 to avoid background
+                show : true
             },
-            grid : {
-                hoverable : true,
-                clickable : true
+            tooltip : true,
+            tooltipOpts : {
+                content : "<b>%s</b> 年产生 <span>%y</span> 个问题",
+                defaultTheme : false
+            },xaxis: {
+                ticks: ticks
             }
         });
 
@@ -1585,24 +1562,40 @@
     }
 
     function chartD(){
-        /* chart colors default */
-        var $chrt_border_color = "#efefef";
-        var $chrt_grid_color = "#DDD"
-        var $chrt_main = "#E24913";			/* red       */
-        var $chrt_second = "#6595b4";		/* blue      */
-        var $chrt_third = "#FF9F01";		/* orange    */
-        var $chrt_fourth = "#7e9d3a";		/* green     */
-        var $chrt_fifth = "#BD362F";		/* dark red  */
-        var $chrt_mono = "#000";
-        /* pie chart */
+        var data_pie = [{
+            label : "电信",
+            data : 20
+        },{
+            label : "金融",
+            data : 12
+        },{
+            label : "社保",
+            data : 32
+        },{
+            label : "一卡通 ",
+            data : 21
+        },{
+            label : "建设事业",
+            data : 15
+        },{
+            label : "健康卡",
+            data : 10
+        },{
+            label : "移动支付",
+            data : 4
+        }]
+        var data1 = [];
+        for (var i = 0; i <= 6; i += 1)
+            data1.push([i, parseInt(Math.random() * 130)]);
 
-        //Display horizontal graph
+        var data2 = [];
+        for (var i = 0; i <= 6; i += 1)
+            data2.push([i, parseInt(Math.random() * 130)]);
 
-        var data = [[20, 0],[12,1],[32, 2],
-            [21, 3],[15,4], [10,5],[4,6]];
-        var dataset = [
-            { label: "", data: data, color: $chrt_second }
-        ];
+        var data3 = [];
+        for (var i = 0; i <= 6; i += 1)
+            data3.push([i, parseInt(Math.random() * 130)]);
+
         var ticks = [
             [0, "GSM"],
             [1, "CDMA"],
@@ -1612,24 +1605,40 @@
             [5, "CSIM"],
             [6, "终端"]
         ];
-        // display graph
-        $.plot($("#bar-chart-h_"+ selValue), dataset, {
-//            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB","#BBB","#BBB","#BBB"],
-            series: {
-                bars: {
-                    show: true,
-                    barWidth: 0.3,
-                    horizontal: true,
-                    align: "center"
-                }
-            },
-            xaxis: {
-                tickLength: 0,
-                max: 50
-            },
-            yaxis: {
-                ticks: ticks
-            },
+
+        var ds = new Array();
+
+        ds.push({
+            label:"2012",
+            data : data1,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                order : 1
+            }
+        });
+        ds.push({
+            label:"2013",
+            data : data2,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                order : 2
+            }
+        });
+        ds.push({
+            label:"2014",
+            data : data3,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                order : 3
+            }
+        });
+
+        //Display graph
+        $.plot($("#flotcontainer_" + selValue), ds, {
+            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB"],
             grid : {
                 show : true,
                 hoverable : true,
@@ -1637,24 +1646,24 @@
                 tickColor : $chrt_border_color,
                 borderWidth : 0,
                 borderColor : $chrt_border_color
-//                backgroundColor: { colors: ["#ffffff", "#EDF5FF"] }
             },
-
-            legend : true,
+            legend : {
+                show : true
+            },
             tooltip : true,
             tooltipOpts : {
-                content : "<b>%x</b> = <span>%y</span>",
+                content : "<b>%s</b> 年产生 <span>%y</span> 个问题",
                 defaultTheme : false
+            },xaxis: {
+                ticks: ticks
             }
         });
-        /* end pie chart */
     }
 
     function generatePageGraphs() {
 
         $('#btn_dosearch').click(function() {
             var content_empty = $('#report_content_empty');
-
             if(content_empty.is(":visible") && selValue!=''){
 
                 $('#report_content_empty').toggle(function () {

@@ -40,6 +40,16 @@
 	$.enableMobileWidgets = false;
 
 
+    /* chart colors default */
+    var $chrtBorderColor = "#efefef",
+        $chrtGridColor = "#DDD";
+
+    var $customColors = [
+        "#295891", "#E24913", "#6e3671", "#7e9d3a",
+        "#4c4f53", "#FF9F01", "#a90329", "#a57225",
+        "#a8829f", "#6595b4", "#356e35"
+    ];
+
 	/*
 	 * DETECT MOBILE DEVICES
 	 * Description: Detects mobile device - if any of the listed device is detected

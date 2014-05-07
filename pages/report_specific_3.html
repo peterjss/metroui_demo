@@ -1,0 +1,1987 @@
+<link href="css/invoice.css" rel="stylesheet">
+
+<!-- widget grid -->
+<section id="widget-grid" class="">
+
+<!-- row -->
+<div class="row">
+
+<!-- NEW WIDGET START -->
+<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+<!-- Widget ID (each widget will need unique ID)-->
+<div class="jarviswidget well jarviswidget-color-darken" id="wid-id-0" data-widget-sortable="false" data-widget-deletebutton="false" data-widget-editbutton="false" data-widget-colorbutton="false">
+<!-- widget options:
+usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+data-widget-colorbutton="false"
+data-widget-editbutton="false"
+data-widget-togglebutton="false"
+data-widget-deletebutton="false"
+data-widget-fullscreenbutton="false"
+data-widget-custombutton="false"
+data-widget-collapsed="true"
+data-widget-sortable="false"
+
+-->
+    <header>
+        <span class="widget-icon"> <i class="fa fa-barcode"></i> </span>
+        <h2>Item #44761 </h2>
+
+    </header>
+
+    <!-- widget div-->
+    <div>
+
+        <!-- widget edit box -->
+        <div class="jarviswidget-editbox">
+        </div>
+        <!-- end widget edit box -->
+
+        <!-- widget content -->
+        <div class="widget-body no-padding">
+
+            <div class="widget-body-toolbar">
+                <div class="row">
+                    <div class="col-sm-6">
+
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <span class="font-lg">相同问题历年趋势</span>
+                                <!--<div class="btn-group" style="float:left;">-->
+                                <!--<a href="javascript:void(0);" class="btn btn-default">周</a>-->
+                                <!--<a href="javascript:void(0);" class="btn btn-default">月</a>-->
+                                <!--<a href="javascript:void(0);" class="btn btn-default">年</a>-->
+                                <!--</div>-->
+                            </div>
+                            <div class="col-sm-7">
+                                <input id="range-slider-1" type="text" name="range_1" value="">
+                                <!--<select multiple style="width:100%" class="select2">-->
+                                    <!--<optgroup label="Eastern Time Zone">-->
+                                        <!--<option value="1" >2009</option>-->
+                                        <!--<option value="2" >2010</option>-->
+                                        <!--<option value="3">2011</option>-->
+                                        <!--<option value="4" selected="selected">2012</option>-->
+                                        <!--<option value="5" selected="selected">2013</option>-->
+                                        <!--<option value="6" selected="selected">2014</option>-->
+                                    <!--</optgroup>-->
+                                <!--</select>-->
+                                <!--<input class="form-control" type="text" placeholder="选择年份...">-->
+                            </div>
+                        </div>
+                        <!--<input class="form-control" type="text" style="float:left;" placeholder="选择时间...">-->
+                        <!--</div>-->
+                        <!--<div class="col-sm-8">-->
+                        <!--<input class="form-control" type="text" placeholder="选择时间...">-->
+                        <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <!--<label>项目类型</label>-->
+                            <select id="sel_type" style="width:100%" class="select2" data-placeholder="请选择统计类型">
+                                <option></option>
+                                <option value="A">按部门</option>
+                                <option value="B">按缺陷类型</option>
+                                <option value="C">按产品分类</option>
+                                <option value="D">按技术分类</option>
+                            </select>
+                            <div class="input-group-btn">
+                                <button id="btn_dosearch" class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i> 统计
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--按部门-->
+                <div id="subType_content_A" class="row" style="margin-top: 10px; display: none;">
+                    <div class="col-sm-12">
+
+                        <div class="well" style="">
+                            <div style="margin-bottom: 5px;">
+                                请选择需统计的字段 [<a id="select_all_A" href="javascript:void(0);">全选</a>]
+                            </div>
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>COS一部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>COS二部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>应用开发</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>个人化中心</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>技术拓展部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>国际部技术组</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>产品部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>增值业务部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>测试组</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>客户</span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--end 按部门-->
+
+                <!--按缺陷类别-->
+                <div id="subType_content_B" class="row" style="margin-top: 10px; display: none;">
+                    <div class="col-sm-12">
+
+                        <div class="well" style="">
+                            <div style="margin-bottom: 5px;">
+                                请选择需统计的字段 [<a  id="select_all_B" href="javascript:void(0);">全选</a>]
+                            </div>
+                            <div class="nin nowrap-inline">
+                                 <span class="nout">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>功能缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>性能缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>安全缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>稳定性</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>兼容性</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>物理</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>需求缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>COS缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>文件系统</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>应用缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>个人化</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>芯片</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>终端</span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--end 按缺陷类别-->
+
+                <!--按产品分类-->
+                <div id="subType_content_C" class="row" style="margin-top: 10px; display: none;">
+                    <div class="col-sm-12">
+
+                        <div class="well" style="">
+                            <div style="margin-bottom: 5px;">
+                                请选择需统计的字段 [<a  id="select_all_C" href="javascript:void(0);">全选</a>]
+                            </div>
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>电信</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>金融</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>社保</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>一卡通</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>建设事业</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0" checked>
+                                        <span>健康卡</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>移动支付</span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--end 按产品分类-->
+
+                <!--按技术分类-->
+                <div id="subType_content_D" class="row" style="margin-top: 10px; display: none;">
+                    <div class="col-sm-12">
+
+                        <div class="well" style="">
+                            <div style="margin-bottom: 5px;">
+                                请选择需统计的字段 [<a  id="select_all_D" href="javascript:void(0);">全选</a>]
+                            </div>
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>电气特性</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>接触协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>非接协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>天线</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>USB协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>SWP协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>HCI API</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>BIP</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>Https协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>CAP-TP</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>GMS</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>CDMA</span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--end 按技术分类-->
+            </div>
+
+            <div id="report_content_empty" class="padding-10" >
+                请选择统计条件进行统计。
+            </div>
+
+            <div id="report_content_A" class="padding-10" style="display: none;">
+                <div class="row">
+                    <div class="col-sm-6" style="line-height:50px;">
+                        <div class="pull-left">
+                            <img width="150" height="32" alt="invoice icon" src="img/logo-blacknwhite.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="pull-right">
+                            <h1 class="font-400">按部门统计</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                        <address>
+                            <strong>用户信息.</strong>
+                            <br>
+                            Peter Li,
+                            <br>
+                            Administrator,PM
+                            <br>
+                            <abbr title="Phone">P:</abbr> (123) 456-7890
+                        </address>
+                    </div>
+                    <div class="col-sm-4">
+                        <!--<div>-->
+                        <!--<div>-->
+                        <!--<strong>INVOICE NO :</strong>-->
+                        <!--<span class="pull-right"> #AA-454-4113-00 </span>-->
+                        <!--</div>-->
+
+                        <!--</div>-->
+                        <div>
+                            <div class="font-md">
+                                <strong>时间区间 :</strong>
+                                <span class="pull-right"> <i class="fa fa-calendar"></i> 2014-02-15/2014-03-15  </span>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="well well-sm  bg-color-blue txt-color-white no-border">
+                            <div class="fa-lg">
+                                缺陷总数 :
+                                <span class="pull-right"> 95 个 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div  class="col-sm-12">
+                        <div class="widget-body-toolbar bg-color-white " id="rev-toggles_A">
+
+                            <div class="smart-form pull-left">
+                                <div class="inline-group ">
+
+                                    <label for="gra-0_A" class="checkbox">
+                                        <input type="checkbox" name="gra-0" id="gra-0_A" checked="checked">
+                                        <i></i> COS一部
+                                    </label>
+                                    <label for="gra-1_A" class="checkbox">
+                                        <input type="checkbox" name="gra-1" id="gra-1_A" checked="checked">
+                                        <i></i> <span class="">COS二部</span>
+                                    </label>
+                                    <label for="gra-2_A" class="checkbox">
+                                        <input type="checkbox" name="gra-2" id="gra-2_A" checked="checked">
+                                        <i></i> 应用开发
+                                    </label>
+                                    <label for="gra-3_A" class="checkbox">
+                                        <input type="checkbox" name="gra-3" id="gra-3_A" checked="checked">
+                                        <i></i> 个人化中心
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="btn-group hidden-phone pull-right">
+                                <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                        class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <!--<li style="display: none;">-->
+                                    <!--<a href="javascript:void(0);" id="change_to_bar_A"><i class="fa fa-random "></i> 切换为柱状图</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <!--<a href="javascript:void(0);" id="change_to_pie_A"><i class="fa fa-random "></i> 切换为饼状图</a>-->
+                                    <!--</li>-->
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-file-text"></i> 导出至PDF</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-question "></i> 帮助</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="padding-10">
+                            <div id="flotcontainer_A" class="chart-large has-legend-unique "></div>
+                            <!--<div id="pie_chart_A" class="chart-large" style="display: none;"></div>-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div  class="col-sm-12">
+                        <div class="widget-body-toolbar bg-color-white smart-form">
+                            <div class="btn-group hidden-phone pull-right">
+                                <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                        class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-file-text-alt"></i> 导出至
+                                            PDF</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-question-sign"></i> 帮助</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th class="text-center" style="width:40px">No.</th>
+                                <th>类别</th>
+                                <th>2013</th>
+                                <th>2014</th>
+                                <th style="width:100px">总缺陷</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center"><strong>1</strong></td>
+                                <td><a href="javascript:void(0);">COS一部</a></td>
+                                <td>11</td>
+                                <td>9</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><strong>2</strong></td>
+                                <td><a href="javascript:void(0);"> COS二部</a></td>
+                                <td>3</td>
+                                <td>9</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><strong>4</strong></td>
+                                <td><a href="javascript:void(0);">应用开发</a></td>
+                                <td>1</td>
+                                <td>31</td>
+                                <td>32</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><strong>5</strong></td>
+                                <td><a href="javascript:void(0);">个人化中心</a></td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">总缺陷数量</td>
+                                <td><strong>95</strong></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="invoice-footer">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <!--<div class="payment-methods">-->
+                            <!--<h5>Payment Methods</h5>-->
+                            <!--<img src="img/invoice/paypal.png" width="64" height="64" alt="paypal">-->
+                            <!--<img src="img/invoice/americanexpress.png" width="64" height="64" alt="american express">-->
+                            <!--<img src="img/invoice/mastercard.png" width="64" height="64" alt="mastercard">-->
+                            <!--<img src="img/invoice/visa.png" width="64" height="64" alt="visa">-->
+                            <!--</div>-->
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="invoice-sum-total pull-right">
+                                <h3><strong>总数量: <span class="text-success">95 个</span></strong></h3>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--<div class="row">-->
+                    <!--<div class="col-sm-12">-->
+                    <!--<p class="note">**To avoid any excess penalty charges, please make payments within 30 days of the due date. There will be a 2% interest charge per month on all late invoices.</p>-->
+                    <!--</div>-->
+                    <!--</div>-->
+
+                </div>
+            </div>
+
+            <div id="report_content_B" class="padding-10" style="display: none;">
+                <div class="row">
+                    <div class="col-sm-6" style="line-height:50px;">
+                        <div class="pull-left">
+                            <img width="150" height="32" alt="invoice icon" src="img/logo-blacknwhite.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="pull-right">
+                            <h1 class="font-400">按缺陷类型统计</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                        <address>
+                            <strong>用户信息.</strong>
+                            <br>
+                            Peter Li,
+                            <br>
+                            Administrator,PM
+                            <br>
+                            <abbr title="Phone">P:</abbr> (123) 456-7890
+                        </address>
+                    </div>
+                    <div class="col-sm-4">
+                        <!--<div>-->
+                        <!--<div>-->
+                        <!--<strong>INVOICE NO :</strong>-->
+                        <!--<span class="pull-right"> #AA-454-4113-00 </span>-->
+                        <!--</div>-->
+
+                        <!--</div>-->
+                        <div>
+                            <div class="font-md">
+                                <strong>时间区间 :</strong>
+                                <span class="pull-right"> <i class="fa fa-calendar"></i> 2014-02-15/2014-03-15  </span>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="well well-sm  bg-color-blue txt-color-white no-border">
+                            <div class="fa-lg">
+                                缺陷总数 :
+                                <span class="pull-right"> 110 个 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div  class="col-sm-12">
+                        <div class="widget-body-toolbar bg-color-white " id="rev-toggles_B">
+
+                            <div class="smart-form pull-left">
+                                <div class="inline-group ">
+                                    <label for="gra-0_B" class="checkbox">
+                                        <input type="checkbox" name="gra-0" id="gra-0_B" checked="checked">
+                                        <i></i> 功能缺陷
+                                    </label>
+                                    <label for="gra-1_B" class="checkbox">
+                                        <input type="checkbox" name="gra-1" id="gra-1_B" checked="checked">
+                                        <i></i> <span class="">性能缺陷</span>
+                                    </label>
+                                    <label for="gra-2_B" class="checkbox">
+                                        <input type="checkbox" name="gra-2" id="gra-2_B" checked="checked">
+                                        <i></i> 安全缺陷
+                                    </label>
+                                    <label for="gra-3_B" class="checkbox">
+                                        <input type="checkbox" name="gra-3" id="gra-3_B" checked="checked">
+                                        <i></i> 稳定性
+                                    </label>
+                                    <label for="gra-4_B" class="checkbox">
+                                        <input type="checkbox" name="gra-4" id="gra-4_B" checked="checked">
+                                        <i></i> 兼容性
+                                    </label>
+                                    <label for="gra-5_B" class="checkbox">
+                                        <input type="checkbox" name="gra-5" id="gra-5_B" checked="checked">
+                                        <i></i> 物理
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="btn-group hidden-phone pull-right">
+                                <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                        class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <!--<li style="display: none;">-->
+                                    <!--<a href="javascript:void(0);" id="change_to_bar_B"><i class="fa fa-random "></i> 切换为柱状图</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <!--<a href="javascript:void(0);" id="change_to_pie_B"><i class="fa fa-random "></i> 切换为饼状图</a>-->
+                                    <!--</li>-->
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-file-text"></i> 导出至PDF</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-question "></i> 帮助</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="padding-10">
+                            <div id="flotcontainer_B" class="chart-large has-legend-unique "></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div  class="col-sm-12">
+                        <div class="widget-body-toolbar bg-color-white smart-form">
+                            <div class="btn-group hidden-phone pull-right">
+                                <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                        class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-file-text-alt"></i> 导出至
+                                            PDF</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-question-sign"></i> 帮助</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th class="text-center" style="width:40px">No.</th>
+                                <th>类别</th>
+                                <th>2013</th>
+                                <th>2014</th>
+                                <th style="width:100px">总缺陷</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center"><strong>1</strong></td>
+                                <td><a href="javascript:void(0);">功能缺陷</a></td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><strong>2</strong></td>
+                                <td><a href="javascript:void(0);"> 性能缺陷</a></td>
+                                <td>9</td>
+                                <td>3</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><strong>3</strong></td>
+                                <td><a href="javascript:void(0);">安全缺陷</a></td>
+                                <td>10</td>
+                                <td>22</td>
+                                <td>32</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><strong>4</strong></td>
+                                <td><a href="javascript:void(0);">稳定性</a></td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><strong>5</strong></td>
+                                <td><a href="javascript:void(0);">兼容性</a></td>
+                                <td>5</td>
+                                <td>10</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><strong>6</strong></td>
+                                <td><a href="javascript:void(0);">物理</a></td>
+                                <td>9</td>
+                                <td>1</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">总缺陷数量</td>
+                                <td><strong>110</strong></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="invoice-footer">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <!--<div class="payment-methods">-->
+                            <!--<h5>Payment Methods</h5>-->
+                            <!--<img src="img/invoice/paypal.png" width="64" height="64" alt="paypal">-->
+                            <!--<img src="img/invoice/americanexpress.png" width="64" height="64" alt="american express">-->
+                            <!--<img src="img/invoice/mastercard.png" width="64" height="64" alt="mastercard">-->
+                            <!--<img src="img/invoice/visa.png" width="64" height="64" alt="visa">-->
+                            <!--</div>-->
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="invoice-sum-total pull-right">
+                                <h3><strong>总数量: <span class="text-success">110 个</span></strong></h3>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--<div class="row">-->
+                    <!--<div class="col-sm-12">-->
+                    <!--<p class="note">**To avoid any excess penalty charges, please make payments within 30 days of the due date. There will be a 2% interest charge per month on all late invoices.</p>-->
+                    <!--</div>-->
+                    <!--</div>-->
+
+                </div>
+            </div>
+
+            <div id="report_content_C" class="padding-10" style="display: none;">
+                    <div class="row">
+                        <div class="col-sm-6" style="line-height:50px;">
+                            <div class="pull-left">
+                                <img width="150" height="32" alt="invoice icon" src="img/logo-blacknwhite.png">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="pull-right">
+                                <h1 class="font-400">按产品分类统计</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <address>
+                                <strong>用户信息.</strong>
+                                <br>
+                                Peter Li,
+                                <br>
+                                Administrator,PM
+                                <br>
+                                <abbr title="Phone">P:</abbr> (123) 456-7890
+                            </address>
+                        </div>
+                        <div class="col-sm-4">
+                            <!--<div>-->
+                            <!--<div>-->
+                            <!--<strong>INVOICE NO :</strong>-->
+                            <!--<span class="pull-right"> #AA-454-4113-00 </span>-->
+                            <!--</div>-->
+
+                            <!--</div>-->
+                            <div>
+                                <div class="font-md">
+                                    <strong>时间区间 :</strong>
+                                    <span class="pull-right"> <i class="fa fa-calendar"></i> 2014-02-15/2014-03-15  </span>
+                                </div>
+
+                            </div>
+                            <br>
+                            <div class="well well-sm  bg-color-blue txt-color-white no-border">
+                                <div class="fa-lg">
+                                    缺陷总数 :
+                                    <span class="pull-right"> 100 个 </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                        <div  class="col-sm-12">
+                            <div class="widget-body-toolbar bg-color-white " id="rev-toggles_C">
+
+                                <div class="smart-form pull-left">
+                                    <div class="inline-group ">
+                                        <label for="gra-0_C" class="checkbox">
+                                            <input type="checkbox" name="gra-0" id="gra-0_C" checked="checked">
+                                            <i></i> 电信
+                                        </label>
+                                        <label for="gra-1_C" class="checkbox">
+                                            <input type="checkbox" name="gra-1" id="gra-1_C" checked="checked">
+                                            <i></i> 金融
+                                        </label>
+                                        <label for="gra-2_C" class="checkbox">
+                                            <input type="checkbox" name="gra-2" id="gra-2_C" checked="checked">
+                                            <i></i> 社保
+                                        </label>
+                                        <label for="gra-3_C" class="checkbox">
+                                            <input type="checkbox" name="gra-3" id="gra-3_C" checked="checked">
+                                            <i></i> 一卡通
+                                        </label>
+                                        <label for="gra-4_C" class="checkbox">
+                                            <input type="checkbox" name="gra-4" id="gra-4_C" checked="checked">
+                                            <i></i> 建设事业
+                                        </label>
+                                        <label for="gra-5_C" class="checkbox">
+                                            <input type="checkbox" name="gra-5" id="gra-5_C" checked="checked">
+                                            <i></i> 健康卡
+                                        </label>
+                                    </div>
+                                <div class="btn-group hidden-phone pull-right">
+                                    <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                            class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <!--<li style="display: none;">-->
+                                        <!--<a href="javascript:void(0);" id="change_to_bar_C"><i class="fa fa-random "></i> 切换为柱状图</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                        <!--<a href="javascript:void(0);" id="change_to_pie_C"><i class="fa fa-random "></i> 切换为饼状图</a>-->
+                                        <!--</li>-->
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="javascript:void(0);"><i class="fa fa-file-text"></i> 导出至PDF</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);"><i class="fa fa-question "></i> 帮助</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="padding-10">
+                                <div id="flotcontainer_C" class="chart-large has-legend-unique "></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div  class="col-sm-12">
+                            <div class="widget-body-toolbar bg-color-white smart-form">
+                                <div class="btn-group hidden-phone pull-right">
+                                    <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                            class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="javascript:void(0);"><i class="fa fa-file-text-alt"></i> 导出至
+                                                PDF</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);"><i class="fa fa-question-sign"></i> 帮助</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th class="text-center" style="width:40px">No.</th>
+                                    <th>类别</th>
+                                    <th>2009</th>
+                                    <th>2010</th>
+                                    <th>2011</th>
+                                    <th>2012</th>
+                                    <th>2013</th>
+                                    <th>2014</th>
+                                    <th style="width:100px">总缺陷</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-center"><strong>1</strong></td>
+                                    <td><a href="javascript:void(0);">电信</a></td>
+                                    <td>10</td>
+                                    <td>9</td>
+                                    <td>3</td>
+                                    <td>10</td>
+                                    <td>12</td>
+                                    <td>22</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><strong>2</strong></td>
+                                    <td><a href="javascript:void(0);"> 金融 </a></td>
+                                    <td>9</td>
+                                    <td>3</td>
+                                    <td>10</td>
+                                    <td>22</td>
+                                    <td>32</td>
+                                    <td>22</td>
+                                    <td>120</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><strong>3</strong></td>
+                                    <td><a href="javascript:void(0);">社保</a></td>
+                                    <td>10</td>
+                                    <td>22</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                    <td>22</td>
+                                    <td>10</td>
+                                    <td>320</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><strong>4</strong></td>
+                                    <td><a href="javascript:void(0);">一卡通</a></td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>21</td>
+                                    <td>10</td>
+                                    <td>22</td>
+                                    <td>10</td>
+                                    <td>121</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><strong>5</strong></td>
+                                    <td><a href="javascript:void(0);">建设事业</a></td>
+                                    <td>5</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>21</td>
+                                    <td>11</td>
+                                    <td>10</td>
+                                    <td>150</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><strong>6</strong></td>
+                                    <td><a href="javascript:void(0);">健康卡</a></td>
+                                    <td>9</td>
+                                    <td>1</td>
+                                    <td>11</td>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>10</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="8">总缺陷数量</td>
+                                    <td><strong>514</strong></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="invoice-footer">
+                        <div class="row">
+                            <div class="col-sm-7">
+                                <!--<div class="payment-methods">-->
+                                <!--<h5>Payment Methods</h5>-->
+                                <!--<img src="img/invoice/paypal.png" width="64" height="64" alt="paypal">-->
+                                <!--<img src="img/invoice/americanexpress.png" width="64" height="64" alt="american express">-->
+                                <!--<img src="img/invoice/mastercard.png" width="64" height="64" alt="mastercard">-->
+                                <!--<img src="img/invoice/visa.png" width="64" height="64" alt="visa">-->
+                                <!--</div>-->
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="invoice-sum-total pull-right">
+                                    <h3><strong>总数量: <span class="text-success">114 个</span></strong></h3>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--<div class="row">-->
+                        <!--<div class="col-sm-12">-->
+                        <!--<p class="note">**To avoid any excess penalty charges, please make payments within 30 days of the due date. There will be a 2% interest charge per month on all late invoices.</p>-->
+                        <!--</div>-->
+                        <!--</div>-->
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="report_content_D" class="padding-10" style="display: none;">
+                <div class="row">
+                    <div class="col-sm-6" style="line-height:50px;">
+                        <div class="pull-left">
+                            <img width="150" height="32" alt="invoice icon" src="img/logo-blacknwhite.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="pull-right">
+                            <h1 class="font-400">按产品分类统计</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                        <address>
+                            <strong>用户信息.</strong>
+                            <br>
+                            Peter Li,
+                            <br>
+                            Administrator,PM
+                            <br>
+                            <abbr title="Phone">P:</abbr> (123) 456-7890
+                        </address>
+                    </div>
+                    <div class="col-sm-4">
+                        <!--<div>-->
+                        <!--<div>-->
+                        <!--<strong>INVOICE NO :</strong>-->
+                        <!--<span class="pull-right"> #AA-454-4113-00 </span>-->
+                        <!--</div>-->
+
+                        <!--</div>-->
+                        <div>
+                            <div class="font-md">
+                                <strong>时间区间 :</strong>
+                                <span class="pull-right"> <i class="fa fa-calendar"></i> 2014-02-15/2014-03-15  </span>
+                            </div>
+
+                        </div>
+                        <br>
+                        <div class="well well-sm  bg-color-blue txt-color-white no-border">
+                            <div class="fa-lg">
+                                缺陷总数 :
+                                <span class="pull-right"> 100 个 </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                    <div  class="col-sm-12">
+                        <div class="widget-body-toolbar bg-color-white " id="rev-toggles_D">
+                            <div class="smart-form pull-left">
+                                <div class="inline-group ">
+                                    <label for="gra-0_D" class="checkbox">
+                                        <input type="checkbox" name="gra-0" id="gra-0_D" checked="checked">
+                                        <i></i> GSM
+                                    </label>
+                                    <label for="gra-1_D" class="checkbox">
+                                        <input type="checkbox" name="gra-1" id="gra-1_D" checked="checked">
+                                        <i></i> <span class="">CDMA</span>
+                                    </label>
+                                    <label for="gra-2_D" class="checkbox">
+                                        <input type="checkbox" name="gra-2" id="gra-2_D" checked="checked">
+                                        <i></i> 3G UICC
+                                    </label>
+                                    <label for="gra-3_D" class="checkbox">
+                                        <input type="checkbox" name="gra-3" id="gra-3_D" checked="checked">
+                                        <i></i> LTE
+                                    </label>
+                                    <label for="gra-4_D" class="checkbox">
+                                        <input type="checkbox" name="gra-4" id="gra-4_D" checked="checked">
+                                        <i></i> ISIM
+                                    </label>
+                                    <label for="gra-5_D" class="checkbox">
+                                        <input type="checkbox" name="gra-5" id="gra-5_D" checked="checked">
+                                        <i></i> CSIM
+                                    </label>
+
+                                </div>
+                            </div>
+                            <div class="btn-group hidden-phone pull-right">
+                                <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                        class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <!--<li style="display: none;">-->
+                                    <!--<a href="javascript:void(0);" id="change_to_bar_A"><i class="fa fa-random "></i> 切换为柱状图</a>-->
+                                    <!--</li>-->
+                                    <!--<li>-->
+                                    <!--<a href="javascript:void(0);" id="change_to_pie_A"><i class="fa fa-random "></i> 切换为饼状图</a>-->
+                                    <!--</li>-->
+                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-file-text"></i> 导出至PDF</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-question "></i> 帮助</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="padding-10">
+                            <div id="flotcontainer_D" class="chart-large has-legend-unique "></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div  class="col-sm-12">
+                        <div class="widget-body-toolbar bg-color-white smart-form">
+                            <div class="btn-group hidden-phone pull-right">
+                                <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                        class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-file-text-alt"></i> 导出至
+                                            PDF</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"><i class="fa fa-question-sign"></i> 帮助</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th class="text-center" style="width:40px">No.</th>
+                                <th>类别</th>
+                                <th>2009</th>
+                                <th>2010</th>
+                                <th>2011</th>
+                                <th>2012</th>
+                                <th>2013</th>
+                                <th>2014</th>
+                                <th style="width:100px">总缺陷</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center"><strong>1</strong></td>
+                                <td><a href="javascript:void(0);">GSM</a></td>
+                                <td>9</td>
+                                <td>3</td>
+                                <td>10</td>
+                                <td>12</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>200</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><strong>2</strong></td>
+                                <td><a href="javascript:void(0);"> CDMA </a></td>
+                                <td>9</td>
+                                <td>5</td>
+                                <td>3</td>
+                                <td>10</td>
+                                <td>15</td>
+                                <td>3</td>
+                                <td>120</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><strong>3</strong></td>
+                                <td><a href="javascript:void(0);">3G UICC</a></td>
+                                <td>9</td>
+                                <td>3</td>
+                                <td>12</td>
+                                <td>10</td>
+                                <td>22</td>
+                                <td>22</td>
+                                <td>320</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><strong>4</strong></td>
+                                <td><a href="javascript:void(0);">LTE</a></td>
+                                <td>10</td>
+                                <td>21</td>
+                                <td>11</td>
+                                <td>9</td>
+                                <td>3</td>
+                                <td>12</td>
+                                <td>210</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><strong>5</strong></td>
+                                <td><a href="javascript:void(0);">ISIM</a></td>
+                                <td>5</td>
+                                <td>10</td>
+                                <td>115</td>
+                                <td>10</td>
+                                <td>115</td>
+                                <td>10</td>
+                                <td>315</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><strong>6</strong></td>
+                                <td><a href="javascript:void(0);">CSIM</a></td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>21</td>
+                                <td>11</td>
+                                <td>9</td>
+                                <td>3</td>
+                                <td>100</td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="8">总缺陷数量</td>
+                                <td><strong>614</strong></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="invoice-footer">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <!--<div class="payment-methods">-->
+                            <!--<h5>Payment Methods</h5>-->
+                            <!--<img src="img/invoice/paypal.png" width="64" height="64" alt="paypal">-->
+                            <!--<img src="img/invoice/americanexpress.png" width="64" height="64" alt="american express">-->
+                            <!--<img src="img/invoice/mastercard.png" width="64" height="64" alt="mastercard">-->
+                            <!--<img src="img/invoice/visa.png" width="64" height="64" alt="visa">-->
+                            <!--</div>-->
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="invoice-sum-total pull-right">
+                                <h3><strong>总数量: <span class="text-success">114 个</span></strong></h3>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--<div class="row">-->
+                    <!--<div class="col-sm-12">-->
+                    <!--<p class="note">**To avoid any excess penalty charges, please make payments within 30 days of the due date. There will be a 2% interest charge per month on all late invoices.</p>-->
+                    <!--</div>-->
+                    <!--</div>-->
+
+                </div>
+
+            </div>
+
+
+        </div>
+            <!-- end widget content -->
+
+        </div>
+        <!-- end widget div -->
+
+    </div>
+<!-- end widget -->
+
+</article>
+<!-- WIDGET END -->
+
+</div>
+
+<!-- end row -->
+
+</section>
+<!-- end widget grid -->
+
+<script type="text/javascript">
+// DO NOT REMOVE : GLOBAL FUNCTIONS!
+pageSetUp();
+
+/*
+ * ION SLIDER
+ */
+loadScript("js/plugin/ion-slider/ion.rangeSlider.min.js", ion_slider);
+
+function ion_slider() {
+    // Spinners
+    $("#range-slider-1").ionRangeSlider({
+        min: 2004,
+        max: 2014,
+        from: 2009,
+        to: 2014,
+        type: 'double',
+        step: 1,
+        prefix: "",
+        postfix:"年",
+        prettify: false,
+        hasGrid: true
+    });
+}
+
+// Load FLOAT dependencies (related to page)
+loadScript("js/plugin/flot/jquery.flot.cust.js", loadFlotResize);
+
+
+function loadFlotResize() {
+    loadScript("js/plugin/flot/jquery.flot.resize.js", loadFlotFillbetween);
+}
+
+function loadFlotFillbetween() {
+    loadScript("js/plugin/flot/jquery.flot.fillbetween.js", loadFlotOrderBar);
+}
+
+function loadFlotOrderBar() {
+    loadScript("js/plugin/flot/jquery.flot.orderBar.js", loadFlotPie);
+}
+
+function loadFlotPie() {
+    loadScript("js/plugin/flot/jquery.flot.pie.js", loadFlotToolTip);
+}
+
+function loadFlotToolTip() {
+    loadScript("js/plugin/flot/jquery.flot.tooltip.js", generatePageGraphs);
+}
+
+/* TAB 1: UPDATING CHART */
+// For the demo we use generated data, but normally it would be coming from the server
+
+var selValue = "";
+
+/* chart colors default */
+//var chrtBorderColor = "#efefef",
+//        chrtGridColor = "#DDD";
+//
+//var customColors = [
+//    "#295891", "#E24913", "#6e3671", "#7e9d3a",
+//    "#4c4f53", "#FF9F01", "#a90329", "#a57225",
+//    "#a8829f", "#6595b4", "#356e35"
+//];
+
+function typeSelected(){
+    eval('chart'+selValue +'()');
+}
+
+function chartA(){
+
+    var data1 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data1.push([i, parseInt(Math.random() * 300)]);
+
+    var data2 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data2.push([i, parseInt(Math.random() * 300)]);
+
+    var data3 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data3.push([i, parseInt(Math.random() * 300)]);
+
+    var data4 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data4.push([i, parseInt(Math.random() * 300)]);
+
+    var ds = new Array();
+
+    ds.push({
+        label:"COS一部",
+        data : data1,
+        color: $customColors[0]
+    });
+    ds.push({
+        label:"COS二部",
+        data : data2,
+        color: $customColors[1]
+    });
+    ds.push({
+        label:"应用开发",
+        data : data3,
+        color: $customColors[2]
+    });
+    ds.push({
+        label:"个人化中心",
+        data : data4,
+        color: $customColors[3]
+    });
+
+//    var pageviews = [[2009, 75], [2010, 87], [2011, 93], [2012, 127], [2013, 116]];
+//    var visitors = [[2009, 65], [2010, 50], [2011, 73], [2012, 100], [2013, 95]];
+    //console.log(pageviews)
+//    $.plot($("#flotcontainer_" + selValue), ds, {
+    var options = {
+//    var plot = $.plot($("#flotcontainer_" + selValue), ds, {
+        series: {
+            lines: {
+                show: true,
+                lineWidth: 1,
+                fill: true,
+                fillColor: {
+                    colors: [
+                        {
+                            opacity: 0.1
+                        },
+                        {
+                            opacity: 0.15
+                        }
+                    ]
+                }
+            },
+            points: {
+                show: true
+            },
+            shadowSize: 0
+        },
+
+        grid: {
+            hoverable: true,
+            clickable: true,
+            tickColor: $chrtBorderColor,
+            borderWidth: 0,
+            borderColor: $chrtBorderColor
+        },
+        tooltip: true,
+        tooltipOpts: {
+            content: "%s 在 <b>%x 年</b> 共有问题 %y",
+            dateFormat: "%y-%0m-%0d",
+            defaultTheme: false
+        },
+//        colors: [$chrt_main, $chrt_second],
+        yaxes: [
+            {
+                min: 20,
+                tickLength: 10
+            }
+        ],
+        xaxis: {
+            ticks: 15,
+            tickDecimals: 0
+        },
+        yaxis: {
+            ticks: 15,
+            tickDecimals: 0
+        }
+    }
+//    });
+
+   var toggles = $("#rev-toggles_" + selValue),
+            target = $("#flotcontainer_" + selValue);
+
+    plot2 = null;
+
+    function plotNow() {
+        console.log('plotNow_A');
+        var d = [];
+        toggles.find(':checkbox').each(function () {
+            if ($(this).is(':checked')) {
+                d.push(ds[$(this).attr("name").substr(4, 1)]);
+            }
+        });
+        if (d.length > 0) {
+            if (plot2) {
+                plot2.setData(d);
+                plot2.draw();
+            } else {
+                plot2 = $.plot(target, d, options);
+            }
+        }
+
+    };
+    toggles.find(':checkbox').on('change', function () {
+        plotNow();
+    });
+
+    plotNow();
+
+}
+
+function chartB(){
+
+    var data1 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data1.push([i, parseInt(Math.random() * 300)]);
+
+    var data2 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data2.push([i, parseInt(Math.random() * 300)]);
+
+    var data3 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data3.push([i, parseInt(Math.random() * 300)]);
+
+    var data4 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data4.push([i, parseInt(Math.random() * 300)]);
+
+    var data5 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data5.push([i, parseInt(Math.random() * 300)]);
+
+    var data6 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data6.push([i, parseInt(Math.random() * 300)]);
+
+    var ds = new Array();
+
+    ds.push({
+        label:"功能缺陷",
+        data : data1,
+        color: $customColors[0]
+    });
+    ds.push({
+        label:"性能缺陷",
+        data : data2,
+        color: $customColors[1]
+    });
+    ds.push({
+        label:"安全缺陷",
+        data : data3,
+        color: $customColors[2]
+    });
+    ds.push({
+        label:"稳定性",
+        data : data4,
+        color: $customColors[3]
+    });
+    ds.push({
+        label:"兼容性",
+        data : data5,
+        color: $customColors[4]
+    });
+    ds.push({
+        label:"物理",
+        data : data6,
+        color: $customColors[5]
+    });
+
+    var options = {
+        series: {
+            lines: {
+                show: true,
+                lineWidth: 1,
+                fill: true,
+                fillColor: {
+                    colors: [
+                        {
+                            opacity: 0.1
+                        },
+                        {
+                            opacity: 0.15
+                        }
+                    ]
+                }
+            },
+            points: {
+                show: true
+            },
+            shadowSize: 0
+        },
+        grid: {
+            hoverable: true,
+            clickable: true,
+            tickColor: $chrtBorderColor,
+            borderWidth: 0,
+            borderColor: $chrtBorderColor
+        },
+        tooltip: true,
+        tooltipOpts: {
+            content: "%s 在 <b>%x 年</b> 共有问题 %y 个",
+            dateFormat: "%y-%0m-%0d",
+            defaultTheme: false
+        },
+        yaxes: [
+            {
+                min: 20,
+                tickLength: 10
+            }
+        ],
+        xaxis: {
+            ticks: 15,
+            tickDecimals: 0
+        },
+        yaxis: {
+            ticks: 15,
+            tickDecimals: 0
+        }
+    }
+
+    var toggles = $("#rev-toggles_" + selValue),
+            target = $("#flotcontainer_" + selValue);
+
+    plot2 = null;
+
+    function plotNow() {
+        console.log('plotNow_B' + target);
+        var d = [];
+        toggles.find(':checkbox').each(function () {
+            if ($(this).is(':checked')) {
+                d.push(ds[$(this).attr("name").substr(4, 1)]);
+            }
+        });
+        if (d.length > 0) {
+            if (plot2) {
+                plot2.setData(d);
+                plot2.draw();
+            } else {
+                plot2 = $.plot(target, d, options);
+            }
+        }
+
+    };
+    toggles.find(':checkbox').on('change', function () {
+        plotNow();
+    });
+
+    plotNow();
+}
+
+function chartC(){
+
+    var data1 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data1.push([i, parseInt(Math.random() * 300)]);
+
+    var data2 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data2.push([i, parseInt(Math.random() * 300)]);
+
+    var data3 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data3.push([i, parseInt(Math.random() * 300)]);
+
+    var data4 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data4.push([i, parseInt(Math.random() * 300)]);
+
+    var data5 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data5.push([i, parseInt(Math.random() * 300)]);
+
+    var data6 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data6.push([i, parseInt(Math.random() * 300)]);
+
+    var ds = new Array();
+
+    ds.push({
+        label:"电信",
+        data : data1,
+        color: $customColors[0]
+    });
+    ds.push({
+        label:"金融",
+        data : data2,
+        color: $customColors[1]
+    });
+    ds.push({
+        label:"社保",
+        data : data3,
+        color: $customColors[2]
+    });
+    ds.push({
+        label:"一卡通",
+        data : data4,
+        color: $customColors[3]
+    });
+    ds.push({
+        label:"建设事业",
+        data : data5,
+        color: $customColors[4]
+    });
+    ds.push({
+        label:"健康卡",
+        data : data6,
+        color: $customColors[5]
+    });
+
+    var options = {
+        series: {
+            lines: {
+                show: true,
+                lineWidth: 1,
+                fill: true,
+                fillColor: {
+                    colors: [
+                        {
+                            opacity: 0.1
+                        },
+                        {
+                            opacity: 0.15
+                        }
+                    ]
+                }
+            },
+            points: {
+                show: true
+            },
+            shadowSize: 0
+        },
+
+        grid: {
+            hoverable: true,
+            clickable: true,
+            tickColor: $chrtBorderColor,
+            borderWidth: 0,
+            borderColor: $chrtBorderColor
+        },
+        tooltip: true,
+        tooltipOpts: {
+            content: "%s 在 <b>%x 年</b> 共有问题 %y",
+            dateFormat: "%y-%0m-%0d",
+            defaultTheme: false
+        },
+        yaxes: [
+            {
+                min: 20,
+                tickLength: 10
+            }
+        ],
+        xaxis: {
+            ticks: 15,
+            tickDecimals: 0
+        },
+        yaxis: {
+            ticks: 15,
+            tickDecimals: 0
+        }
+    }
+
+    var toggles = $("#rev-toggles_" + selValue),
+            target = $("#flotcontainer_" + selValue);
+
+    plot2 = null;
+
+    function plotNow() {
+        console.log('plotNow_B' + target);
+        var d = [];
+        toggles.find(':checkbox').each(function () {
+            if ($(this).is(':checked')) {
+                d.push(ds[$(this).attr("name").substr(4, 1)]);
+            }
+        });
+        if (d.length > 0) {
+            if (plot2) {
+                plot2.setData(d);
+                plot2.draw();
+            } else {
+                plot2 = $.plot(target, d, options);
+            }
+        }
+
+    };
+    toggles.find(':checkbox').on('change', function () {
+        plotNow();
+    });
+
+    plotNow();
+}
+
+function chartD(){
+
+    var data1 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data1.push([i, parseInt(Math.random() * 300)]);
+
+    var data2 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data2.push([i, parseInt(Math.random() * 300)]);
+
+    var data3 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data3.push([i, parseInt(Math.random() * 300)]);
+
+    var data4 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data4.push([i, parseInt(Math.random() * 300)]);
+
+    var data5 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data5.push([i, parseInt(Math.random() * 300)]);
+
+    var data6 = [];
+    for (var i = 2009; i <= 2014; i += 1)
+        data6.push([i, parseInt(Math.random() * 300)]);
+
+    var ds = new Array();
+
+    ds.push({
+        label:"GSM",
+        data : data1,
+        color: $customColors[0]
+    });
+    ds.push({
+        label:"CDMA",
+        data : data2,
+        color: $customColors[1]
+    });
+    ds.push({
+        label:"3G UICC",
+        data : data3,
+        color: $customColors[2]
+    });
+    ds.push({
+        label:"LTE",
+        data : data4,
+        color: $customColors[3]
+    });
+    ds.push({
+        label:"ISIM",
+        data : data5,
+        color: $customColors[4]
+    });
+    ds.push({
+        label:"CSIM",
+        data : data6,
+        color: $customColors[5]
+    });
+
+    var options = {
+        series: {
+            lines: {
+                show: true,
+                lineWidth: 1,
+                fill: true,
+                fillColor: {
+                    colors: [
+                        {
+                            opacity: 0.1
+                        },
+                        {
+                            opacity: 0.15
+                        }
+                    ]
+                }
+            },
+            points: {
+                show: true
+            },
+            shadowSize: 0
+        },
+
+        grid: {
+            hoverable: true,
+            clickable: true,
+            tickColor: $chrtBorderColor,
+            borderWidth: 0,
+            borderColor: $chrtBorderColor
+        },
+        tooltip: true,
+        tooltipOpts: {
+            content: "%s 在 <b>%x 年</b> 共有问题 %y",
+            dateFormat: "%y-%0m-%0d",
+            defaultTheme: false
+        },
+        yaxes: [
+            {
+                min: 20,
+                tickLength: 10
+            }
+        ],
+        xaxis: {
+            ticks: 15,
+            tickDecimals: 0
+        },
+        yaxis: {
+            ticks: 15,
+            tickDecimals: 0
+        }
+    }
+
+    var toggles = $("#rev-toggles_" + selValue),
+            target = $("#flotcontainer_" + selValue);
+
+    plot2 = null;
+
+    function plotNow() {
+        console.log('plotNow_D' + target);
+        var d = [];
+        toggles.find(':checkbox').each(function () {
+            if ($(this).is(':checked')) {
+                d.push(ds[$(this).attr("name").substr(4, 1)]);
+            }
+        });
+        if (d.length > 0) {
+            if (plot2) {
+                plot2.setData(d);
+                plot2.draw();
+            } else {
+                plot2 = $.plot(target, d, options);
+            }
+        }
+    };
+    toggles.find(':checkbox').on('change', function () {
+        plotNow();
+    });
+
+    plotNow();
+}
+
+function generatePageGraphs() {
+
+    $('#btn_dosearch').click(function() {
+        var content_empty = $('#report_content_empty');
+
+        if(content_empty.is(":visible") && selValue!=''){
+            $('#report_content_empty').toggle(function () {
+                $('#report_content_' + selValue).toggle();
+                console.log('report_content_' + selValue);
+                typeSelected();
+            });
+        } else {
+            $("div[id^=report_content_]").filter(":visible").toggle();
+            $('#report_content_' + selValue).toggle();
+            console.log('1report_content_' + selValue);
+            typeSelected();
+        }
+    });
+
+    $('#sel_type').bind('change', function() {
+        selValue = $(this).val();
+
+        $("div[id^=subType_content_]").filter(":visible").toggle();
+
+        $('#subType_content_'+ selValue).toggle();
+    });
+
+    $('a[id^=select_all_]').click(function(e) {
+        var checks = $(this).parent('div').next('div').children('span').children('label').children('input:checkbox');
+//            console.log(checks.size());
+        checks.prop('checked', true);
+        e.preventDefault();
+    });
+
+
+
+//        $('#myonoffswitch, #closeProjectForm').click(function (e) {
+//            var $btn_add_project = $("#project_add_content");
+//
+//            $btn_add_project.slideToggle(function(){
+//                console.log($btn_add_project.is(':visible'));
+//                if($btn_add_project.is(':visible')){
+//                    $('#myonoffswitch').attr('checked',true);
+//                }else
+//                {
+//                    $('#myonoffswitch').attr('checked',false);
+//                }
+//            });
+//        });
+
+//        $('#change_to_pie, #change_to_bar').click(function(){
+//            $(this).parent('li').toggle(function(){
+//                $('#change_to_bar').parent('li').toggle();
+//            });
+//
+//
+//            if($('#flotcontainer').is(':visible')){
+//                $('#flotcontainer').fadeToggle(250,function(){
+//                    $('#pie_chart').fadeToggle(250, function(){
+//                        if ($(this).is(':visible')) {
+//                            plotPieNow();
+//                        }
+//                    });
+//                });
+//            } else {
+//                $('#pie_chart').fadeToggle(250,function(){
+//                    $('#flotcontainer').fadeToggle(250);
+//                });
+//            }
+//
+//        });
+
+
+}
+</script>
