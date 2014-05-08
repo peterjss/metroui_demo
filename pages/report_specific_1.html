@@ -324,7 +324,6 @@
                         <div id="report_content_empty" class="padding-10" >
                             请选择统计条件进行统计。
                         </div>
-                        </div>
 
 						<div id="report_content_A" class="padding-10" style="display: none;">
                             <div class="row">
@@ -410,13 +409,6 @@
                                             <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
                                                     class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
                                             <ul class="dropdown-menu pull-right">
-                                                <!--<li style="display: none;">-->
-                                                    <!--<a href="javascript:void(0);" id="change_to_bar_A"><i class="fa fa-random "></i> 切换为柱状图</a>-->
-                                                <!--</li>-->
-                                                <!--<li>-->
-                                                    <!--<a href="javascript:void(0);" id="change_to_pie_A"><i class="fa fa-random "></i> 切换为饼状图</a>-->
-                                                <!--</li>-->
-                                                <li class="divider"></li>
                                                 <li>
                                                     <a href="javascript:void(0);"><i class="fa fa-file-text"></i> 导出至PDF</a>
                                                 </li>
@@ -1218,6 +1210,7 @@
 
                         </div>
                         </div>
+
 					</div>
 					<!-- end widget content -->
 
@@ -1275,146 +1268,82 @@
     }
 
     function chartA(){
-// PAGE RELATED SCRIPTS
-        /* TAB 3: 分类信息  */
-        var d1 = [
-                    [1354586000000, 153],
-                    [1364587000000, 658],
-                    [1374588000000, 198],
-                    [1384589000000, 663],
-                    [1394590000000, 801],
-                    [1404591000000, 1080],
-                    [1414592000000, 353],
-                    [1424593000000, 749],
-                    [1434594000000, 523],
-                    [1444595000000, 258],
-                    [1454596000000, 688],
-                    [1464597000000, 364]
-                ],
-                d2 = [
-                    [1354586000000, 53],
-                    [1364587000000, 65],
-                    [1374588000000, 98],
-                    [1384589000000, 83],
-                    [1394590000000, 980],
-                    [1404591000000, 808],
-                    [1414592000000, 720],
-                    [1424593000000, 674],
-                    [1434594000000, 23],
-                    [1444595000000, 79],
-                    [1454596000000, 88],
-                    [1464597000000, 36]
-                ],
-                d3 = [
-                    [1354586000000, 647],
-                    [1364587000000, 435],
-                    [1374588000000, 784],
-                    [1384589000000, 346],
-                    [1394590000000, 487],
-                    [1404591000000, 463],
-                    [1414592000000, 479],
-                    [1424593000000, 236],
-                    [1434594000000, 843],
-                    [1444595000000, 657],
-                    [1454596000000, 241],
-                    [1464597000000, 341]
-                ],
-                d4 = [
-                    [1354586000000, 547],
-                    [1364587000000, 335],
-                    [1374588000000, 684],
-                    [1384589000000, 746],
-                    [1394590000000, 287],
-                    [1404591000000, 563],
-                    [1414592000000, 979],
-                    [1424593000000, 136],
-                    [1434594000000, 743],
-                    [1444595000000, 857],
-                    [1454596000000, 441],
-                    [1464597000000, 641]
-                ],
-                toggles = $("#rev-toggles_" + selValue),
-                target = $("#flotcontainer_" + selValue);
-        var data = [
-            {
-                label: "COS一部",
-                data: d1,
-                bars: {
-                    show: true,
-                    align: "center",
-                    //                    horizontal : true,
-                    //                    barWidth : 0.5,
-                    barWidth: 15 * 30 * 60 * 1000 * 80,
-                    order : 1
-                }
-            },
-            {
-                label: "随便的卡片",
-                data: d4,
-                color: '#6E587A',
-                //                lines: {
-                //                    show: true,
-                //                    lineWidth: 2
-                //                },
-                //                points: {
-                //                    show: true
-                //                }
-                bars: {
-                    show: true,
-                    align: "center",
-                    //                    horizontal : true,
-                    //                    barWidth : 0.5,
-                    barWidth: 15 * 30 * 60 * 1000 * 80,
-                    order : 2
-                }
-            },
-            {
-                label: "DD卡片",
-                data: d2,
-                color: '#3276B1',
-                lines: {
-                    show: true,
-                    lineWidth: 3
-                },
-                points: {
-                    show: true
-                }
-            },
-            {
-                label: "ADC卡片",
-                data: d3,
-                color: '#71843F',
-                lines: {
-                    show: true,
-                    lineWidth: 1
-                },
-                points: {
-                    show: true
-                }
-            }
+        var data1 = [];
+        for (var i = 0; i <= 3; i += 1)
+            data1.push([i, parseInt(Math.random() * 130)]);
+
+        var data2 = [];
+        for (var i = 0; i <= 3; i += 1)
+            data2.push([i, parseInt(Math.random() * 130)]);
+
+        var data3 = [];
+        for (var i = 0; i <= 3; i += 1)
+            data3.push([i, parseInt(Math.random() * 130)]);
+
+        var data4 = [];
+        for (var i = 0; i <= 3; i += 1)
+            data4.push([i, parseInt(Math.random() * 130)]);
+
+
+        var ticks = [
+            [0, "COS一部"],
+            [1, "COS二部"],
+            [2, "应用开发"],
+            [3, "个人化中心"]
         ];
 
-        var options = {
-            grid: {
+        var  toggles = $("#rev-toggles_" + selValue),
+        target = $("#flotcontainer_" + selValue);
+
+        var ds = new Array();
+        ds.push({
+            data : data1,
+            bars : {
                 show : true,
-                borderWidth : 0,
-                hoverable: true
-            },
-            legend : true,
-            tooltip: true,
-            tooltipOpts: {
-                //content: '%x - %y',
-                //dateFormat: '%b %y',
-                defaultTheme: false
+                barWidth : 0.1,
+                align: "center"
+            }
+        });
+
+        ds.push({
+            data : data2,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                align: "center"
+            }
+        });
+        ds.push({
+            data : data3,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                align: "center"
+            }
+        });
+        ds.push({
+            data : data4,
+            bars : {
+                show : true,
+                barWidth : 0.1,
+                align: "center"
+            }
+        });
+
+        var options = {
+            series: {
+                bars: {
+                    show: true,
+                    barWidth: 0.3,
+                    align: "center"
+                }
             },
             xaxis: {
-                mode: "time"
+
+                ticks: ticks
             },
-            yaxes: {
-                tickFormatter: function (val, axis) {
-                    return "$" + val;
-                },
-                max: 1200
+            yaxis: {
+                tickLength: 0
             }
         };
         plot2 = null;
@@ -1422,10 +1351,11 @@
             var d = [];
             toggles.find(':checkbox').each(function () {
                 if ($(this).is(':checked')) {
-                    d.push(data[$(this).attr("name").substr(4, 1)]);
+                    d.push(ds[$(this).attr("name").substr(4, 1)]);
                 }
             });
             if (d.length > 0) {
+                console.log(d);
                 if (plot2) {
                     plot2.setData(d);
                     plot2.draw();
@@ -1693,7 +1623,6 @@
             language: "zh-CN",
             autoclose: true
         });
-
 
     }
 </script>
