@@ -44,42 +44,42 @@
 					<div class="widget-body no-padding">
 
 						<div class="widget-body-toolbar">
-							<div class="row">
-								<div class="col-sm-6">
-                                    <!--<div class="row">-->
-                                        <!--<div class="col-sm-4">-->
-                                            <div class="btn-group" style="float:left;">
-                                                <a href="javascript:void(0);" class="btn btn-default">周</a>
-                                                <a href="javascript:void(0);" class="btn btn-default">月</a>
-                                                <a href="javascript:void(0);" class="btn btn-default">年</a>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <form class="form-inline" role="form">
+                                        请选择时间范围：
+                                        <div class="form-group">
+                                            <input type="text" name="startDate" class="form-control input-sm readonlyDate" readonly="readonly" placeholder="开始时间" >
+                                        </div>
+                                        &nbsp;-&nbsp;
+                                        <div class="form-group">
+                                            <input type="text" name="endDate" class="form-control input-sm readonlyDate" readonly="readonly" placeholder="结束时间">
+                                        </div>
+                                        <!--<button class="btn btn-default btn-sm" type="button">-->
+                                            <!--<i class="fa fa-search"></i> 统计-->
+                                        <!--</button>-->
+                                        &nbsp;&nbsp;&nbsp;
 
-                                            </div>
-                                    <!--<input class="form-control" type="text" style="float:left;" placeholder="选择时间...">-->
-                                        <!--</div>-->
-                                        <!--<div class="col-sm-8">-->
-                                            <!--<input class="form-control" type="text" placeholder="选择时间...">-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="input-group">
-                                        <!--<label>项目类型</label>-->
-                                        <select id="sel_type" style="width:100%" class="select2" data-placeholder="请选择统计类型">
-                                            <option></option>
-                                            <option value="A">按部门</option>
-                                            <option value="B">按缺陷类型</option>
-                                            <option value="C">按产品分类</option>
-                                            <option value="D">按技术分类</option>
-                                        </select>
-                                        <div class="input-group-btn">
+                                        <div class="form-group" style="width:200px" >
+                                            <!--<label>项目类型</label>-->
+                                            <select id="sel_type" class="select2" data-placeholder="请选择统计类型">
+                                                <option></option>
+                                                <option value="A">按部门</option>
+                                                <option value="B">按缺陷类型</option>
+                                                <option value="C">按产品分类</option>
+                                                <option value="D">按技术分类</option>
+                                            </select>
+
+                                        </div>
+                                        <!--<div class="form-group">-->
                                             <button id="btn_dosearch" class="btn btn-default" type="button">
                                                 <i class="fa fa-search"></i> 统计
                                             </button>
-                                        </div>
-                                    </div>
+                                        <!--</div>-->
+                                    </form>
+                                </div>
+                            </div>
 
-								</div>
-							</div>
                             <!--按部门-->
                             <div id="subType_content_A" class="row" style="margin-top: 10px; display: none;">
                                 <div class="col-sm-12">
@@ -323,6 +323,7 @@
 
                         <div id="report_content_empty" class="padding-10" >
                             请选择统计条件进行统计。
+                        </div>
                         </div>
 
 						<div id="report_content_A" class="padding-10" style="display: none;">
@@ -636,7 +637,7 @@
 
                                 <div class="padding-10">
                                     <!--<div id="flotcontainer_B" class="chart-large has-legend-unique "></div>-->
-                                    <div id="pie_chart_B" class="chart-large" ></div>
+                                    <div id="pie_chart_B" class="chart has-legend-unique" ></div>
                                 </div>
                             </div>
                         </div>
@@ -1684,43 +1685,14 @@
             e.preventDefault();
         });
 
-
-
-//        $('#myonoffswitch, #closeProjectForm').click(function (e) {
-//            var $btn_add_project = $("#project_add_content");
-//
-//            $btn_add_project.slideToggle(function(){
-//                console.log($btn_add_project.is(':visible'));
-//                if($btn_add_project.is(':visible')){
-//                    $('#myonoffswitch').attr('checked',true);
-//                }else
-//                {
-//                    $('#myonoffswitch').attr('checked',false);
-//                }
-//            });
-//        });
-
-//        $('#change_to_pie, #change_to_bar').click(function(){
-//            $(this).parent('li').toggle(function(){
-//                $('#change_to_bar').parent('li').toggle();
-//            });
-//
-//
-//            if($('#flotcontainer').is(':visible')){
-//                $('#flotcontainer').fadeToggle(250,function(){
-//                    $('#pie_chart').fadeToggle(250, function(){
-//                        if ($(this).is(':visible')) {
-//                            plotPieNow();
-//                        }
-//                    });
-//                });
-//            } else {
-//                $('#pie_chart').fadeToggle(250,function(){
-//                    $('#flotcontainer').fadeToggle(250);
-//                });
-//            }
-//
-//        });
+        // Date Picker
+        $('input[name=startDate],input[name=endDate]').datepicker({
+            format: "yyyy-mm-dd",
+            endDate: "2014-05-08",
+//            minViewMode: "years",
+            language: "zh-CN",
+            autoclose: true
+        });
 
 
     }

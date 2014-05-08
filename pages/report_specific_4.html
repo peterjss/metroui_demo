@@ -1,0 +1,1060 @@
+<link href="css/invoice.css" rel="stylesheet">
+
+<!-- widget grid -->
+<section id="widget-grid" class="">
+
+    <!-- row -->
+    <div class="row">
+
+        <!-- NEW WIDGET START -->
+        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <!-- Widget ID (each widget will need unique ID)-->
+            <div class="jarviswidget well jarviswidget-color-darken" id="wid-id-0" data-widget-sortable="false" data-widget-deletebutton="false" data-widget-editbutton="false" data-widget-colorbutton="false">
+
+                <header>
+                    <span class="widget-icon"> <i class="fa fa-barcode"></i> </span>
+                    <h2>Item #44761 </h2>
+
+                </header>
+
+                <!-- widget div-->
+                <div>
+
+                    <!-- widget edit box -->
+                    <div class="jarviswidget-editbox">
+                    </div>
+                    <!-- end widget edit box -->
+
+                    <!-- widget content -->
+                    <div class="widget-body no-padding">
+
+                                <div class="widget-body-toolbar">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <form class="form-inline" role="form">
+                                                请选择时间范围：
+                                                <div class="form-group">
+                                                    <input type="text" name="startDate" class="form-control input-sm readonlyDate" readonly="readonly" placeholder="开始时间" >
+                                                </div>
+                                                &nbsp;-&nbsp;
+                                                <div class="form-group">
+                                                    <input type="text" name="endDate" class="form-control input-sm readonlyDate" readonly="readonly" placeholder="结束时间">
+                                                </div>
+                                                &nbsp;&nbsp;&nbsp;
+                                                <button id="btn_dosearch" class="btn btn-default btn-sm" type="button">
+                                                    <i class="fa fa-search"></i> 统计
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <div class="col-sm-6">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="report_content_empty" class="padding-10" >
+                                    请选择统计条件进行统计。
+                                </div>
+
+                                    <div id="pie_report_content_all" class="padding-10" style="display: none;">
+                                        <div class="row">
+                                            <div class="col-sm-6" >
+                                                <div id="highligher" style="margin-top: 0px;">可以通过单击饼状图的模块，来获得子类别的统计数据。</div>
+                                                <div id="flotcontainer_pie" class="chart-large has-legend-unique "></div>
+
+
+                                            </div>
+                                            <div class="col-sm-6" >
+                                                <div class="row">
+                                                    <div class="col-sm-12" >
+                                                        <div class="pull-right">
+                                                            <h1 class="font-400">白盒统计</h1>
+                                                        </div>
+                                                    </div>
+                                                 </div>
+                                                <br>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="col-sm-8 pull-right" >
+                                                        <div>
+                                                            <div class="font-md">
+                                                                <strong>时间区间 :</strong>
+                                                                <span class="pull-right"> <i class="fa fa-calendar"></i> 2014-02-15/2014-03-15  </span>
+                                                            </div>
+
+                                                        </div>
+                                                        <br>
+                                                        <div class="well well-sm  bg-color-blue txt-color-white no-border">
+                                                            <div class="fa-lg">
+                                                                缺陷总数 :
+                                                                <span class="pull-right"> 95 个 </span>
+                                                            </div>
+                                                        </div>
+                                                        <br>
+                                                        <div id="total_bar" class="well well-sm  bg-color-orange txt-color-white no-border" style="display: none;">
+                                                            <div class="fa-lg">
+                                                                <span id="total_title"></span> - 缺陷总数 :
+                                                                <span class="pull-right"> 95 个 </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div style="display: none;">
+
+
+                                    <div id="report_content_A" class="padding-10" style="display: none;">
+                                        <hr>
+                                    <div class="row">
+                                        <div  class="col-sm-12">
+                                            <div class="widget-body-toolbar bg-color-white " id="rev-toggles_A">
+                                                <div class="smart-form pull-left">
+
+                                                </div>
+                                                <div class="btn-group hidden-phone pull-right">
+                                                    <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                                            class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li class="divider"></li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-file-text"></i> 导出至PDF</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-question "></i> 帮助</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="padding-10">
+                                                <div id="flotcontainer_A" class="chart-large has-legend-unique "></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div  class="col-sm-12">
+                                            <div class="widget-body-toolbar bg-color-white smart-form">
+                                                <div class="btn-group hidden-phone pull-right">
+                                                    <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                                            class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-file-text-alt"></i> 导出至
+                                                                PDF</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-question-sign"></i> 帮助</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <table class="table table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center" style="width:40px">No.</th>
+                                                    <th>类别</th>
+                                                    <th>2013</th>
+                                                    <th>2014</th>
+                                                    <th style="width:100px">总缺陷</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="text-center"><strong>1</strong></td>
+                                                    <td><a href="javascript:void(0);">COS一部</a></td>
+                                                    <td>11</td>
+                                                    <td>9</td>
+                                                    <td>20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>2</strong></td>
+                                                    <td><a href="javascript:void(0);"> COS二部</a></td>
+                                                    <td>3</td>
+                                                    <td>9</td>
+                                                    <td>12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>4</strong></td>
+                                                    <td><a href="javascript:void(0);">应用开发</a></td>
+                                                    <td>1</td>
+                                                    <td>31</td>
+                                                    <td>32</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>5</strong></td>
+                                                    <td><a href="javascript:void(0);">个人化中心</a></td>
+                                                    <td>10</td>
+                                                    <td>11</td>
+                                                    <td>21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4">总缺陷数量</td>
+                                                    <td><strong>95</strong></td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="invoice-footer">
+                                        <div class="row">
+                                            <div class="col-sm-7">
+
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="invoice-sum-total pull-right">
+                                                    <h3><strong>总数量: <span class="text-success">95 个</span></strong></h3>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+                                    <div id="report_content_B" class="padding-10" style="display: none;">
+                                        <hr>
+                                    <div class="row">
+                                        <div  class="col-sm-12">
+                                            <div class="widget-body-toolbar bg-color-white " id="rev-toggles_B">
+
+                                                <div class="smart-form pull-left">
+
+                                                </div>
+                                                <div class="btn-group hidden-phone pull-right">
+                                                    <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                                            class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li class="divider"></li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-file-text"></i> 导出至PDF</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-question "></i> 帮助</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="padding-10">
+                                                <div id="flotcontainer_B" class="chart-large has-legend-unique "></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div  class="col-sm-12">
+                                            <div class="widget-body-toolbar bg-color-white smart-form">
+                                                <div class="btn-group hidden-phone pull-right">
+                                                    <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                                            class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-file-text-alt"></i> 导出至
+                                                                PDF</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-question-sign"></i> 帮助</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <table class="table table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center" style="width:40px">No.</th>
+                                                    <th>类别</th>
+                                                    <th>2013</th>
+                                                    <th>2014</th>
+                                                    <th style="width:100px">总缺陷</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="text-center"><strong>1</strong></td>
+                                                    <td><a href="javascript:void(0);">功能缺陷</a></td>
+                                                    <td>10</td>
+                                                    <td>10</td>
+                                                    <td>20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>2</strong></td>
+                                                    <td><a href="javascript:void(0);"> 性能缺陷</a></td>
+                                                    <td>9</td>
+                                                    <td>3</td>
+                                                    <td>12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>3</strong></td>
+                                                    <td><a href="javascript:void(0);">安全缺陷</a></td>
+                                                    <td>10</td>
+                                                    <td>22</td>
+                                                    <td>32</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>4</strong></td>
+                                                    <td><a href="javascript:void(0);">稳定性</a></td>
+                                                    <td>10</td>
+                                                    <td>11</td>
+                                                    <td>21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>5</strong></td>
+                                                    <td><a href="javascript:void(0);">兼容性</a></td>
+                                                    <td>5</td>
+                                                    <td>10</td>
+                                                    <td>15</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>6</strong></td>
+                                                    <td><a href="javascript:void(0);">物理</a></td>
+                                                    <td>9</td>
+                                                    <td>1</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4">总缺陷数量</td>
+                                                    <td><strong>110</strong></td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="invoice-footer">
+                                        <div class="row">
+                                            <div class="col-sm-7">
+
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="invoice-sum-total pull-right">
+                                                    <h3><strong>总数量: <span class="text-success">110 个</span></strong></h3>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    </div>
+
+                                    <div id="report_content_C" class="padding-10" style="display: none;">
+                                    <hr>
+                                    <div class="row">
+                                        <div  class="col-sm-12">
+                                            <div class="widget-body-toolbar bg-color-white " id="rev-toggles_C">
+
+                                                <div class="smart-form pull-left">
+                                                    <!--<div class="inline-group ">-->
+
+                                                        <!--<label for="gra-0_C" class="checkbox">-->
+                                                            <!--<input type="checkbox" name="gra-0" id="gra-0_C" checked="checked">-->
+                                                            <!--<i></i> 野指针-->
+                                                        <!--</label>-->
+                                                        <!--<label for="gra-1_C" class="checkbox">-->
+                                                            <!--<input type="checkbox" name="gra-1" id="gra-1_C" checked="checked">-->
+                                                            <!--<i></i> 空指针解引用-->
+                                                        <!--</label>-->
+                                                        <!--<label for="gra-2_C" class="checkbox">-->
+                                                            <!--<input type="checkbox" name="gra-2" id="gra-2_C" checked="checked">-->
+                                                            <!--<i></i> 指针未对齐-->
+                                                        <!--</label>-->
+                                                        <!--<label for="gra-3_C" class="checkbox">-->
+                                                            <!--<input type="checkbox" name="gra-3" id="gra-3_C" checked="checked">-->
+                                                            <!--<i></i> 指针指向内存未初始化-->
+                                                        <!--</label>-->
+                                                        <!--<label for="gra-4_C" class="checkbox">-->
+                                                            <!--<input type="checkbox" name="gra-4" id="gra-4_C" checked="checked">-->
+                                                            <!--<i></i> 增强指针-->
+                                                        <!--</label>-->
+                                                        <!--<label for="gra-5_C" class="checkbox">-->
+                                                            <!--<input type="checkbox" name="gra-5" id="gra-5_C" checked="checked">-->
+                                                            <!--<i></i> 指针越界-->
+                                                        <!--</label>-->
+                                                    <!--</div>-->
+                                                </div>
+                                                <div class="btn-group hidden-phone pull-right">
+                                                    <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                                            class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <!--<li style="display: none;">-->
+                                                        <!--<a href="javascript:void(0);" id="change_to_bar_C"><i class="fa fa-random "></i> 切换为柱状图</a>-->
+                                                        <!--</li>-->
+                                                        <!--<li>-->
+                                                        <!--<a href="javascript:void(0);" id="change_to_pie_C"><i class="fa fa-random "></i> 切换为饼状图</a>-->
+                                                        <!--</li>-->
+                                                        <li class="divider"></li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-file-text"></i> 导出至PDF</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-question "></i> 帮助</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="padding-10">
+                                                <div id="flotcontainer_C" class="chart-large has-legend-unique "></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div  class="col-sm-12">
+                                            <div class="widget-body-toolbar bg-color-white smart-form">
+                                                <div class="btn-group hidden-phone pull-right">
+                                                    <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                                            class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-file-text-alt"></i> 导出至
+                                                                PDF</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-question-sign"></i> 帮助</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <table class="table table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center" style="width:40px">No.</th>
+                                                    <th>类别</th>
+                                                    <th>2013</th>
+                                                    <th>2014</th>
+                                                    <th style="width:100px">总缺陷</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="text-center"><strong>1</strong></td>
+                                                    <td><a href="javascript:void(0);">野指针</a></td>
+                                                    <td>10</td>
+                                                    <td>10</td>
+                                                    <td>20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>2</strong></td>
+                                                    <td><a href="javascript:void(0);"> 空指针解引用 </a></td>
+                                                    <td>9</td>
+                                                    <td>3</td>
+                                                    <td>12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>3</strong></td>
+                                                    <td><a href="javascript:void(0);">指针未对齐</a></td>
+                                                    <td>10</td>
+                                                    <td>22</td>
+                                                    <td>32</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>4</strong></td>
+                                                    <td><a href="javascript:void(0);">指针指向内存未初始化</a></td>
+                                                    <td>10</td>
+                                                    <td>11</td>
+                                                    <td>21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>5</strong></td>
+                                                    <td><a href="javascript:void(0);">增强指针</a></td>
+                                                    <td>5</td>
+                                                    <td>10</td>
+                                                    <td>15</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>6</strong></td>
+                                                    <td><a href="javascript:void(0);">指针越界</a></td>
+                                                    <td>9</td>
+                                                    <td>1</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4">总缺陷数量</td>
+                                                    <td><strong>114</strong></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="invoice-footer">
+                                        <div class="row">
+                                            <div class="col-sm-7">
+                                                <!--<div class="payment-methods">-->
+                                                <!--<h5>Payment Methods</h5>-->
+                                                <!--<img src="img/invoice/paypal.png" width="64" height="64" alt="paypal">-->
+                                                <!--<img src="img/invoice/americanexpress.png" width="64" height="64" alt="american express">-->
+                                                <!--<img src="img/invoice/mastercard.png" width="64" height="64" alt="mastercard">-->
+                                                <!--<img src="img/invoice/visa.png" width="64" height="64" alt="visa">-->
+                                                <!--</div>-->
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="invoice-sum-total pull-right">
+                                                    <h3><strong>总数量: <span class="text-success">114 个</span></strong></h3>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!--<div class="row">-->
+                                        <!--<div class="col-sm-12">-->
+                                        <!--<p class="note">**To avoid any excess penalty charges, please make payments within 30 days of the due date. There will be a 2% interest charge per month on all late invoices.</p>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+
+                                    </div>
+                                    </div>
+
+                                    <div id="report_content_D" class="padding-10" style="display: none;">
+                                    <hr>
+                                    <div class="row">
+                                        <div  class="col-sm-12">
+                                            <div class="widget-body-toolbar bg-color-white " id="rev-toggles_D">
+                                                <div class="smart-form pull-left">
+
+                                                </div>
+                                                <div class="btn-group hidden-phone pull-right">
+                                                    <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                                            class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                                    <ul class="dropdown-menu pull-right">
+
+                                                        <li class="divider"></li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-file-text"></i> 导出至PDF</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-question "></i> 帮助</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="padding-10">
+                                                <div id="flotcontainer_D" class="chart-large has-legend-unique "></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div  class="col-sm-12">
+                                            <div class="widget-body-toolbar bg-color-white smart-form">
+                                                <div class="btn-group hidden-phone pull-right">
+                                                    <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
+                                                            class="fa fa-cog"></i> 更多 <span class="caret"> </span> </a>
+                                                    <ul class="dropdown-menu pull-right">
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-file-text-alt"></i> 导出至
+                                                                PDF</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);"><i class="fa fa-question-sign"></i> 帮助</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <table class="table table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center" style="width:40px">No.</th>
+                                                    <th>类别</th>
+                                                    <th>2013</th>
+                                                    <th>2014</th>
+                                                    <th style="width:100px">总缺陷</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td class="text-center"><strong>1</strong></td>
+                                                    <td><a href="javascript:void(0);">if-else类</a></td>
+                                                    <td>10</td>
+                                                    <td>10</td>
+                                                    <td>20</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>2</strong></td>
+                                                    <td><a href="javascript:void(0);"> switch-case类 </a></td>
+                                                    <td>9</td>
+                                                    <td>3</td>
+                                                    <td>12</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>3</strong></td>
+                                                    <td><a href="javascript:void(0);">循环类</a></td>
+                                                    <td>10</td>
+                                                    <td>22</td>
+                                                    <td>32</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>4</strong></td>
+                                                    <td><a href="javascript:void(0);">LTE</a></td>
+                                                    <td>10</td>
+                                                    <td>11</td>
+                                                    <td>21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center"><strong>5</strong></td>
+                                                    <td><a href="javascript:void(0);">goto问题</a></td>
+                                                    <td>5</td>
+                                                    <td>10</td>
+                                                    <td>15</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4">总缺陷数量</td>
+                                                    <td><strong>114</strong></td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="invoice-footer">
+                                        <div class="row">
+                                            <div class="col-sm-7">
+                                                <!--<div class="payment-methods">-->
+                                                <!--<h5>Payment Methods</h5>-->
+                                                <!--<img src="img/invoice/paypal.png" width="64" height="64" alt="paypal">-->
+                                                <!--<img src="img/invoice/americanexpress.png" width="64" height="64" alt="american express">-->
+                                                <!--<img src="img/invoice/mastercard.png" width="64" height="64" alt="mastercard">-->
+                                                <!--<img src="img/invoice/visa.png" width="64" height="64" alt="visa">-->
+                                                <!--</div>-->
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="invoice-sum-total pull-right">
+                                                    <h3><strong>总数量: <span class="text-success">114 个</span></strong></h3>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!--<div class="row">-->
+                                        <!--<div class="col-sm-12">-->
+                                        <!--<p class="note">**To avoid any excess penalty charges, please make payments within 30 days of the due date. There will be a 2% interest charge per month on all late invoices.</p>-->
+                                        <!--</div>-->
+                                        <!--</div>-->
+
+                                    </div>
+                                    </div>
+                     </div>
+                    <!-- end widget content -->
+
+                </div>
+                <!-- end widget div -->
+
+            </div>
+            <!-- end widget -->
+
+        </article>
+        <!-- WIDGET END -->
+
+    </div>
+    <!-- end row -->
+
+</section>
+<!-- end widget grid -->
+
+<script type="text/javascript">
+	// DO NOT REMOVE : GLOBAL FUNCTIONS!
+	pageSetUp();
+
+    /*
+     * ION SLIDER
+     */
+    loadScript("js/plugin/ion-slider/ion.rangeSlider.min.js", ion_slider);
+
+    function ion_slider() {
+        // Spinners
+        $("#range-slider-1").ionRangeSlider({
+            min: 2004,
+            max: 2014,
+            from: 2009,
+            to: 2014,
+            type: 'double',
+            step: 1,
+            prefix: "",
+            postfix:"年",
+            prettify: false,
+            hasGrid: true
+        });
+
+    }
+
+    // Load FLOAT dependencies (related to page)
+    loadScript("js/plugin/flot/jquery.flot.cust.js", loadFlotResize);
+
+
+    function loadFlotResize() {
+        loadScript("js/plugin/flot/jquery.flot.resize.js", loadFlotFillbetween);
+    }
+
+    function loadFlotFillbetween() {
+        loadScript("js/plugin/flot/jquery.flot.fillbetween.js", loadFlotOrderBar);
+    }
+
+    function loadFlotOrderBar() {
+        loadScript("js/plugin/flot/jquery.flot.orderBar.js", loadFlotPie);
+    }
+
+    function loadFlotPie() {
+        loadScript("js/plugin/flot/jquery.flot.pie.js", loadFlotToolTip);
+    }
+
+    function loadFlotToolTip() {
+        loadScript("js/plugin/flot/jquery.flot.tooltip.js", generatePageGraphs);
+    }
+
+    /* TAB 1: UPDATING CHART */
+    // For the demo we use generated data, but normally it would be coming from the server
+
+    var selValue = "";
+
+    /* chart colors default */
+    var $chrt_border_color = "#efefef";
+    var $chrt_grid_color = "#DDD"
+    var $chrt_main = "#E24913";			/* red       */
+    var $chrt_second = "#6595b4";		/* blue      */
+    var $chrt_third = "#FF9F01";		/* orange    */
+    var $chrt_fourth = "#7e9d3a";		/* green     */
+    var $chrt_fifth = "#BD362F";		/* dark red  */
+    var $chrt_mono = "#000";
+
+    function typeSelected(){
+        eval('chart'+selValue +'()');
+    }
+
+    function chartA(){
+
+        var data1 = [];
+        for (var i = 0; i <= 3; i += 1)
+            data1.push([i, parseInt(Math.random() * 30)]);
+
+        var ticks = [
+            [0, "缓冲区溢出"],
+            [1, "动态内存问题"],
+            [2, "堆栈溢出"],
+            [3, "内存泄漏"]
+        ];
+
+        var ds = new Array();
+
+        ds.push({
+            label:"内存管理类",
+            data : data1,
+            bars : {
+                show : true,
+                align: "center",
+                barWidth : 0.1
+            }
+        });
+
+        //Display graph
+        $.plot($("#flotcontainer_" + selValue), ds, {
+            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB"],
+            grid : {
+                show : true,
+                hoverable : true,
+                clickable : true,
+                tickColor : $chrt_border_color,
+                borderWidth : 0,
+                borderColor : $chrt_border_color
+            },
+            legend : {
+                show : true
+            },
+            tooltip : true,
+            tooltipOpts : {
+                content : "<b>%s</b> 共有 <span>%y</span> 个问题",
+                defaultTheme : false
+            },xaxis: {
+                ticks: ticks
+            }
+        });
+    }
+
+    function chartB(){
+        var data1 = [];
+        for (var i = 0; i <= 3; i += 1)
+            data1.push([i, parseInt(Math.random() * 30)]);
+
+        var ticks = [
+            [0, "资源泄漏"],
+            [1, "资源竞争问题"],
+            [2, "资源超限"],
+            [3, "临界资源缺陷"]
+        ];
+
+        var ds = new Array();
+
+        ds.push({
+            label:"资源管理类",
+            data : data1,
+            bars : {
+                show : true,
+                align: "center",
+                barWidth : 0.1
+            }
+        });
+
+        //Display graph
+        $.plot($("#flotcontainer_" + selValue), ds, {
+            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB"],
+            grid : {
+                show : true,
+                hoverable : true,
+                clickable : true,
+                tickColor : $chrt_border_color,
+                borderWidth : 0,
+                borderColor : $chrt_border_color
+            },
+            legend : {
+                show : true
+            },
+            tooltip : true,
+            tooltipOpts : {
+                content : "<b>%s</b> 共有 <span>%y</span> 个问题",
+                defaultTheme : false
+            },xaxis: {
+                ticks: ticks
+            }
+        });
+
+    }
+
+    function chartC(){
+        var data1 = [];
+        for (var i = 0; i <= 5; i += 1)
+            data1.push([i, parseInt(Math.random() * 30)]);
+
+        var ticks = [
+            [0, "野指针"],
+            [1, "空指针解引用"],
+            [2, "指针未对齐"],
+            [3, "指针指向内存未初始化"],
+            [4, "增强指针"],
+            [5, "指针越界"]
+        ];
+
+        var ds = new Array();
+
+        ds.push({
+            label:"指针类",
+            data : data1,
+            bars : {
+                show : true,
+                align: "center",
+                barWidth : 0.1
+            }
+        });
+
+        //Display graph
+        $.plot($("#flotcontainer_" + selValue), ds, {
+            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB"],
+            grid : {
+                show : true,
+                hoverable : true,
+                clickable : true,
+                tickColor : $chrt_border_color,
+                borderWidth : 0,
+                borderColor : $chrt_border_color
+            },
+            legend : {
+                show : true
+            },
+            tooltip : true,
+            tooltipOpts : {
+                content : "<b>%s</b> 共有 <span>%y</span> 个问题",
+                defaultTheme : false
+            },xaxis: {
+                ticks: ticks
+            }
+        });
+    }
+
+    function chartD(){
+        var data1 = [];
+        for (var i = 0; i <= 3; i += 1)
+            data1.push([i, parseInt(Math.random() * 30)]);
+
+        var ticks = [
+            [0, "if-else类"],
+            [1, "switch-case类"],
+            [2, "循环类"],
+            [3, "goto问题"]
+        ];
+
+        var ds = new Array();
+
+        ds.push({
+            label:"控制流程类",
+            data : data1,
+            bars : {
+                show : true,
+                align: "center",
+                barWidth : 0.1
+            }
+        });
+
+        //Display graph
+        $.plot($("#flotcontainer_" + selValue), ds, {
+            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB"],
+            grid : {
+                show : true,
+                hoverable : true,
+                clickable : true,
+                tickColor : $chrt_border_color,
+                borderWidth : 0,
+                borderColor : $chrt_border_color
+            },
+            legend : {
+                show : true
+            },
+            tooltip : true,
+            tooltipOpts : {
+                content : "<b>%s</b> 共有 <span>%y</span> 个问题",
+                defaultTheme : false
+            },xaxis: {
+                ticks: ticks
+            }
+        });
+    }
+
+    function pieNow(){
+        var data_pie = [{
+            label : "内存管理类",
+            data : 20
+        },{
+            label : "资源管理类",
+            data : 12
+        },{
+            label : "指针类",
+            data : 32
+        },{
+            label : "控制流程类",
+            data : 21
+        }]
+        $.plot($("#flotcontainer_pie"), data_pie, {
+            series : {
+                pie : {
+                    show : true,
+//                        innerRadius : 0.5,
+                    radius : 1,
+                    label : {
+                        show : true,
+                        radius : 2 / 3,
+                        formatter : function(label, series) {
+                            return '<div style="font-size:11px;text-align:center;padding:4px;color:white;">' + series.label + '<br/>' + series.percent.toFixed(1) + '%</div>';
+                        },
+                        threshold : 0.05
+                    }
+                }
+            },
+            legend : {
+                show : true,
+                noColumns : 1, // number of colums in legend table
+                labelFormatter : function(label, series) {
+                    return label + ': ' + series.data[0][1] + ' (' + series.percent.toFixed(1) + '%)';
+                }, // fn: string -> string
+
+                labelBoxBorderColor : "#000", // border color for the little label boxes
+                container : null, // container (as jQuery object) to put legend in, null means default on top of graph
+                position : "ne", // position of default legend container within plot
+                margin : [5, 10], // distance from grid edge to default legend container within plot
+                backgroundColor : "#efefef", // null means auto-detect
+                backgroundOpacity : 1 // set to 0 to avoid background
+            },
+            grid : {
+                hoverable : true,
+                clickable : true
+            }
+        });
+//        $("#highligher").click(function () {
+//            var e = jQuery.Event('click');
+//            e.pageX = 50;
+//            e.pageY = 50;
+//            $('#flotcontainer_pie canvas:first').trigger(e);
+//        });
+
+//        $("#flotcontainer_pie").bind("plotHover", pieHover);
+        $("#flotcontainer_pie").bind("plotclick", pieClick);
+    }
+
+    function pieClick(event, pos, obj){
+
+        if (!obj) {
+            return;
+        }
+        var label = obj.series.label;
+        if(!label){
+            return;
+        }
+
+        if(label =="内存管理类"){
+            selValue = 'A';
+        }else if(label =="资源管理类") {
+            selValue = 'B';
+        }else if(label =="指针类") {
+            selValue = 'C';
+        }else if(label =="控制流程类") {
+            selValue = 'D';
+        }
+
+        console.log('label:' + label);
+        showSubSelect(label);
+
+
+//        percent = parseFloat(obj.series.percent).toFixed(1);
+//        alert("" + obj.series.label + ": " + percent + "%");
+    }
+    function showSubSelect(label){
+        if(!label){
+            return;
+        }
+
+        $('#total_title').text(label);
+        if(!$('#total_bar').is(":visible")){
+            $('#total_bar').toggle();
+        }
+
+        $("div[id^=report_content_]").filter(":visible").toggle();
+        $('#report_content_' + selValue).toggle();
+        typeSelected();
+    }
+
+    function generatePageGraphs() {
+        pieNow();
+
+        $('#btn_dosearch').click(function() {
+            var content_empty = $('#report_content_empty');
+            if(content_empty.is(":visible")){
+                $('#report_content_empty').toggle(function () {
+                    $('#pie_report_content_all').toggle();
+                });
+            }else {
+                $("div[id^=report_content_]").filter(":visible").toggle();
+//                $('#report_content_' + selValue).toggle();
+            }
+        });
+
+        // Date Picker
+        $('input[name=startDate],input[name=endDate]').datepicker({
+            format: "yyyy-mm-dd",
+            endDate: "2014-05-08",
+//            minViewMode: "years",
+            language: "zh-CN",
+            autoclose: true
+        });
+    }
+</script>

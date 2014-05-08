@@ -1708,3 +1708,7 @@ nav > ul > li.open > ul > li > a {
     /*padding: 10px;*/
 /*}*/
 
+input.readonlyDate {
+    cursor: pointer !important;
+    background-color: white !important;
+}
