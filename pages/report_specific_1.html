@@ -385,25 +385,25 @@
                                     <div class="widget-body-toolbar bg-color-white " id="rev-toggles_A">
 
                                        <div class="smart-form pull-left">
-                                           <div class="inline-group ">
+                                           <!--<div class="inline-group ">-->
 
-                                                <label for="gra-0_A" class="checkbox">
-                                                    <input type="checkbox" name="gra-0" id="gra-0_A" checked="checked">
-                                                    <i></i> COS一部
-                                                </label>
-                                                <label for="gra-1_A" class="checkbox">
-                                                    <input type="checkbox" name="gra-1" id="gra-1_A" checked="checked">
-                                                    <i></i> <span class="">COS二部</span>
-                                                </label>
-                                                <label for="gra-2_A" class="checkbox">
-                                                    <input type="checkbox" name="gra-2" id="gra-2_A" checked="checked">
-                                                    <i></i> 应用开发
-                                                </label>
-                                                <label for="gra-3_A" class="checkbox">
-                                                    <input type="checkbox" name="gra-3" id="gra-3_A" checked="checked">
-                                                    <i></i> 个人化中心
-                                                </label>
-                                            </div>
+                                                <!--<label for="gra-0_A" class="checkbox">-->
+                                                    <!--<input type="checkbox" name="gra-0" id="gra-0_A" checked="checked">-->
+                                                    <!--<i></i> COS一部-->
+                                                <!--</label>-->
+                                                <!--<label for="gra-1_A" class="checkbox">-->
+                                                    <!--<input type="checkbox" name="gra-1" id="gra-1_A" checked="checked">-->
+                                                    <!--<i></i> <span class="">COS二部</span>-->
+                                                <!--</label>-->
+                                                <!--<label for="gra-2_A" class="checkbox">-->
+                                                    <!--<input type="checkbox" name="gra-2" id="gra-2_A" checked="checked">-->
+                                                    <!--<i></i> 应用开发-->
+                                                <!--</label>-->
+                                                <!--<label for="gra-3_A" class="checkbox">-->
+                                                    <!--<input type="checkbox" name="gra-3" id="gra-3_A" checked="checked">-->
+                                                    <!--<i></i> 个人化中心-->
+                                                <!--</label>-->
+                                            <!--</div>-->
                                        </div>
                                         <div class="btn-group hidden-phone pull-right">
                                             <a class="btn dropdown-toggle btn-xs btn-default" data-toggle="dropdown"><i
@@ -1267,23 +1267,33 @@
         eval('chart'+selValue +'()');
     }
 
+    /* chart colors default */
+    //    var $chrtBorderColor = "#efefef",
+    //            $chrtGridColor = "#DDD";
+    //
+    //    var $customColors = [
+    //        "#295891", "#E24913", "#6e3671", "#7e9d3a",
+    //        "#4c4f53", "#FF9F01", "#a90329", "#a57225",
+    //        "#a8829f", "#6595b4", "#356e35"
+    //    ];
     function chartA(){
+
         var data1 = [];
         for (var i = 0; i <= 3; i += 1)
-            data1.push([i, parseInt(Math.random() * 130)]);
+            data1.push([i, parseInt(Math.random() * 30)]);
 
-        var data2 = [];
-        for (var i = 0; i <= 3; i += 1)
-            data2.push([i, parseInt(Math.random() * 130)]);
 
-        var data3 = [];
-        for (var i = 0; i <= 3; i += 1)
-            data3.push([i, parseInt(Math.random() * 130)]);
+        var ds = new Array();
 
-        var data4 = [];
-        for (var i = 0; i <= 3; i += 1)
-            data4.push([i, parseInt(Math.random() * 130)]);
-
+        ds.push({
+            label:"部门统计",
+            data : data1,
+            bars : {
+                show : true,
+                align: "center",
+                barWidth : 0.1
+            }
+        });
 
         var ticks = [
             [0, "COS一部"],
@@ -1292,96 +1302,32 @@
             [3, "个人化中心"]
         ];
 
-        var  toggles = $("#rev-toggles_" + selValue),
-        target = $("#flotcontainer_" + selValue);
-
-        var ds = new Array();
-        ds.push({
-            data : data1,
-            bars : {
+        //Display graph
+        $.plot($("#flotcontainer_" + selValue), ds, {
+            colors : $customColors,
+            grid : {
                 show : true,
-                barWidth : 0.1,
-                align: "center"
-            }
-        });
-
-        ds.push({
-            data : data2,
-            bars : {
-                show : true,
-                barWidth : 0.1,
-                align: "center"
-            }
-        });
-        ds.push({
-            data : data3,
-            bars : {
-                show : true,
-                barWidth : 0.1,
-                align: "center"
-            }
-        });
-        ds.push({
-            data : data4,
-            bars : {
-                show : true,
-                barWidth : 0.1,
-                align: "center"
-            }
-        });
-
-        var options = {
-            series: {
-                bars: {
-                    show: true,
-                    barWidth: 0.3,
-                    align: "center"
-                }
+                hoverable : true,
+                clickable : true,
+                tickColor : $chrtBorderColor,
+                borderWidth : 0,
+                borderColor : $chrtBorderColor
             },
-            xaxis: {
-
+            legend : {
+                show : true
+            },
+            tooltip : true,
+            tooltipOpts : {
+                content : "共有 <span>%y</span> 个问题",
+                defaultTheme : false
+            },xaxis: {
                 ticks: ticks
-            },
-            yaxis: {
-                tickLength: 0
             }
-        };
-        plot2 = null;
-        function plotNow() {
-            var d = [];
-            toggles.find(':checkbox').each(function () {
-                if ($(this).is(':checked')) {
-                    d.push(ds[$(this).attr("name").substr(4, 1)]);
-                }
-            });
-            if (d.length > 0) {
-                console.log(d);
-                if (plot2) {
-                    plot2.setData(d);
-                    plot2.draw();
-                } else {
-                    plot2 = $.plot(target, d, options);
-                }
-            }
-
-        };
-        toggles.find(':checkbox').on('change', function () {
-            plotNow();
         });
 
-        plotNow();
     }
     function chartB(){
-// PAGE RELATED SCRIPTS
-        /* pie chart */
-//        var data_pie = [];
-//        var series = Math.floor(Math.random() * 10) + 1;
-//        for (var i = 0; i < series; i++) {
-//            data_pie[i] = {
-//                label : "Series" + (i + 1),
-//                data : Math.floor(Math.random() * 100) + 1
-//            }
-//        }
+
         var data_pie = [{
             label : "功能缺陷",
             data : 20
@@ -1437,20 +1383,10 @@
             }
         });
 
-        /* end pie chart */
     }
 
     function chartC(){
-// PAGE RELATED SCRIPTS
-        /* pie chart */
-//        var data_pie = [];
-//        var series = Math.floor(Math.random() * 10) + 1;
-//        for (var i = 0; i < series; i++) {
-//            data_pie[i] = {
-//                label : "Series" + (i + 1),
-//                data : Math.floor(Math.random() * 100) + 1
-//            }
-//        }
+
         var data_pie = [{
             label : "电信",
             data : 20
@@ -1473,7 +1409,6 @@
             label : "移动支付",
             data : 4
         }]
-        console.log(selValue);
 
         $.plot($("#pie_chart_" + selValue), data_pie, {
             series : {
@@ -1485,7 +1420,6 @@
                         show : true,
                         radius : 2 / 3,
                         formatter : function(label, series) {
-                            console.log('in formater');
                             return '<div style="font-size:11px;text-align:center;padding:4px;color:white;">' + series.label + '<br/>' + series.percent.toFixed(1) + '%</div>';
                         },
                         threshold : 0.05
@@ -1496,7 +1430,6 @@
                 show : true,
                 noColumns : 2, // number of colums in legend table
                 labelFormatter : function(label, series) {
-                    console.log('in labelFormatter');
                     return label + ': ' + series.data[0][1] + ' (' + series.percent.toFixed(1) + '%)';
                 }, // fn: string -> string
                 labelBoxBorderColor : "#000", // border color for the little label boxes
@@ -1512,28 +1445,16 @@
             }
         });
 
-        /* end pie chart */
     }
 
     function chartD(){
-        /* chart colors default */
-        var $chrt_border_color = "#efefef";
-        var $chrt_grid_color = "#DDD"
-        var $chrt_main = "#E24913";			/* red       */
-        var $chrt_second = "#6595b4";		/* blue      */
-        var $chrt_third = "#FF9F01";		/* orange    */
-        var $chrt_fourth = "#7e9d3a";		/* green     */
-        var $chrt_fifth = "#BD362F";		/* dark red  */
-        var $chrt_mono = "#000";
-        /* pie chart */
-
-        //Display horizontal graph
-
         var data = [[20, 0],[12,1],[32, 2],
             [21, 3],[15,4], [10,5],[4,6]];
+
         var dataset = [
-            { label: "", data: data, color: $chrt_second }
+            { label: "", data: data, color: $customColors[0] }
         ];
+
         var ticks = [
             [0, "GSM"],
             [1, "CDMA"],
@@ -1545,7 +1466,7 @@
         ];
         // display graph
         $.plot($("#bar-chart-h_"+ selValue), dataset, {
-//            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB","#BBB","#BBB","#BBB"],
+            colors : $customColors,
             series: {
                 bars: {
                     show: true,
@@ -1565,9 +1486,9 @@
                 show : true,
                 hoverable : true,
                 clickable : true,
-                tickColor : $chrt_border_color,
+                tickColor : $chrtBorderColor,
                 borderWidth : 0,
-                borderColor : $chrt_border_color
+                borderColor : $chrtBorderColor
 //                backgroundColor: { colors: ["#ffffff", "#EDF5FF"] }
             },
 

@@ -31,7 +31,7 @@
 
                                 <div class="widget-body-toolbar">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-sm-12">
                                             <form class="form-inline" role="form">
                                                 请选择时间范围：
                                                 <div class="form-group">
@@ -46,9 +46,6 @@
                                                     <i class="fa fa-search"></i> 统计
                                                 </button>
                                             </form>
-                                        </div>
-                                        <div class="col-sm-6">
-
                                         </div>
                                     </div>
                                 </div>
@@ -721,15 +718,16 @@
 
     var selValue = "";
 
+
     /* chart colors default */
-    var $chrt_border_color = "#efefef";
-    var $chrt_grid_color = "#DDD"
-    var $chrt_main = "#E24913";			/* red       */
-    var $chrt_second = "#6595b4";		/* blue      */
-    var $chrt_third = "#FF9F01";		/* orange    */
-    var $chrt_fourth = "#7e9d3a";		/* green     */
-    var $chrt_fifth = "#BD362F";		/* dark red  */
-    var $chrt_mono = "#000";
+//    var $chrtBorderColor = "#efefef",
+//            chrtGridColor = "#DDD";
+//
+//    var $customColors = [
+//        "#295891", "#E24913", "#6e3671", "#7e9d3a",
+//        "#4c4f53", "#FF9F01", "#a90329", "#a57225",
+//        "#a8829f", "#6595b4", "#356e35"
+//    ];
 
     function typeSelected(){
         eval('chart'+selValue +'()');
@@ -762,14 +760,14 @@
 
         //Display graph
         $.plot($("#flotcontainer_" + selValue), ds, {
-            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB"],
+            colors : $customColors,
             grid : {
                 show : true,
                 hoverable : true,
                 clickable : true,
-                tickColor : $chrt_border_color,
+                tickColor : $chrtBorderColor,
                 borderWidth : 0,
-                borderColor : $chrt_border_color
+                borderColor : $chrtBorderColor
             },
             legend : {
                 show : true
@@ -810,14 +808,14 @@
 
         //Display graph
         $.plot($("#flotcontainer_" + selValue), ds, {
-            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB"],
+            colors : $customColors,
             grid : {
                 show : true,
                 hoverable : true,
                 clickable : true,
-                tickColor : $chrt_border_color,
+                tickColor : $chrtBorderColor,
                 borderWidth : 0,
-                borderColor : $chrt_border_color
+                borderColor : $chrtBorderColor
             },
             legend : {
                 show : true
@@ -861,14 +859,14 @@
 
         //Display graph
         $.plot($("#flotcontainer_" + selValue), ds, {
-            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB"],
+            colors : $customColors,
             grid : {
                 show : true,
                 hoverable : true,
                 clickable : true,
-                tickColor : $chrt_border_color,
+                tickColor : $chrtBorderColor,
                 borderWidth : 0,
-                borderColor : $chrt_border_color
+                borderColor : $chrtBorderColor
             },
             legend : {
                 show : true
@@ -909,14 +907,14 @@
 
         //Display graph
         $.plot($("#flotcontainer_" + selValue), ds, {
-            colors : [$chrt_second, $chrt_fourth, "#666", "#BBB"],
+            colors : $customColors,
             grid : {
                 show : true,
                 hoverable : true,
                 clickable : true,
-                tickColor : $chrt_border_color,
+                tickColor : $chrtBorderColor,
                 borderWidth : 0,
-                borderColor : $chrt_border_color
+                borderColor : $chrtBorderColor
             },
             legend : {
                 show : true
