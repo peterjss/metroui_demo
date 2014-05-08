@@ -57,8 +57,8 @@
                                         <div class="row">
                                             <div class="col-sm-6" >
                                                 <div id="highligher" style="margin-top: 0px;">可以通过单击饼状图的模块，来获得子类别的统计数据。</div>
-                                                <div id="flotcontainer_pie" class="chart-large has-legend-unique "></div>
-
+                                                <!--<div id="flotcontainer_pie" class="chart-large has-legend-unique "></div>-->
+                                                <div id="flotcontainer_pie" class="chart-large has-legend-unique " style="min-width: 310px; height: 320px; max-width: 600px; margin: 0 auto"></div>
 
                                             </div>
                                             <div class="col-sm-6" >
@@ -706,7 +706,9 @@
     }
 
     function loadFlotPie() {
-        loadScript("js/plugin/flot/jquery.flot.pie.js", loadFlotToolTip);
+//        loadScript("js/plugin/flot/jquery.flot.pie.js", loadFlotToolTip);
+          loadScript("js/plugin/highcharts/highcharts.js", loadFlotToolTip);
+
     }
 
     function loadFlotToolTip() {
@@ -758,7 +760,6 @@
             }
         });
 
-        //Display graph
         $.plot($("#flotcontainer_" + selValue), ds, {
             colors : $customColors,
             grid : {
@@ -780,6 +781,9 @@
                 ticks: ticks
             }
         });
+
+
+
     }
 
     function chartB(){
@@ -930,71 +934,147 @@
     }
 
     function pieNow(){
-        var data_pie = [{
-            label : "内存管理类",
-            data : 20
-        },{
-            label : "资源管理类",
-            data : 12
-        },{
-            label : "指针类",
-            data : 32
-        },{
-            label : "控制流程类",
-            data : 21
-        }]
-        $.plot($("#flotcontainer_pie"), data_pie, {
-            series : {
-                pie : {
-                    show : true,
-//                        innerRadius : 0.5,
-                    radius : 1,
-                    label : {
-                        show : true,
-                        radius : 2 / 3,
-                        formatter : function(label, series) {
-                            return '<div style="font-size:11px;text-align:center;padding:4px;color:white;">' + series.label + '<br/>' + series.percent.toFixed(1) + '%</div>';
-                        },
-                        threshold : 0.05
+//        var data_pie = [{
+//            label : "内存管理类",
+//            data : 20
+//        },{
+//            label : "资源管理类",
+//            data : 12
+//        },{
+//            label : "指针类",
+//            data : 32
+//        },{
+//            label : "控制流程类",
+//            data : 21
+//        }]
+//        $.plot($("#flotcontainer_pie"), data_pie, {
+//            series : {
+//                pie : {
+//                    show : true,
+////                        innerRadius : 0.5,
+//                    radius : 1,
+//                    label : {
+//                        show : true,
+//                        radius : 2 / 3,
+//                        formatter : function(label, series) {
+//                            return '<div style="font-size:11px;text-align:center;padding:4px;color:white;">' + series.label + '<br/>' + series.percent.toFixed(1) + '%</div>';
+//                        },
+//                        threshold : 0.05
+//                    }
+//                }
+//            },
+//            legend : {
+//                show : true,
+//                noColumns : 1, // number of colums in legend table
+//                labelFormatter : function(label, series) {
+//                    return label + ': ' + series.data[0][1] + ' (' + series.percent.toFixed(1) + '%)';
+//                }, // fn: string -> string
+//
+//                labelBoxBorderColor : "#000", // border color for the little label boxes
+//                container : null, // container (as jQuery object) to put legend in, null means default on top of graph
+//                position : "ne", // position of default legend container within plot
+//                margin : [5, 10], // distance from grid edge to default legend container within plot
+//                backgroundColor : "#efefef", // null means auto-detect
+//                backgroundOpacity : 1 // set to 0 to avoid background
+//            },
+//            grid : {
+//                hoverable : true,
+//                clickable : true
+//            },
+//            highlight : {
+//                opacity : 0.5
+//            }
+//        });
+
+
+
+//        $("#flotcontainer_pie").bind("plotHover", pieHover);
+//        $("#flotcontainer_pie").bind("plotclick", pieClick);
+
+         var data_pie = [{
+                name : "内存管理类",
+                y : 20
+            },{
+                 name : "资源管理类",
+                y : 12
+            },{
+                 name : "指针类",
+                y : 32
+            },{
+                 name : "控制流程类",
+                y : 21
+            }];
+
+        Highcharts.getOptions().plotOptions.pie.colors = $customColors;
+
+        $("#flotcontainer_pie").highcharts({
+            credits: {
+                enabled: false
+            },
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: ''
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+//                        distance: -50,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+
+                        }
+//                        style: {
+//                            fontWeight: 'bold',
+//                            color: 'white',
+//                            textShadow: '0px 1px 2px black'
+//                        }
+                    }
+                },
+                series: {
+                    point: {
+                        events: {
+                            click: function() {
+                                pieClick(this.name, this.y);
+                            }
+                        }
                     }
                 }
             },
-            legend : {
-                show : true,
-                noColumns : 1, // number of colums in legend table
-                labelFormatter : function(label, series) {
-                    return label + ': ' + series.data[0][1] + ' (' + series.percent.toFixed(1) + '%)';
-                }, // fn: string -> string
+            series: [{
+                type: 'pie',
+                name: '所占比重',
+                data:data_pie
+            }]
 
-                labelBoxBorderColor : "#000", // border color for the little label boxes
-                container : null, // container (as jQuery object) to put legend in, null means default on top of graph
-                position : "ne", // position of default legend container within plot
-                margin : [5, 10], // distance from grid edge to default legend container within plot
-                backgroundColor : "#efefef", // null means auto-detect
-                backgroundOpacity : 1 // set to 0 to avoid background
-            },
-            grid : {
-                hoverable : true,
-                clickable : true
-            }
         });
-//        $("#highligher").click(function () {
-//            var e = jQuery.Event('click');
-//            e.pageX = 50;
-//            e.pageY = 50;
-//            $('#flotcontainer_pie canvas:first').trigger(e);
-//        });
-
-//        $("#flotcontainer_pie").bind("plotHover", pieHover);
-        $("#flotcontainer_pie").bind("plotclick", pieClick);
     }
 
-    function pieClick(event, pos, obj){
+//    $("#highligher").click(function () {
+//        var e = jQuery.Event('click');
+//        e.pageX = 250;
+//        e.pageY = 250;
+//        alert('aa');
+//        $('#flotcontainer_pie canvas:first').trigger(e);
+//    });
 
-        if (!obj) {
+//    function pieClick(event, pos, obj){
+        function pieClick(label, y){
+
+        if (!label) {
             return;
         }
-        var label = obj.series.label;
+//        var label = obj.series.label;
         if(!label){
             return;
         }
@@ -1009,7 +1089,7 @@
             selValue = 'D';
         }
 
-        console.log('label:' + label);
+
         showSubSelect(label);
 
 
