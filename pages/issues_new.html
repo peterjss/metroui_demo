@@ -615,7 +615,8 @@ data-widget-sortable="false"
                     </div>
                     <div class="form-group">
                         <label class=" control-label"> 描述 </label>
-                        <textarea name="ckeditor" class="form-control" rows="6"></textarea>
+                        <!--<textarea name="ckeditor" class="form-control" rows="6"></textarea>-->
+                        <div class="summernote"></div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6">
@@ -1138,15 +1139,40 @@ function startDropzone (){
     });
 }
 
-loadScript("js/plugin/ckeditor/ckeditor.js", ckeditorStart);
+/*
+ * SUMMERNOTE EDITOR
+ */
+loadScript("js/plugin/summernote/summernote.js", summernoteStart);
 
-function ckeditorStart() {
-    CKEDITOR.replace( 'ckeditor', {
-        toolbar : 'Standard',
-        height: '150px',
-        startupFocus : false
+function summernoteStart() {
+    $('.summernote').summernote({
+        height : 180,
+        focus : false,
+        tabsize : 2,
+        toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'italic', 'underline', 'clear']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+//            ['height', ['height']],
+//            ['table', ['table']],
+            ['insert', ['link', 'picture']],
+            ['view', ['fullscreen', 'codeview']]
+//            ['help', ['help']]
+        ]
     });
 }
+//
+//loadScript("js/plugin/ckeditor/ckeditor.js", ckeditorStart);
+//
+//function ckeditorStart() {
+//    CKEDITOR.replace( 'ckeditor', {
+//        toolbar : 'Standard',
+//        height: '150px',
+//        startupFocus : false
+//    });
+//}
 
 
 $.chat_list_btn = $('.ad-container > .chat-list-open-close');
